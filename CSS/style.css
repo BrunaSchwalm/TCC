@@ -188,6 +188,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 30px;
 }
 .container1 img {
     max-width: 100%;
@@ -203,6 +204,8 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 .hero {
     background-color: var(--secondary-color);
     color: var(--neutral-dark);
@@ -269,6 +272,8 @@ p {
 
 
 
+
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -315,4 +320,27 @@ footer nav ul li a:hover {
 .social-icons img {
     height: 30px;
     margin-left: 15px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats .number, .stats-grid .number {
+        font-size: 3rem;
+    }
+
+    .help-options span {
+        padding: 8px 15px;
+    }
+
+    .contact-images {
+        flex-direction: column;
+        align-items: center;
+    }
 }

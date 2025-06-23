@@ -1,0 +1,285 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #1e95b3; /* Azul vibrante */
+    --secondary-color: #eab74a; /* Amarelo quente */
+    --tertiary-color: #ffe6af; /* Vermelho suave */
+    --accent-color: #c2f2ff; /* Azul claro */
+    --neutral-dark: #333; /* Texto escuro */
+    --neutral-medium: #666; /* Texto médio */
+    --neutral-light: #f4f4f4; /* Fundo claro */
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* position: fixed; 
+    width: 100%;  */
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--accent-color);
+}
+
+
+
+.logoInicio img {
+    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
+    height: auto;    /* Mantém a proporção */
+    display: block;  /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    padding-top: 150px;
+    padding-bottom: 0px; /* Espaço abaixo da imagem */
+   
+}
+
+
+
+/* Estilos para o contêiner principal da logo e links */
+.cabecalho-principal {
+    display: flex;             /* Habilita o Flexbox */
+    flex-direction: column;    /* Coloca os itens em coluna (logo em cima, links embaixo) */
+    align-items: center;       /* Centraliza os itens horizontalmente dentro do contêiner */
+    width: 100%;               /* Ocupa a largura total */
+    padding-top: 20px;         /* Espaçamento superior, ajuste conforme necessário */
+    position: relative;        /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
+    z-index: 2;                /* Garante que o conteúdo fique acima da imagem de fundo */
+    background-color: rgba(255, 255, 255, 0.8);  
+    border-bottom: 1px solid #ccc; 
+}
+
+
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--neutral-dark);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/* Estilos básicos para a imagem e layout geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.cartaz-evento {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cartaz-evento img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+    border-bottom: 2px solid var(--primary-color); /* Linha abaixo da imagem */
+
+}
+
+.detalhes-evento {
+    padding: 20px;
+}
+
+/* Estilo para o botão "Saiba Mais" */
+#botaoAlternar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px; /* Espaço entre o botão e o conteúdo escondido */
+}
+
+#botaoAlternar:hover {
+    background-color: #0056b3;
+}
+
+/* CSS para esconder e mostrar o conteúdo */
+.escondido {
+    display: none;
+}
+
+.visivel {
+    display: block;
+}
+
+/* Opcional: Estilos para o próprio conteúdo escondido */
+#informacoes-escondidas h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+#informacoes-escondidas p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#informacoes-escondidas a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#informacoes-escondidas a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    margin: 0 15px 10px;
+}
+
+footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    flex-wrap: wrap;
+}
+
+.footer-bottom .logo-footer {
+    height: 40px;
+}
+
+.social-icons img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .stats .number, .stats-grid .number {
+        font-size: 3rem;
+    }
+
+    .help-options span {
+        padding: 8px 15px;
+    }
+
+    .contact-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}

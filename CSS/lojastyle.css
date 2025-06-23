@@ -1,0 +1,77 @@
+.lojagrande {
+  background-color: rgb(196, 209, 227);
+  height: 1000px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  gap: 40px; /* espaço entre os itens */
+}
+.produto1{
+
+    border-radius: 25px;
+
+
+}
+.produto2{
+   
+    border-radius: 25px;
+   
+}
+.produto3{
+    
+    border-radius: 25px;
+   
+}
+.produto4{
+    
+    border-radius: 25px;
+    
+}
+.box {
+  height: 200px;
+  width: 200px; /* medida original */
+  background-color: rgb(239, 239, 239);
+  border: transparent;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  flex: 0 0 150px; /* impede de crescer ou diminuir */
+  ;
+}
+.destaques{
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif;
+ 
+}
+#intro1{
+    width: 20%;
+     border-radius: 30px;
+}
+#intro2{
+    width: 20%;
+     border-radius: 30px;
+}
+#intro3{
+    width: 20%;
+    border-radius: 30px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha */
+    justify-content: center;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+#itensloja {
+  width: 100%;
+}

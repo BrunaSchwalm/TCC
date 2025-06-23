@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #1e95b3; /* Azul vibrante */
+    --secondary-color: #eab74a; /* Amarelo quente */
+    --tertiary-color: #ffe6af; /* Vermelho suave */
+    --accent-color: #c2f2ff; /* Azul claro */
+    --neutral-dark: #333; /* Texto escuro */
+    --neutral-medium: #666; /* Texto médio */
+    --neutral-light: #f4f4f4; /* Fundo claro */
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* position: fixed; 
+    width: 100%;  */
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--accent-color);
+}
+
+
+
+.logoInicio img {
+    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
+    height: auto;    /* Mantém a proporção */
+    display: block;  /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    padding-top: 150px;
+    padding-bottom: 0px; /* Espaço abaixo da imagem */
+   
+}
+
+
+
+/* Estilos para o contêiner principal da logo e links */
+.cabecalho-principal {
+    display: flex;             /* Habilita o Flexbox */
+    flex-direction: column;    /* Coloca os itens em coluna (logo em cima, links embaixo) */
+    align-items: center;       /* Centraliza os itens horizontalmente dentro do contêiner */
+    width: 100%;               /* Ocupa a largura total */
+    padding-top: 20px;         /* Espaçamento superior, ajuste conforme necessário */
+    position: relative;        /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
+    z-index: 2;                /* Garante que o conteúdo fique acima da imagem de fundo */
+    /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
+    /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
+}
+
+
+
+
+/* Estilos para a div dos links rápidos */
+.links-rapidos {
+    background-color: rgba(255, 255, 255, 0.5); 
+    margin-top: 60px;
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    text-align: center; /* Centraliza o h2 e a ul */
+    margin-bottom: 20px; /* Espaço abaixo dos links */
+}
+
+
+/* Estilos para a lista de links */
+.links-rapidos ul {
+    list-style: none;     /* Remove os marcadores de lista */
+    padding: 0;           /* Remove o padding padrão da lista */
+    margin: 0;            /* Remove a margem padrão da lista */
+    display: flex;        /* Habilita o Flexbox para os itens da lista */
+    gap: 20px;            /* Espaçamento entre os itens da lista */
+    justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+
+/* Estilos para os links (a) */
+.links-rapidos a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--neutral-dark);        /* Cor azul padrão, ajuste conforme sua paleta */
+    font-weight: bold;     /* Deixa o texto em negrito */
+    padding: 5px 10px;     /* Espaçamento interno para clique */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+.links-rapidos a:hover {
+    color: var(--accent-color); /* Cor mais escura no hover */
+    background-color: var(--primary-color);
+    border-radius: 20px; /* Borda arredondada no hover */
+    padding: 20px 15px; /* Aumenta o espaçamento interno no hover */
+}
+
+/* Estilo para a imagem de fundo (provavelmente no seu #imagemfundo) */
+#imagemfundo {
+    background-image: url('../img/pastelinoFundo.png.png'); /* Substitua pelo caminho correto */
+    background-size: cover;       /* Cobre toda a área do elemento */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    min-height: 100vh;            /* Garante que a seção tenha pelo menos a altura da viewport */
+    display: flex;                /* Pode usar flexbox aqui também para centralizar o conteúdo */
+    justify-content: center;
+    align-items: flex-start;      /* Alinha o conteúdo ao topo */
+    position: relative;           /* Permite que o conteúdo seja posicionado em relação a ele */
+    /* z-index: 1; */                 /* A imagem de fundo deve ter um z-index menor que o conteúdo */
+}
+
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--neutral-dark);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/*Inicio dos estilos para a seção "conheca a associacao"*/
+
+.container1 {
+    background-color: var(--tertiary-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+.container1 img {
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+.container1 h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 200px;
+    color: var(--neutral-dark);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.stats {
+    margin: 40px 0;
+}
+
+.stats .number {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.help-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.help-options span {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.stats-grid div {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stats-grid .number {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    margin: 0 15px 10px;
+}
+
+footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    flex-wrap: wrap;
+}
+
+.footer-bottom .logo-footer {
+    height: 40px;
+}
+
+.social-icons img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+#equipe{
+    height: 582px;
+    width: 825px;
+    display: block;
+    margin: auto;
+    border: 7px solid #1e95b3;
+  border-radius: 5px;
+}
