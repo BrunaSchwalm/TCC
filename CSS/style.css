@@ -1,12 +1,19 @@
 /* Paleta de Cores */
 :root {
-    --primary-color: #1e95b3; /* Azul vibrante */
-    --secondary-color: #eab74a; /* Amarelo quente */
-    --tertiary-color: #ffe6af; /* Vermelho suave */
-    --accent-color: #c2f2ff; /* Azul claro */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f4f4f4; /* Fundo claro */
+    --primary-color: #1e95b3;
+    /* Azul vibrante */
+    --secondary-color: #eab74a;
+    /* Amarelo quente */
+    --tertiary-color: #ffe6af;
+    /* Vermelho suave */
+    --accent-color: #c2f2ff;
+    /* Azul claro */
+    --neutral-dark: #333;
+    /* Texto escuro */
+    --neutral-medium: #666;
+    /* Texto médio */
+    --neutral-light: #f4f4f4;
+    /* Fundo claro */
     --white: #ffffff;
     --black: #000000;
 }
@@ -36,10 +43,16 @@ header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* position: fixed; 
-    width: 100%;  */
-    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* Adicione esta linha */
+    left: 0;
+    /* Adicione esta linha */
+    z-index: 1000;
+    /* Adicione esta linha - um valor alto para garantir que fique acima de tudo */
+
 }
 
 header nav {
@@ -49,12 +62,14 @@ header nav {
 }
 
 header .logo {
-    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+    height: 50px;
+    /* Ajuste conforme o tamanho do seu logo */
 }
 
 header ul {
     list-style: none;
     display: flex;
+    padding-top: 20px;
 }
 
 header ul li {
@@ -66,35 +81,52 @@ header ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+
 }
 
 header ul li a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 10px;
+    border-radius: 20px;
+
 }
 
 
 
 .logoInicio img {
-    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
-    height: auto;    /* Mantém a proporção */
-    display: block;  /* Garante que a imagem seja tratada como um bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 60%;
+    /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
+    height: auto;
+    /* Mantém a proporção */
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
     padding-top: 150px;
-    padding-bottom: 0px; /* Espaço abaixo da imagem */
-   
+    padding-bottom: 0px;
+    /* Espaço abaixo da imagem */
+
 }
 
 
 
 /* Estilos para o contêiner principal da logo e links */
 .cabecalho-principal {
-    display: flex;             /* Habilita o Flexbox */
-    flex-direction: column;    /* Coloca os itens em coluna (logo em cima, links embaixo) */
-    align-items: center;       /* Centraliza os itens horizontalmente dentro do contêiner */
-    width: 100%;               /* Ocupa a largura total */
-    padding-top: 20px;         /* Espaçamento superior, ajuste conforme necessário */
-    position: relative;        /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
-    z-index: 2;                /* Garante que o conteúdo fique acima da imagem de fundo */
+    display: flex;
+    /* Habilita o Flexbox */
+    flex-direction: column;
+    /* Coloca os itens em coluna (logo em cima, links embaixo) */
+    align-items: center;
+    /* Centraliza os itens horizontalmente dentro do contêiner */
+    width: 100%;
+    /* Ocupa a largura total */
+    padding-top: 20px;
+    /* Espaçamento superior, ajuste conforme necessário */
+    position: relative;
+    /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
+    z-index: 2;
+    /* Garante que o conteúdo fique acima da imagem de fundo */
     /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
     /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
 }
@@ -104,59 +136,90 @@ header ul li a:hover {
 
 /* Estilos para a div dos links rápidos */
 .links-rapidos {
-    background-color: rgba(255, 255, 255, 0.5); 
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 60px;
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-    text-align: center; /* Centraliza o h2 e a ul */
-    margin-bottom: 20px; /* Espaço abaixo dos links */
+    padding: 20px;
+    /* Espaçamento interno */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Centraliza o h2 e a ul */
+    margin-bottom: 20px;
+    /* Espaço abaixo dos links */
 }
 
 
 /* Estilos para a lista de links */
 .links-rapidos ul {
-    list-style: none;     /* Remove os marcadores de lista */
-    padding: 0;           /* Remove o padding padrão da lista */
-    margin: 0;            /* Remove a margem padrão da lista */
-    display: flex;        /* Habilita o Flexbox para os itens da lista */
-    gap: 20px;            /* Espaçamento entre os itens da lista */
-    justify-content: center; /* Centraliza os links horizontalmente */
+    list-style: none;
+    /* Remove os marcadores de lista */
+    padding: 0;
+    /* Remove o padding padrão da lista */
+    margin: 0;
+    /* Remove a margem padrão da lista */
+    display: flex;
+    /* Habilita o Flexbox para os itens da lista */
+    gap: 20px;
+    /* Espaçamento entre os itens da lista */
+    justify-content: center;
+    /* Centraliza os links horizontalmente */
 }
 
 
 /* Estilos para os links (a) */
 .links-rapidos a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: var(--neutral-dark);        /* Cor azul padrão, ajuste conforme sua paleta */
-    font-weight: bold;     /* Deixa o texto em negrito */
-    padding: 5px 10px;     /* Espaçamento interno para clique */
-    transition: color 0.3s ease; /* Transição suave para o hover */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: var(--neutral-dark);
+    /* Cor azul padrão, ajuste conforme sua paleta */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+    padding: 5px 10px;
+    /* Espaçamento interno para clique */
+    transition: color 0.3s ease;
+    /* Transição suave para o hover */
 }
 
 .links-rapidos a:hover {
-    color: var(--accent-color); /* Cor mais escura no hover */
+    color: var(--accent-color);
+    /* Cor mais escura no hover */
     background-color: var(--primary-color);
-    border-radius: 20px; /* Borda arredondada no hover */
-    padding: 20px 15px; /* Aumenta o espaçamento interno no hover */
+    border-radius: 20px;
+    /* Borda arredondada no hover */
+    padding: 10px;
+    /* Aumenta o espaçamento interno no hover */
 }
 
 /* Estilo para a imagem de fundo (provavelmente no seu #imagemfundo) */
 #imagemfundo {
-    background-image: url('../img/pastelinoFundo.png.png'); /* Substitua pelo caminho correto */
-    background-size: cover;       /* Cobre toda a área do elemento */
-    background-position: center;  /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    min-height: 100vh;            /* Garante que a seção tenha pelo menos a altura da viewport */
-    display: flex;                /* Pode usar flexbox aqui também para centralizar o conteúdo */
+    background-image: url('../img/pastelinoFundo.png.png');
+    /* Substitua pelo caminho correto */
+    background-size: cover;
+    /* Cobre toda a área do elemento */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Não repete a imagem */
+    min-height: 100vh;
+    /* Garante que a seção tenha pelo menos a altura da viewport */
+    display: flex;
+    /* Pode usar flexbox aqui também para centralizar o conteúdo */
     justify-content: center;
-    align-items: flex-start;      /* Alinha o conteúdo ao topo */
-    position: relative;           /* Permite que o conteúdo seja posicionado em relação a ele */
-    /* z-index: 1; */                 /* A imagem de fundo deve ter um z-index menor que o conteúdo */
+    align-items: flex-start;
+    /* Alinha o conteúdo ao topo */
+    position: relative;
+    /* Permite que o conteúdo seja posicionado em relação a ele */
+    /* z-index: 1; */
+    /* A imagem de fundo deve ter um z-index menor que o conteúdo */
 }
 
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: var(--primary-color);
     margin-bottom: 20px;
 }
@@ -169,6 +232,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
+
 }
 
 h3 {
@@ -180,6 +244,9 @@ p {
     margin-bottom: 15px;
 }
 
+section#imagemfundo {
+    padding-top: 100px;
+}
 
 /*Inicio dos estilos para a seção "conheca a associacao"*/
 
@@ -190,12 +257,14 @@ p {
     padding: 20px;
     border-radius: 30px;
 }
+
 .container1 img {
     max-width: 100%;
     height: 200px;
     display: block;
     margin: 0 auto;
 }
+
 .container1 h1 {
     font-size: 2.5rem;
     text-align: left;
@@ -218,6 +287,50 @@ p {
     max-width: 800px;
     margin: 0 auto 30px;
 }
+
+
+.header-container {
+    display: flex;
+    /* Habilita o Flexbox */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente (se o contêiner for maior) */
+    gap: 20px;
+    /* Espaço entre a logo e a imagem dos cachorros */
+    margin-bottom: 30px;
+    /* Espaço abaixo do cabeçalho */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+
+
+.logo-img {
+    max-width: 150px;
+    /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove o espaço extra abaixo da imagem */
+}
+
+.dogs-img {
+    max-width: 300px;
+    /* Ajuste o tamanho da imagem dos cachorros conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove o espaço extra abaixo da imagem */
+    border-radius: 8px;
+    /* Opcional: Adiciona bordas arredondadas à imagem dos cachorros */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Opcional: Adiciona uma sombra */
+}
+
+
+
+
 
 .stats {
     margin: 40px 0;
@@ -258,7 +371,7 @@ p {
     background-color: var(--white);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .stats-grid .number {
@@ -267,6 +380,129 @@ p {
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+
+/*carousel*/
+.carouselbackground {
+    background-color: var(--accent-color);
+    padding: 50px 0;
+}
+
+.carouselbackground h2 {
+    text-align: center;
+    color: var(--neutral-medium);
+    font-size: 2.5rem;
+    background-color: var(--secondary-color);
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.carousel-item {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item.active p {
+    display: block;
+    bottom: 20px;
+    left: 20px;
+    color: var(--neutral-medium);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: var(--primary-color) 4px solid;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para o carrossel */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+
+
+}
+
+
+
+
+.adotar {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.adotar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--neutral-dark);
+
+}
+
+.adotar:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: background-color 0.3s ease;
+    padding: 15px;
+    /* Aumenta o espaçamento interno no hover */
+
+
+}
+
 
 
 
@@ -309,7 +545,7 @@ footer nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
 }
 
@@ -322,7 +558,7 @@ footer nav ul li a:hover {
     margin-left: 15px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 518px) {
     h1 {
         font-size: 2rem;
     }
@@ -331,7 +567,8 @@ footer nav ul li a:hover {
         font-size: 1.8rem;
     }
 
-    .stats .number, .stats-grid .number {
+    .stats .number,
+    .stats-grid .number {
         font-size: 3rem;
     }
 
@@ -343,4 +580,147 @@ footer nav ul li a:hover {
         flex-direction: column;
         align-items: center;
     }
+
+    .links-rapidos a {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .container1 h1 {
+        font-size: 2rem;
+        /* Ajusta o tamanho do título para telas menores */
+        padding-left: 20px;
+        /* Ajusta o preenchimento para telas menores */
+    }
+
+    .hero p {
+        font-size: 1rem;
+        /* Ajusta o tamanho do texto da seção hero */
+        padding: 0 20px;
+        /* Adiciona preenchimento horizontal */
+    }
+
+    .hero {
+        padding: 40px 0;
+        /* Ajusta o preenchimento da seção hero */
+    }
+
+    .help-options {
+        flex-direction: column;
+        /* Alinha os itens verticalmente em telas menores */
+        align-items: center;
+        /* Centraliza os itens */
+    }
+
+    .help-options span {
+        margin-bottom: 10px;
+        /* Adiciona espaço entre os itens */
+        padding: 8px 15px;
+        /* Ajusta o preenchimento dos itens de ajuda */
+    }
+
+    .carouselbackground h2 {
+        font-size: 2rem;
+        /* Ajusta o tamanho do título do carrossel */
+        margin: 20px;
+        /* Ajusta a margem do título do carrossel */
+        padding: 15px;
+        /* Ajusta o preenchimento do título do carrossel */
+    }
+
+    .carousel-item.active p {
+        font-size: 1rem;
+        /* Ajusta o tamanho do texto descritivo do carrossel */
+        padding: 10px;
+        /* Ajusta o preenchimento do texto descritivo */
+    }
+
+    .carousel-item img {
+        height: 300px;
+        /* Ajusta a altura da imagem do carrossel */
+    }
+
+    .carousel {
+        max-width: 100%;
+        /* Permite que o carrossel ocupe toda a largura disponível */
+        padding: 10px;
+        /* Ajusta o preenchimento do carrossel */
+    }
+
+    .carousel-controls button {
+        padding: 5px 10px;
+        /* Ajusta o tamanho dos botões de controle do carrossel */
+    }
+
+    .adotar {
+        padding: 15px;
+        /* Ajusta o preenchimento do botão de adoção */
+        font-size: 1.2rem;
+        /* Ajusta o tamanho da fonte do botão de adoção */
+    }
+
+    .adotar a {
+        padding: 10px 20px;
+        /* Ajusta o preenchimento do link de adoção */
+        font-size: 1rem;
+        /* Ajusta o tamanho da fonte do link de adoção */
+    }
+
+    .container1 {
+        padding: 15px;
+        /* Ajusta o preenchimento do contêiner */
+    }
+
+    .container1 img {
+        height: 150px;
+        /* Ajusta a altura da imagem no contêiner */
+    }
+
+    .container1 h1 {
+        font-size: 1.8rem;
+        /* Ajusta o tamanho do título no contêiner */
+        padding-left: 10px;
+        /* Ajusta o preenchimento do título no contêiner */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        /* Ajusta o tamanho do título da seção hero */
+    }
+
+
+
+}
+
+@media (max-width: 518px) {
+    .carousel-item {
+        height: 300px;
+        /* Ajusta a altura do carrossel para telas menores */
+    }
+
+    .carousel-controls button {
+        padding: 8px 16px;
+        /* Ajusta o tamanho dos botões de controle */
+    }
+
+    .adotar {
+        max-width: 100%;
+        /* Permite que o botão de adoção ocupe toda a largura disponível */
+        margin-top: 20px;
+        /* Espaço acima do botão de adoção */
+    }
+
+    .adotar a {
+        padding: 10px 15px;
+        /* Ajusta o tamanho do link de adoção */
+        font-size: 1rem;
+        /* Ajusta o tamanho da fonte do link de adoção */
+    }
+
+    .links-rapidos a {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+
 }

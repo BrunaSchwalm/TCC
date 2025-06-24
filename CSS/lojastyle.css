@@ -1,77 +1,145 @@
-.lojagrande {
-  background-color: rgb(196, 209, 227);
-  height: 1000px;
-  width: 1000px;
-  display: flex;
-  flex-wrap: wrap; /* permite quebrar linha */
-  justify-content: center;
-  align-items: flex-start;
-  margin: auto;
-  border: 3px solid black;
-  border-radius: 25px;
-  margin-bottom: 50px;
-  gap: 40px; /* espaço entre os itens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(2, 47, 75);
+    color: #333;
 }
-.produto1{
 
-    border-radius: 25px;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
 
 
+.product-container {
+
+    display: flex; /* Permite que os cards fiquem um ao lado do outro */
+    flex-wrap: wrap; /* Quebra para a próxima linha se não houver espaço */
+    justify-content: center; /* Centraliza os cards */
+    gap: 30px; /* Espaçamento entre os cards */
+    padding: 40px 20px;
+    max-width: 1200px; /* Largura máxima para o contêiner */
+    margin: 80px auto; /* Centraliza o contêiner na página */
 }
-.produto2{
-   
-    border-radius: 25px;
-   
-}
-.produto3{
-    
-    border-radius: 25px;
-   
-}
-.produto4{
-    
-    border-radius: 25px;
-    
-}
-.box {
-  height: 200px;
-  width: 200px; /* medida original */
-  background-color: rgb(239, 239, 239);
-  border: transparent;
-  border-radius: 25px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  flex: 0 0 150px; /* impede de crescer ou diminuir */
-  ;
-}
-.destaques{
-  text-align: center;
-  font-family: "Red Hat Display", sans-serif;
- 
-}
-#intro1{
-    width: 20%;
-     border-radius: 30px;
-}
-#intro2{
-    width: 20%;
-     border-radius: 30px;
-}
-#intro3{
-    width: 20%;
-    border-radius: 30px;
-}
-.container{
+
+/* Card de Produto Individual */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Garante que a imagem não saia do card */
+    width: 280px; /* Largura fixa para cada card */
     display: flex;
-    flex-wrap: wrap; /* permite quebrar linha */
-    justify-content: center;
-    justify-content: space-between;
-    border-radius: 30px;
+    flex-direction: column; /* Coloca a imagem em cima e as infos embaixo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
 }
-#itensloja {
-  width: 100%;
+
+.product-card:hover {
+    transform: translateY(-5px); /* Move o card um pouco para cima no hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Aumenta a sombra no hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+}
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1; /* Permite que este elemento ocupe o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaçamento entre os elementos do info */
+}
+
+.product-info h2 {
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3; /* Cor para o título do produto */
+}
+
+.product-info .price {
+    font-size: 1.3em;
+    color: #28a745; /* Cor verde para o preço */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-info .description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+   
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Em telas menores, os cards ocupam 100% da largura */
+        max-width: 350px; /* Limita a largura máxima mesmo em 100% */
+    }
+
+    .product-container {
+        padding: 20px 10px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .product-info h2 {
+        font-size: 1.2em;
+    }
+
+    .product-info .price {
+        font-size: 1.1em;
+    }
+
+    .buy-button {
+        width: 100%; /* Botão ocupa a largura total em telas muito pequenas */
+        text-align: center;
+    }
+}
+.tipos {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 50px;
+  margin-top: 50px;
+ margin-bottom: 40px;
 }

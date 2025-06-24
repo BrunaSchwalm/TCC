@@ -9,6 +9,7 @@
     --neutral-light: #f4f4f4; /* Fundo claro */
     --white: #ffffff;
     --black: #000000;
+    --darker-primary-color: #1e4db3; /*cor primaria um pouco mais escura*/
 }
 
 /* Reset Básico */
@@ -320,3 +321,49 @@ footer nav ul li a:hover {
     margin-left: 15px;
 }
 
+/* A partir daqui são as edições além do modelo de css */
+body{
+    background-color: var(--secondary-color);
+}
+#contato {
+    display: flex; /* usei para deixar a seção de contatos no meio da página*/
+    justify-content: center;  
+    border: solid var(--tertiary-color) 10px;
+    margin-left: 170px;
+    margin-right: 170px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: var(--tertiary-color);
+}
+
+h2 {
+    display: flex; /*Deixa o título da aba no meio da página*/
+    justify-content: center;
+}
+
+h3 {
+    display: flex; /*Deixa o título da aba no meio da página*/
+    justify-content: center;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.4s; /*tempo de transição de entrada e saida*/
+    border-radius: 50px;;
+    border: solid 3px var(--primary-color);/*cor da borda*/
+    background-color: var(--primary-color);/*cor do fundo do texto*/
+    display: flex;/*Deixa o texto da aba no meio da página*/
+    justify-content: center;
+}
+
+a:hover{
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s;
+    color: var(--accent-color);
+    border: solid 3px  var(--primary-color);
+    background-color: var(--primary-color);
+    padding-left: 5px;
+}

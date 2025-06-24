@@ -38,8 +38,8 @@ header {
     color: var(--white);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* position: fixed; 
-    width: 100%;  */
+    position: fixed; 
+    width: 100%;
     
 }
 
@@ -73,6 +73,10 @@ header ul li a:hover {
     color: var(--accent-color);
 }
 
+section#eventos {
+    padding: 100px 0; /* Espaço para o header fixo */
+    background-color: var(--neutral-light);
+}
 
 
 .logoInicio img {
@@ -127,35 +131,30 @@ p {
 }
 
 
-/* Estilos básicos para a imagem e layout geral */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
+
+
+.cartazEvento {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+margin-bottom: 20px; /* Adicionado para dar espaço entre os banners */
+    
 }
 
-.cartaz-evento {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.cartaz-evento img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    height: auto;
-    display: block; /* Remove espaço extra abaixo da imagem */
-    border-bottom: 2px solid var(--primary-color); /* Linha abaixo da imagem */
+.cartazEvento img {
+max-width: 500px; 
+height: auto;
+display: block; 
+border-bottom: 2px solid var(--primary-color);
+margin-left: auto; 
+margin-right: auto; 
 
 }
 
 .detalhes-evento {
-    padding: 20px;
+padding: 20px;
+text-align: center; /* Centraliza o conteúdo dentro de detalhes-evento */
 }
 
 /* Estilo para o botão "Saiba Mais" */
@@ -182,6 +181,7 @@ body {
 .visivel {
     display: block;
 }
+
 
 /* Opcional: Estilos para o próprio conteúdo escondido */
 #informacoes-escondidas h2 {

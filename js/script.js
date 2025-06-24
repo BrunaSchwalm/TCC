@@ -1,16 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const botaoAlternar = document.getElementById('botaoAlternar');
-    const informacoesEscondidas = document.getElementById('informacoes-escondidas');
+    // Seleciona todos os botões com a classe 'btn-alternar'
+    const botoesAlternar = document.querySelectorAll('.btn-alternar');
 
-    botaoAlternar.addEventListener('click', function() {
-        if (informacoesEscondidas.classList.contains('escondido')) {
-            informacoesEscondidas.classList.remove('escondido');
-            informacoesEscondidas.classList.add('visivel');
-            botaoAlternar.textContent = 'Ver Menos'; // Mudar texto do botão
-        } else {
-            informacoesEscondidas.classList.remove('visivel');
-            informacoesEscondidas.classList.add('escondido');
-            botaoAlternar.textContent = 'Saiba Mais'; // Mudar texto do botão de volta
-        }
+    botoesAlternar.forEach(function(botao) {
+        botao.addEventListener('click', function() {
+            // Encontra o elemento pai mais próximo que tem a classe 'detalhes-evento'
+            const detalhesEvento = this.closest('.detalhes-evento');
+
+            // Dentro desse 'detalhesEvento', encontra a div com a classe 'informacoes-evento'
+            const informacoesEscondidas = detalhesEvento.querySelector('.informacoes-evento');
+
+            // Alterna a classe 'escondido' para mostrar ou esconder o conteúdo
+            informacoesEscondidas.classList.toggle('escondido');
+
+            // Opcional: Altera o texto do botão
+            if (informacoesEscondidas.classList.contains('escondido')) {
+                this.textContent = 'Saiba Mais';
+            } else {
+                this.textContent = 'Ver Menos';
+            }
+        });
     });
 });
