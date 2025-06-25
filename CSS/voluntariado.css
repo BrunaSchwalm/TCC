@@ -1,0 +1,291 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #1e95b3; /* Azul vibrante */
+    --secondary-color: #eab74a; /* Amarelo quente */
+    --tertiary-color: #ffe6af; /* Vermelho suave */
+    --accent-color: #c2f2ff; /* Azul claro */
+    --neutral-dark: #333; /* Texto escuro */
+    --neutral-medium: #666; /* Texto médio */
+    --neutral-light: #f4f4f4; /* Fundo claro */
+    --white: #ffffff;
+    --black: #000000;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--neutral-dark);
+    background-color: var(--accent-color);
+    padding-top: 85px; /* Espaço para o cabeçalho fixo */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Remover text-align: center; daqui se quiser alinhar conteúdo à esquerda */
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
+}
+
+header .logo {
+    height: 50px;
+    /* Ajuste conforme o tamanho do seu logo */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    padding-top: 0px; /* Removido padding-top para alinhar melhor com o logo */
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
+    justify-content: center; /* Centraliza itens em telas menores */
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+    padding: 10px 15px; /* Padronizado o padding inicial */
+    border-radius: 5px; /* Arredondamento suave */
+}
+
+header ul li a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    border-radius: 20px;
+}
+
+/* Estilos gerais de títulos e parágrafos */
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Destaque para os títulos de cada item */
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Seção de Voluntariado */
+#voluntariado {
+    padding: 80px 0; /* Espaçamento superior e inferior */
+    text-align: center; /* Centraliza o texto geral da seção */
+}
+
+#voluntariado .container {
+    text-align: center; /* Garante que o conteúdo central esteja alinhado */
+}
+
+/* Estilos para os blocos de voluntariado */
+.volunteer-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo com colunas */
+    gap: 30px; /* Espaçamento entre os blocos */
+    margin-top: 40px;
+}
+
+.volunteer-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto de cada item à esquerda */
+    transition: transform 0.3s ease;
+}
+
+.volunteer-item:hover {
+    transform: translateY(-5px); /* Efeito suave ao passar o mouse */
+}
+
+.volunteer-item ul {
+    list-style: inside disc; /* Marcadores de lista dentro do conteúdo */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.volunteer-item ul li {
+    margin-bottom: 8px;
+}
+
+/* Estilo para os botões */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--neutral-dark);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #d1a13e; /* Um tom ligeiramente mais escuro para o hover */
+    transform: translateY(-2px);
+}
+
+/* Seção de Contato para Dúvidas */
+.question-contact {
+    background-color: var(--accent-color);
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-contact h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.question-contact p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    margin: 0 15px 10px;
+}
+
+footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    flex-wrap: wrap;
+}
+
+.footer-bottom .logo-footer {
+    height: 40px;
+}
+
+.social-icons img {
+    height: 30px;
+    margin-left: 15px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .volunteer-options {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .volunteer-item {
+        padding: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

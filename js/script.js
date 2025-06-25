@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     botoesAlternar.forEach(function(botao) {
         botao.addEventListener('click', function() {
             // Encontra o elemento pai mais próximo que tem a classe 'detalhes-evento'
-            const detalhesEvento = this.closest('.detalhes-evento');
+            const eventoWrapper = this.closest('.evento-wrapper');
 
             // Dentro desse 'detalhesEvento', encontra a div com a classe 'informacoes-evento'
-            const informacoesEscondidas = detalhesEvento.querySelector('.informacoes-evento');
+            const informacoesEscondidas = eventoWrapper.querySelector('.informacoes-evento');
 
             // Alterna a classe 'escondido' para mostrar ou esconder o conteúdo
             informacoesEscondidas.classList.toggle('escondido');

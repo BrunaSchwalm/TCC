@@ -1,18 +1,18 @@
 /* Paleta de Cores */
 :root {
-    --primary-color: #1e95b3; /* Azul vibrante */
-    --secondary-color: #eab74a; /* Amarelo quente */
-    --tertiary-color: #ffe6af; /* Vermelho suave */
-    --accent-color: #c2f2ff; /* Azul claro */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f4f4f4; /* Fundo claro */
+    --primary-color: #1e95b3;
+    --secondary-color: #eab74a;
+    --tertiary-color: #ffe6af;
+    --accent-color: #c2f2ff;
+    --neutral-dark: #333;
+    --neutral-medium: #666;
+    --neutral-light: #f4f4f4;
     --white: #ffffff;
     --black: #000000;
-    --darker-primary-color: #1e4db3; /*cor primaria um pouco mais escura*/
+    --darker-primary-color: #1e4db3;
 }
 
-/* Reset Básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,42 +20,54 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--neutral-dark);
-    background-color: var(--neutral-light);
+    background-color: var(--accent-color);
+    padding-top: 85px;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
+
 }
 
-/* Header */
 header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* position: fixed; 
-    width: 100%;  */
-    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header .logo {
-    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+    height: 50px;
+
 }
 
 header ul {
     list-style: none;
     display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header ul li {
@@ -67,97 +79,25 @@ header ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+
 }
 
 header ul li a:hover {
-    color: var(--accent-color);
-}
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    border-radius: 20px;
 
-
-
-.logoInicio img {
-    max-width: 60%; /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
-    height: auto;    /* Mantém a proporção */
-    display: block;  /* Garante que a imagem seja tratada como um bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    padding-top: 150px;
-    padding-bottom: 0px; /* Espaço abaixo da imagem */
-   
-}
-
-
-
-/* Estilos para o contêiner principal da logo e links */
-.cabecalho-principal {
-    display: flex;             /* Habilita o Flexbox */
-    flex-direction: column;    /* Coloca os itens em coluna (logo em cima, links embaixo) */
-    align-items: center;       /* Centraliza os itens horizontalmente dentro do contêiner */
-    width: 100%;               /* Ocupa a largura total */
-    padding-top: 20px;         /* Espaçamento superior, ajuste conforme necessário */
-    position: relative;        /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
-    z-index: 2;                /* Garante que o conteúdo fique acima da imagem de fundo */
-    /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
-    /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
 }
 
 
 
 
-/* Estilos para a div dos links rápidos */
-.links-rapidos {
-    background-color: rgba(255, 255, 255, 0.5); 
-    margin-top: 60px;
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-    text-align: center; /* Centraliza o h2 e a ul */
-    margin-bottom: 20px; /* Espaço abaixo dos links */
-}
-
-
-/* Estilos para a lista de links */
-.links-rapidos ul {
-    list-style: none;     /* Remove os marcadores de lista */
-    padding: 0;           /* Remove o padding padrão da lista */
-    margin: 0;            /* Remove a margem padrão da lista */
-    display: flex;        /* Habilita o Flexbox para os itens da lista */
-    gap: 20px;            /* Espaçamento entre os itens da lista */
-    justify-content: center; /* Centraliza os links horizontalmente */
-}
-
-
-/* Estilos para os links (a) */
-.links-rapidos a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: var(--neutral-dark);        /* Cor azul padrão, ajuste conforme sua paleta */
-    font-weight: bold;     /* Deixa o texto em negrito */
-    padding: 5px 10px;     /* Espaçamento interno para clique */
-    transition: color 0.3s ease; /* Transição suave para o hover */
-}
-
-.links-rapidos a:hover {
-    color: var(--accent-color); /* Cor mais escura no hover */
-    background-color: var(--primary-color);
-    border-radius: 20px; /* Borda arredondada no hover */
-    padding: 20px 15px; /* Aumenta o espaçamento interno no hover */
-}
-
-/* Estilo para a imagem de fundo (provavelmente no seu #imagemfundo) */
-#imagemfundo {
-    background-image: url('../img/pastelinoFundo.png.png'); /* Substitua pelo caminho correto */
-    background-size: cover;       /* Cobre toda a área do elemento */
-    background-position: center;  /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    min-height: 100vh;            /* Garante que a seção tenha pelo menos a altura da viewport */
-    display: flex;                /* Pode usar flexbox aqui também para centralizar o conteúdo */
-    justify-content: center;
-    align-items: flex-start;      /* Alinha o conteúdo ao topo */
-    position: relative;           /* Permite que o conteúdo seja posicionado em relação a ele */
-    /* z-index: 1; */                 /* A imagem de fundo deve ter um z-index menor que o conteúdo */
-}
-
-
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: var(--primary-color);
     margin-bottom: 20px;
 }
@@ -182,98 +122,9 @@ p {
 }
 
 
-/*Inicio dos estilos para a seção "conheca a associacao"*/
-
-.container1 {
-    background-color: var(--tertiary-color);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 30px;
-}
-.container1 img {
-    max-width: 100%;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-}
-.container1 h1 {
-    font-size: 2.5rem;
-    text-align: left;
-    padding-left: 200px;
-    color: var(--neutral-dark);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.hero {
-    background-color: var(--secondary-color);
-    color: var(--neutral-dark);
-    text-align: center;
-    padding: 80px 0;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
-
-.stats {
-    margin: 40px 0;
-}
-
-.stats .number {
-    font-size: 4rem;
-    color: var(--secondary-color);
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.help-options {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.help-options span {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    text-align: center;
-    margin: 40px 0;
-}
-
-.stats-grid div {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.stats-grid .number {
-    font-size: 3rem;
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-bottom: 5px;
-}
 
 
 
-
-
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -308,7 +159,7 @@ footer nav ul li a:hover {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     flex-wrap: wrap;
 }
 
@@ -321,49 +172,140 @@ footer nav ul li a:hover {
     margin-left: 15px;
 }
 
-/* A partir daqui são as edições além do modelo de css */
-body{
+
+body {
     background-color: var(--secondary-color);
 }
+
 #contato {
-    display: flex; /* usei para deixar a seção de contatos no meio da página*/
-    justify-content: center;  
+    display: flex;
+    justify-content: center;
     border: solid var(--tertiary-color) 10px;
-    margin-left: 170px;
-    margin-right: 170px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 90px;
     border-radius: 40px;
     background-color: var(--tertiary-color);
 }
 
 h2 {
-    display: flex; /*Deixa o título da aba no meio da página*/
+    display: flex;
     justify-content: center;
 }
 
 h3 {
-    display: flex; /*Deixa o título da aba no meio da página*/
+    display: flex;
     justify-content: center;
 }
 
-a{
+a.btn1 {
     color: var(--white);
     text-decoration: none;
-    transition: all 0.4s; /*tempo de transição de entrada e saida*/
-    border-radius: 50px;;
-    border: solid 3px var(--primary-color);/*cor da borda*/
-    background-color: var(--primary-color);/*cor do fundo do texto*/
-    display: flex;/*Deixa o texto da aba no meio da página*/
+    transition: all 0.4s;
+    border-radius: 50px;
+    border: solid 3px green;
+    background-color: rgb(97, 189, 97);
+    display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
-a:hover{
+a.btn2 {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.4s;
+    border-radius: 50px;
+    border: solid 3px #d62976;
+    background-image: linear-gradient(to top right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+a.email {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.4s;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+a#contato:hover {
     display: flex;
     justify-content: center;
     transition: all 0.4s;
     color: var(--accent-color);
-    border: solid 3px  var(--primary-color);
+    border: solid 3px var(--primary-color);
     background-color: var(--primary-color);
-    padding-left: 5px;
+    padding: 15px;
+}
+
+/* Estilos para as imagens de contato com os cães */
+
+
+
+.dog-contact-card p {
+    font-size: 0.95rem;
+    color: var(--neutral-medium);
+}
+
+/* Estilos para a mensagem de contato com os cães - PAI FLEX */
+.contact-us-message {
+    background-color: var(--accent-color);
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* NOVO: Propriedades Flexbox para alinhar texto e imagens */
+    display: flex;
+    flex-direction: column; /* Começa empilhando o título e depois as imagens */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.contact-us-message h3 {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center; /* Garante que o título esteja centralizado */
+    /* Remove text-align: left; se tiver */
+}
+
+
+/* Estilos para as imagens de contato com os cães - FILHO FLEX */
+.contact-images {
+    display: flex; /* Transforma em container flex para os cards dos cachorros */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 40px; /* Espaçamento maior entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
+    margin-top: 20px; /* Reduzi a margem superior, pois o título já tem margem inferior */
+    width: 100%; /* Garante que ocupe a largura total para centralização */
+}
+
+.dog-contact-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Largura fixa para os cartões dos cães */
+    text-align: center;
+    transition: transform 0.3s ease;
+    /* Adicione estas propriedades para o posicionamento da imagem circular */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Para empurrar a imagem para cima e o texto para baixo, se houver espaço */
+}
+
+.dog-contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.dog-contact-card img {
+    max-width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 150px; /* Defina uma altura fixa para a imagem */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color); /* Borda para a imagem circular */
 }

@@ -26,10 +26,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--neutral-dark);
-    background-color: var(--neutral-light);
+    background-color: var(--accent-color);
+    padding-top: 85px; /* Espaço para o cabeçalho fixo */
 }
 
 .container {
@@ -59,6 +60,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
 }
 
 header .logo {
@@ -70,6 +72,8 @@ header ul {
     list-style: none;
     display: flex;
     padding-top: 20px;
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
+    justify-content: center; /* Centraliza itens em telas menores */
 }
 
 header ul li {
@@ -81,13 +85,14 @@ header ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 15px; /* Padronizado o padding inicial */
+    border-radius: 5px; /* Arredondamento suave */
 
 }
 
 header ul li a:hover {
     color: var(--primary-color);
     background-color: var(--accent-color);
-    padding: 10px;
     border-radius: 20px;
 
 }
@@ -390,7 +395,7 @@ section#imagemfundo {
 
 .carouselbackground h2 {
     text-align: center;
-    color: var(--neutral-medium);
+    color: var(--neutral-light);
     font-size: 2.5rem;
     background-color: var(--secondary-color);
     margin: 30px;
@@ -417,7 +422,7 @@ section#imagemfundo {
     display: block;
     bottom: 20px;
     left: 20px;
-    color: var(--neutral-medium);
+    color: var(--black);
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px 20px;
     border-radius: 5px;

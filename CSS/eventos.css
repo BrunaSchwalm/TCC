@@ -19,17 +19,18 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--neutral-dark);
-    background-color: var(--neutral-light);
+    background-color: var(--accent-color);
+    padding-top: 85px; /* Espaço para o cabeçalho fixo */
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Header */
@@ -37,25 +38,36 @@ header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
     width: 100%;
-    
+    top: 0;
+    /* Adicione esta linha */
+    left: 0;
+    /* Adicione esta linha */
+    z-index: 1000;
+    /* Adicione esta linha - um valor alto para garantir que fique acima de tudo */
+
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
 }
 
 header .logo {
-    height: 50px; /* Ajuste conforme o tamanho do seu logo */
+    height: 50px;
+    /* Ajuste conforme o tamanho do seu logo */
 }
 
 header ul {
     list-style: none;
     display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap; /* Adicionado para responsividade no menu */
+    justify-content: center; /* Centraliza itens em telas menores */
 }
 
 header ul li {
@@ -67,11 +79,18 @@ header ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    padding: 10px 15px; /* Padronizado o padding inicial */
+    border-radius: 5px; /* Arredondamento suave */
+
 }
 
 header ul li a:hover {
-    color: var(--accent-color);
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    border-radius: 20px;
+
 }
+
 
 section#eventos {
     padding: 100px 0; /* Espaço para o header fixo */
@@ -104,6 +123,23 @@ section#eventos {
     border-bottom: 1px solid #ccc; 
 }
 
+.eventos-header {
+    background-color: var(--accent-color);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.eventos-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+.eventos-header p {
+    font-size: 1.2rem;
+    color: var(--neutral-medium);
+}
+
 
 
 h1, h2, h3, h4 {
@@ -130,18 +166,33 @@ p {
     margin-bottom: 15px;
 }
 
-
-
-
 .cartazEvento {
-background-color: #fff;
+    /* Remova max-width e height fixos aqui, se houver. Deixe a imagem controlar. */
+    /* Garanta que não tenha padding extra que force o tamanho */
+    width: 100%; /* Ocupa toda a largura disponível do evento-wrapper */
+    text-align: center; /* Centraliza a imagem se ela for menor que o container */
+}
+
+.cartazEvento img {
+    max-width: 80%; /* REDUZ o tamanho máximo da imagem dentro do cartaz */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Mantém as bordas arredondadas */
+    margin-bottom: 20px;
+    display: block; /* Garante que as margens automáticas funcionem */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* .cartazEvento {
+background-color: var(--primary-color);
 border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 overflow: hidden;
-margin-bottom: 20px; /* Adicionado para dar espaço entre os banners */
+margin-bottom: 20px; 
     
-}
-
+} */
+/* 
 .cartazEvento img {
 max-width: 500px; 
 height: auto;
@@ -150,15 +201,42 @@ border-bottom: 2px solid var(--primary-color);
 margin-left: auto; 
 margin-right: auto; 
 
-}
+} */
 
-.detalhes-evento {
-padding: 20px;
-text-align: center; /* Centraliza o conteúdo dentro de detalhes-evento */
+/* .cartazEvento img {
+    max-width: 100%; 
+    height: auto;
+    display: block; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    object-fit: cover; 
+} */
+
+/* .evento-wrapper { 
+    padding: 20px;
+    text-align: center; 
+    margin-bottom: 30px; 
+    background-color: var(--accent-color); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+} */
+
+
+.evento-wrapper {
+    background-color: var(--accent-color); /* Fundo branco para cada cartão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 30px; /* Espaço entre os eventos */
+    padding: 25px; /* Espaçamento interno */
+    display: flex; /* Para organizar melhor os itens dentro */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Estilo para o botão "Saiba Mais" */
-#botaoAlternar {
+.btn-alternar {
     background-color: #007bff;
     color: white;
     padding: 10px 15px;
@@ -169,7 +247,7 @@ text-align: center; /* Centraliza o conteúdo dentro de detalhes-evento */
     margin-bottom: 15px; /* Espaço entre o botão e o conteúdo escondido */
 }
 
-#botaoAlternar:hover {
+.btn-alternar:hover {
     background-color: #0056b3;
 }
 
@@ -184,23 +262,23 @@ text-align: center; /* Centraliza o conteúdo dentro de detalhes-evento */
 
 
 /* Opcional: Estilos para o próprio conteúdo escondido */
-#informacoes-escondidas h2 {
+.informacoes-evento h2 {
     color: #333;
     margin-top: 0;
     font-size: 1.5em;
 }
 
-#informacoes-escondidas p {
+.informacoes-evento p {
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
-#informacoes-escondidas a {
+.informacoes-evento a {
     color: #007bff;
     text-decoration: none;
 }
 
-#informacoes-escondidas a:hover {
+.informacoes-evento a:hover {
     text-decoration: underline;
 }
 
