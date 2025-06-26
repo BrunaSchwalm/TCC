@@ -1,53 +1,60 @@
 /* Paleta de Cores */
 :root {
-    --primary-color: #1e95b3;
-    --secondary-color: #eab74a;
-    --tertiary-color: #ffe6af;
-    --accent-color: #c2f2ff;
-    --neutral-dark: #333;
-    --neutral-medium: #666;
-    --neutral-light: #f4f4f4;
-    --white: #ffffff;
-    --black: #000000;
-    --darker-primary-color: #1e4db3;
+    --primary-color: #1e95b3; /* Azul principal */
+    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
+    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
+    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
+    --neutral-dark: #333; /* Texto escuro */
+    --neutral-medium: #666; /* Texto médio */
+    --neutral-light: #f8f8f8; /* Fundo claro */
+    --white: #ffffff; /* Branco */
+    --black: #000000; /* Preto */
+    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
+    --success-color: #28a745; /* Verde para sucesso (WhatsApp) */
+    --success-hover: #218838; /* Verde mais escuro no hover */
+    --instagram-gradient-start: #fd5949; /* Início do degradê do Instagram (mais vibrante) */
+    --instagram-gradient-middle: #d62976; /* Meio do degradê do Instagram */
+    --instagram-gradient-end: #962fbf; /* Fim do degradê do Instagram */
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
 }
 
-
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos Globais do Corpo */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    line-height: 1.7; /* Melhorar legibilidade */
     color: var(--neutral-dark);
-    background-color: var(--accent-color);
-    padding-top: 85px;
+    background-color: var(--neutral-light);
+    padding-top: 90px; /* Espaçamento para o header fixo */
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
+/* Container Central */
 .container {
-    max-width: 1100px;
+    max-width: 1200px; /* Aumentar um pouco a largura máxima */
     margin: 0 auto;
-    padding: 0 20px;
-
+    padding: 0 25px; /* Mais padding lateral */
 }
 
+/* Cabeçalho */
 header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra mais visível */
     position: fixed;
     width: 100%;
     top: 0;
-
     left: 0;
-
     z-index: 1000;
-
-
 }
 
 header nav {
@@ -58,96 +65,330 @@ header nav {
 }
 
 header .logo {
-    height: 50px;
+    height: 65px; /* Logo um pouco maior */
+    transition: transform 0.3s ease;
+}
 
+header .logo:hover {
+    transform: scale(1.08);
+}
+
+/* Esconde o botão do menu hambúrguer por padrão em telas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--secondary-color);
 }
 
 header ul {
     list-style: none;
     display: flex;
-    padding-top: 20px;
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
     justify-content: center;
+    transition: all 0.3s ease-in-out; /* Transição para abertura/fechamento */
 }
 
 header ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 header ul li a {
     color: var(--white);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 10px 18px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
 
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease-out;
+}
+
+header ul li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 header ul li a:hover {
-    color: var(--primary-color);
-    background-color: var(--accent-color);
-    border-radius: 20px;
-
+    color: var(--secondary-color);
 }
 
+/* --- FIM DOS ESTILOS DO HEADER --- */
 
 
-
-h1,
-h2,
-h3,
-h4 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
+/* Títulos e Parágrafos (Estilos reutilizados das outras páginas) */
+h2, h3, h4 {
     color: var(--neutral-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    position: relative;
+    color: var(--primary-color);
+    padding-top: 20px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-top: 30px;
+    font-size: 2rem;
+    margin-top: 40px;
+    color: var(--neutral-dark);
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--neutral-medium);
+}
+
+/* Seção de Contato */
+#contato {
+    background-color: var(--white);
+    margin: 60px auto 40px; /* Centralizar e adicionar margem */
+    border-radius: 20px; /* Bordas mais arredondadas */
+    padding: 50px; /* Mais preenchimento interno */
+    box-shadow: var(--box-shadow-medium); /* Sombra mais pronunciada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%; /* Limitar largura em telas maiores */
+}
+
+/* Grupo de Botões de Contato */
+.btn-group {
+    display: flex;
+    flex-direction: row; /* Botões lado a lado */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas menores */
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px; /* Aumentar a largura máxima do grupo para permitir botões mais compridos */
+    
+    
+
+}
+
+.btn-group a, a.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 30px; /* Mais padding para os botões */
+    border-radius: 35px; /* Bordas bem arredondadas */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem; /* Fonte maior nos botões */
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow-light);
+    color: var(--white); /* Cor do texto dos botões */
+    flex: 1; /* Permite que os botões cresçam e ocupem o espaço disponível igualmente */
+    min-width: 250px; /* Garante que os botões não fiquem muito pequenos */
+}
+
+.btn-group a i, a.email i {
+    margin-right: 10px; /* Espaçamento entre ícone e texto */
+    font-size: 1.4rem; /* Tamanho do ícone */
+}
+
+.btn-group a:hover, a.email:hover {
+    transform: translateY(-5px); /* Efeito de levitar mais visível */
+    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
 }
 
 
+a.btn1 { /* WhatsApp */
+    background-color: var(--success-color);
+    border: 2px solid var(--success-color);
+}
 
+a.btn1:hover {
+    background-color: var(--success-hover);
+    border-color: var(--success-hover);
+}
 
+a.btn2 { /* Instagram */
+    background-image: linear-gradient(to right top, var(--instagram-gradient-start), var(--instagram-gradient-middle), var(--instagram-gradient-end));
+    border: 2px solid transparent;
+}
 
+a.btn2:hover {
+    background-image: linear-gradient(to left bottom, var(--instagram-gradient-end), var(--instagram-gradient-middle), var(--instagram-gradient-start));
+}
+
+a.email {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    margin-top: 30px; /* Espaçamento para o email */
+    width: 100%; /* Ocupa a largura total para o botão de email */
+    max-width: 450px; /* Limitar largura para o botão de email */
+}
+
+a.email:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+#subtitulo {
+    margin-top: 60px; /* Espaçamento antes do "Fale com a gente por Email!" */
+    font-size: 1.8rem; /* Ajustar tamanho */
+    color: var(--primary-color); /* Cor do subtítulo */
+}
+
+/* Estilos para a mensagem de contato com os cães */
+.contact-us-message {
+    background-color: var(--accent-color);
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 80px; /* Mais espaçamento */
+    box-shadow: var(--box-shadow-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-us-message::before {
+    content: '🐾'; /* Icone de patinha */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 3rem;
+    opacity: 0.2;
+    color: var(--primary-color);
+    transform: rotate(-20deg);
+}
+
+.contact-us-message::after {
+    content: '🐶'; /* Icone de cachorro */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+    opacity: 0.2;
+    color: var(--secondary-color);
+    transform: rotate(20deg);
+}
+
+.contact-us-message h3 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 1; /* Garantir que o texto fique acima dos ícones decorativos */
+}
+
+.contact-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaçamento maior entre os cards */
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.dog-contact-card {
+    background-color: var(--white);
+    padding: 30px; /* Mais padding */
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+
+.dog-contact-card:hover {
+    transform: translateY(-10px); /* Efeito de levitar mais pronunciado */
+    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
+}
+
+.dog-contact-card img {
+    max-width: 160px; /* Imagem ligeiramente menor para melhor encaixe */
+    height: 160px; /* Altura fixa */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 6px solid var(--secondary-color); /* Borda com a cor secundária */
+    box-shadow: 0 0 0 4px var(--primary-color), 0 0 15px rgba(0, 0, 0, 0.1); /* Anel externo e sombra */
+}
+
+.dog-contact-card p {
+    font-size: 1.05rem;
+    color: var(--neutral-dark);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Rodapé (Estilos reutilizados das outras páginas) */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
+    margin-top: 80px;
 }
 
 footer nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 footer nav ul li {
-    margin: 0 15px 10px;
+    margin: 0 20px 10px;
 }
 
 footer nav ul li a {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 400;
 }
 
 footer nav ul li a:hover {
@@ -158,154 +399,230 @@ footer nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 .footer-bottom .logo-footer {
-    height: 40px;
+    height: 55px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
 }
 
 .social-icons img {
-    height: 30px;
-    margin-left: 15px;
-}
-
-
-body {
-    background-color: var(--secondary-color);
-}
-
-#contato {
-    display: flex;
-    justify-content: center;
-    border: solid var(--tertiary-color) 10px;
-    margin: 90px;
-    border-radius: 40px;
-    background-color: var(--tertiary-color);
-}
-
-h2 {
-    display: flex;
-    justify-content: center;
-}
-
-h3 {
-    display: flex;
-    justify-content: center;
-}
-
-a.btn1 {
-    color: var(--white);
-    text-decoration: none;
-    transition: all 0.4s;
-    border-radius: 50px;
-    border: solid 3px green;
-    background-color: rgb(97, 189, 97);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-a.btn2 {
-    color: var(--white);
-    text-decoration: none;
-    transition: all 0.4s;
-    border-radius: 50px;
-    border: solid 3px #d62976;
-    background-image: linear-gradient(to top right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-a.email {
-    color: var(--white);
-    text-decoration: none;
-    transition: all 0.4s;
-    border-radius: 50px;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-
-a#contato:hover {
-    display: flex;
-    justify-content: center;
-    transition: all 0.4s;
-    color: var(--accent-color);
-    border: solid 3px var(--primary-color);
-    background-color: var(--primary-color);
-    padding: 15px;
-}
-
-/* Estilos para as imagens de contato com os cães */
-
-
-
-.dog-contact-card p {
-    font-size: 0.95rem;
-    color: var(--neutral-medium);
-}
-
-/* Estilos para a mensagem de contato com os cães - PAI FLEX */
-.contact-us-message {
-    background-color: var(--accent-color);
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    /* NOVO: Propriedades Flexbox para alinhar texto e imagens */
-    display: flex;
-    flex-direction: column; /* Começa empilhando o título e depois as imagens */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-}
-
-.contact-us-message h3 {
-    margin-bottom: 20px; /* Espaço abaixo do título */
-    text-align: center; /* Garante que o título esteja centralizado */
-    /* Remove text-align: left; se tiver */
-}
-
-
-/* Estilos para as imagens de contato com os cães - FILHO FLEX */
-.contact-images {
-    display: flex; /* Transforma em container flex para os cards dos cachorros */
-    justify-content: center; /* Centraliza os cards horizontalmente */
-    gap: 40px; /* Espaçamento maior entre os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
-    margin-top: 20px; /* Reduzi a margem superior, pois o título já tem margem inferior */
-    width: 100%; /* Garante que ocupe a largura total para centralização */
-}
-
-.dog-contact-card {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 250px; /* Largura fixa para os cartões dos cães */
-    text-align: center;
+    height: 40px;
     transition: transform 0.3s ease;
-    /* Adicione estas propriedades para o posicionamento da imagem circular */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Para empurrar a imagem para cima e o texto para baixo, se houver espaço */
 }
 
-.dog-contact-card:hover {
-    transform: translateY(-5px);
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
-.dog-contact-card img {
-    max-width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: 150px; /* Defina uma altura fixa para a imagem */
-    border-radius: 50%; /* Faz a imagem ficar redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
-    margin-bottom: 15px;
-    border: 3px solid var(--primary-color); /* Borda para a imagem circular */
+/* Responsividade */
+@media (max-width: 992px) {
+    body {
+     align-items: center;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+    }
+    .btn-group {
+        max-width: 600px; /* Ajustar max-width para telas maiores de tablet */
+    }
+    .btn-group a {
+        flex: 1; /* Manter flex: 1 para crescer */
+        min-width: 200px; /* Ajuste para não ficarem muito pequenos */
+        font-size: 1.1rem;
+        padding: 15px 25px;
+    }
+    a.email {
+        max-width: 380px; /* Ajustar max-width para o botão de email */
+    }
+    .dog-contact-card {
+        width: 260px;
+    }
+    .dog-contact-card img {
+        max-width: 140px; /* Ajuste para telas menores */
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+        align-items: center;
+    }
+    
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
+
+    #contato {
+        margin: 40px 15px;
+        padding: 30px;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    h2::after {
+        width: 80px;
+        height: 4px;
+    }
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .btn-group {
+        flex-direction: column; /* Voltar a empilhar em telas pequenas */
+        max-width: 90%; /* Ocupa mais largura */
+        gap: 15px;
+    }
+    .btn-group a, a.email {
+        width: 100%; /* Ocupa a largura total */
+        max-width: none; /* Remover max-width individual */
+        font-size: 1rem;
+        padding: 14px 20px;
+    }
+    .btn-group a i, a.email i {
+        font-size: 1.2rem;
+    }
+    #subtitulo {
+        margin-top: 40px;
+        font-size: 1.6rem;
+    }
+    .contact-us-message {
+        padding: 35px;
+        margin-top: 60px;
+    }
+    .contact-us-message h3 {
+        font-size: 1.8rem;
+    }
+    .contact-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .dog-contact-card {
+        width: 90%;
+        padding: 25px;
+    }
+    .dog-contact-card img {
+        max-width: 130px; /* Ajuste para telas menores */
+        height: 130px;
+        border-width: 5px;
+        box-shadow: 0 0 0 3px var(--primary-color), 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .dog-contact-card p {
+        font-size: 0.95rem;
+    }
+    footer {
+        padding: 2rem 0;
+        margin-top: 60px;
+    }
+    footer nav ul {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+        align-items: center;
+    }
+    header .logo {
+        height: 55px;
+    }
+    header ul {
+        top: 70px; /* Ajuste de top para o menu expandido em telas muito pequenas */
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .btn-group a, a.email {
+        font-size: 0.95rem;
+        padding: 12px 18px;
+    }
+    .btn-group a i, a.email i {
+        font-size: 1rem;
+    }
+    #subtitulo {
+        font-size: 1.4rem;
+    }
+    .contact-us-message {
+        padding: 25px;
+    }
+    .contact-us-message h3 {
+        font-size: 1.6rem;
+    }
+    .social-icons img {
+        height: 30px;
+    }
 }

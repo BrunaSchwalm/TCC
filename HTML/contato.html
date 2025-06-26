@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -7,15 +7,27 @@
     <title>Contato</title>
     <link rel="stylesheet" href="../CSS/contato.css">
     <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
+    <!-- Link para a fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Importação de Font Awesome para ícones (WhatsApp, Instagram, Email, e o ícone do menu) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html"><img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale"
-                        class="logo"></a>
-                <ul>
+                <!-- Logo da Associação Caramelos do Vale -->
+                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png"
+                        alt="Logo Associação Caramelos do Vale" class="logo"></a>
+
+                <!-- Botão do Menu Hambúrguer (visível apenas em telas pequenas) -->
+                <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Menu de Navegação Principal -->
+                <ul id="main-nav">
                     <li><a href="voluntariado.html">Voluntariado</a></li>
                     <li><a href="loja.html">Loja</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
@@ -29,19 +41,35 @@
         <div class="container">
             <h2>Contato</h2>
             <h3>Ficou com alguma dúvida? Fale com a gente!</h3>
+            <h4>Para doar ou se voluntariar como lar temporário fale conosco!</h4>
+            <br><br>
+            <!-- Grupo de Botões de Contato -->
+            <div class="btn-group">
+                <a href="#" class="btn1">
+                    <i class="fab fa-whatsapp"></i> Fale com a gente por WhatsApp
+                </a>
+                <a href="#" class="btn2">
+                    <i class="fab fa-instagram"></i> Fale com a gente por Instagram
+                </a>
+            </div>
 
-            <p><a href="#" class="btn1">Fale com a gente por WhatsApp</a></p>
-            <p><a href="#" class="btn2">Fale com a gente por Instagram</a></p>
-            <h3 id="subtitulo">Fale com a gente por Email!</a></h3>
-            <p><a href="mailto:caramelosdovale@gmail.com" class="email">caramelosdovale@gmail.com</a></p>
+            <h3 id="subtitulo">Fale com a gente por Email!</h3>
+            <p>
+                <a href="mailto:caramelosdovale@gmail.com" class="email">
+                    <i class="fas fa-envelope"></i> caramelosdovale@gmail.com
+                </a>
+            </p>
 
+            <!-- Seção de Mensagem com os Cães -->
             <div class="contact-us-message">
                 <h3>Nossos Aumigos Estão Prontos Para Ajudar!</h3>
                 <div class="contact-images">
+                    <!-- Card do Timóteo -->
                     <div class="dog-contact-card">
                         <img src="../img/Timoteo1.jpg" alt="Imagem do cão Timóteo">
                         <p>O **Timóteo** vai esclarecer todas as suas dúvidas! 💛</p>
                     </div>
+                    <!-- Card do Lobo -->
                     <div class="dog-contact-card">
                         <img src="../img/joinusdog1.jpg" alt="Imagem do cão Lobo">
                         <p>O **Lobo** vai estar pronto para responder suas perguntas! 🐾</p>
@@ -51,7 +79,6 @@
         </div>
     </section>
 
-
     <footer>
         <div class="container">
             <nav>
@@ -69,96 +96,44 @@
                 <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
                 <div class="social-icons">
                     <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
-                            src="../img/tiktoklogo.png.png" alt="Logo Instagram"></a>
-                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"></a><img
-                        src="../img/insta-logo.png" alt="Logo TikTok"></a>
+                            src="../img/insta-logo.png" alt="Logo Instagram"></a>
+                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"><img
+                            src="../img/tiktoklogo.png.png" alt="Logo TikTok"></a>
                 </div>
             </div>
         </div>
     </footer>
-</body>
 
-</html> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.getElementById('main-nav');
 
-<!DOCTYPE html>
-<html lang="pt-br">
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function () {
+                    mainNav.classList.toggle('nav-open');
+                    // Altera o ícone do hambúrguer para um 'X' e vice-versa
+                    const icon = menuToggle.querySelector('i');
+                    if (mainNav.classList.contains('nav-open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Associação Caramelos do Vale</title>
-    <link rel="stylesheet" href="../CSS/contato.css">
-    <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="../index.html"><img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale"
-                        class="logo"></a>
-                <ul>
-                    <li><a href="voluntariado.html">Voluntariado</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="contato" class="section-padding">
-            <div class="container">
-                <h2>Contato</h2>
-                <h3>Ficou com alguma dúvida? Fale com a gente!</h3>
-
-                <p><a href="#" class="btn1">Fale com a gente por WhatsApp</a></p>
-                <p><a href="#" class="btn2">Fale com a gente por Instagram</a></p>
-                <h3 id="subtitulo">Fale com a gente por Email!</h3>
-                <p><a href="mailto:caramelosdovale@gmail.com" class="email">caramelosdovale@gmail.com</a></p>
-
-                <div class="aumigos-contact-section">
-                    <h3>Nossos Aumigos Estão Prontos Para Ajudar!</h3>
-                    <div class="contact-images">
-                        <div class="dog-contact-card">
-                            <img src="../img/Timoteo1.jpg" alt="Imagem do cão Timóteo">
-                            <p>O **Timóteo** vai esclarecer todas as suas dúvidas! 💛</p>
-                        </div>
-                        <div class="dog-contact-card">
-                            <img src="../img/joinusdog1.jpg" alt="Imagem do cão Lobo">
-                            <p>O **Lobo** vai estar pronto para responder suas perguntas! 🐾</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="sobrenos.html">Sobre Nós</a></li>
-                    <li><a href="adocao.html">Adoção e Apadrinhamento</a></li>
-                    <li><a href="comoajudar.html">Como Ajudar</a></li>
-                    <li><a href="voluntariado.html">Voluntariado</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="footer-bottom">
-                <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
-                            src="../img/tiktoklogo.png.png" alt="Logo Instagram"></a>
-                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"></a><img
-                            src="../img/insta-logo.png" alt="Logo TikTok"></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+                // Fecha o menu se um link for clicado (para navegação suave)
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mainNav.classList.remove('nav-open');
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
