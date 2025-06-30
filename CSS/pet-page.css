@@ -1,0 +1,700 @@
+/* Paleta de Cores (Consistente com as outras páginas) */
+:root {
+    --primary-color: #1e95b3; /* Azul principal */
+    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
+    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
+    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
+    --neutral-dark: #333; /* Texto escuro */
+    --neutral-medium: #666; /* Texto médio */
+    --neutral-light: #f8f8f8; /* Fundo claro */
+    --white: #ffffff; /* Branco */
+    --black: #000000; /* Preto */
+    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
+    --success-color: #28a745; /* Verde para botões de ação (ex: WhatsApp) */
+    --success-hover: #218838; /* Verde mais escuro no hover */
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais do Corpo */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    line-height: 1.7; /* Melhorar legibilidade */
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+    padding-top: 90px; /* Espaçamento para o header fixo */
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+/* Container Central (para o conteúdo principal) */
+.container {
+    max-width: 1200px; /* Aumentar um pouco a largura máxima */
+    margin: 0 auto;
+    padding: 0 25px; /* Mais padding lateral */
+}
+
+/* Cabeçalho (Estilos do menu hambúrguer) */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    height: 65px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.08);
+}
+
+/* Esconde o botão do menu hambúrguer por padrão em telas grandes */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--secondary-color);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 10px 18px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease-out;
+}
+
+header ul li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Linha fixa para a aba ativa */
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+header ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- FIM DOS ESTILOS DO HEADER --- */
+
+
+/* Estilos Específicos da Página do Pet */
+
+main {
+    max-width: 900px; /* Limita a largura do conteúdo principal */
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-medium);
+    padding: 50px;
+    margin-top: 60px;
+    border: solid 5px var(--secondary-color);
+}
+
+/* Seção do Título (Nome do Pet) */
+.pet-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pet-hero h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.pet-hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 6px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+/* Imagem redonda do pet abaixo do nome */
+.pet-img {
+    width: 250px; /* Largura fixa para um círculo perfeito */
+    height: 250px; /* Altura fixa para um círculo perfeito */
+    max-width: 100%; /* Garante que ela encolha em telas menores */
+    object-fit: cover; /* Corta a imagem para preencher o círculo sem distorcer */
+    border-radius: 50%; /* Torna a imagem redonda */
+    border: 8px solid var(--primary-color); /* Borda primária */
+    box-shadow: var(--box-shadow-medium); /* Sombra */
+    margin: 40px auto; /* Centraliza a imagem horizontalmente e adiciona margem vertical */
+    display: block; /* Necessário para margin: auto funcionar */
+}
+
+
+/* Container para informações e botões de ação */
+.pet-info-and-buttons {
+    padding-top: 20px; /* Espaço após o título */
+}
+
+/* Layout para as informações gerais e descrição */
+.pet-info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Espaçamento entre as seções de info e descrição */
+    margin-bottom: 40px; /* Espaçamento antes dos botões de ação */
+}
+
+.general-info, .pet-description {
+    background-color: var(--accent-color);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-light);
+    border: 2px solid var(--primary-color);
+    flex: 1 1 45%; /* Permite que ocupem cerca de metade da largura */
+    min-width: 280px; /* Garante que não fiquem muito estreitos */
+}
+
+.general-info p, .pet-description p {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--neutral-dark);
+}
+
+.general-info b {
+    color: var(--primary-color);
+}
+
+/* Botões de Situação (Castrado, Vacinado, etc.) */
+.situation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Centraliza os botões */
+}
+
+.button-pet-info { /* Estilo para os "badges" de situação */
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-block; /* Para que o padding e border-radius funcionem bem */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    margin-bottom: 0; /* Remove a margem padrão do parágrafo */
+}
+
+.button-pet-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.pet-description p span {
+    display: block; /* Cada span em uma nova linha para melhor leitura */
+    margin-bottom: 10px;
+}
+
+.pet-description b {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Botões de Ação Principais (Mandar mensagem, Seja padrinho) */
+.main-action-buttons {
+    display: flex;
+    flex-direction: column; /* Empilha os botões */
+    gap: 20px;
+    margin-top: 60px;
+    align-items: center; /* Centraliza os botões */
+}
+
+.main-action-buttons a {
+    background-color: var(--success-color); /* Usando a cor de sucesso para CTA */
+    color: var(--white);
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow-medium);
+    width: 100%;
+    max-width: 350px; /* Limita a largura dos botões */
+    text-align: center;
+    border: 2px solid var(--success-color); /* Borda da mesma cor */
+}
+
+.main-action-buttons a:hover {
+    background-color: var(--success-hover); /* Cor mais escura no hover */
+    border-color: var(--success-hover);
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-strong);
+}
+
+/* Estilos para o Carrossel do Bootstrap */
+.carousel-gallery-container {
+    margin-top: 80px; /* Espaçamento acima do carrossel */
+    padding: 30px;
+    background-color: var(--tertiary-color); /* Cor de fundo para a seção da galeria */
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-medium);
+    border: 2px solid var(--secondary-color); /* Borda de destaque */
+    max-width: 700px; /* Limita a largura do carrossel para uma boa visualização */
+    margin-left: auto; /* Centraliza o carrossel */
+    margin-right: auto;
+}
+
+.carousel-item img.carousel-img-custom {
+    width: 100%;
+    height: 400px; /* Altura fixa para as imagens do carrossel */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 10px; /* Bordas arredondadas para as imagens do carrossel */
+    border: 5px solid var(--primary-color); /* Borda primária nas imagens */
+    box-shadow: var(--box-shadow-light);
+}
+
+/* Estilos para as setas de navegação do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color); /* Fundo das setas */
+    border-radius: 50%; /* Setas redondas */
+    padding: 15px; /* Tamanho das setas */
+    opacity: 0.8; /* Um pouco transparente */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    opacity: 1; /* Opacidade total no hover */
+    background-color: var(--darker-primary-color);
+}
+
+
+/* Rodapé (Estilos reutilizados das outras páginas) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+footer nav ul li {
+    margin: 0 20px 10px;
+}
+
+footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-bottom .logo-footer {
+    height: 55px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
+
+    main {
+        padding: 40px 25px;
+        margin-top: 40px;
+    }
+    .pet-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 25px;
+    }
+    .pet-hero h1::after {
+        width: 100px;
+        height: 5px;
+    }
+
+    .pet-img { /* Ajustado para telas de tablet */
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+    }
+
+    .pet-info-grid {
+        flex-direction: column; /* Empilha as seções em tablets */
+        gap: 30px;
+    }
+    .general-info, .pet-description {
+        flex: 1 1 100%; /* Ocupa a largura total */
+        padding: 25px;
+    }
+    .general-info p, .pet-description p {
+        font-size: 1rem;
+    }
+    .situation-buttons {
+        justify-content: flex-start; /* Alinha os botões à esquerda em tablets */
+    }
+    .button-pet-info {
+        font-size: 0.9rem;
+        padding: 7px 12px;
+    }
+    .pet-description b {
+        font-size: 1.1rem;
+    }
+    .main-action-buttons {
+        margin-top: 40px;
+        gap: 15px;
+    }
+    .main-action-buttons a {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+        max-width: 300px;
+    }
+    .carousel-gallery-container {
+        margin-top: 60px;
+        padding: 25px;
+        max-width: 600px;
+    }
+    .carousel-item img.carousel-img-custom {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
+
+    main {
+        padding: 30px 15px;
+        margin-top: 30px;
+    }
+    .pet-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .pet-hero h1::after {
+        width: 80px;
+        height: 4px;
+    }
+    .pet-img { /* Ajustado para telas de celular */
+        width: 180px;
+        height: 180px;
+        margin: 25px auto;
+    }
+    .pet-info-grid {
+        gap: 25px;
+    }
+    .general-info, .pet-description {
+        padding: 20px;
+    }
+    .general-info p, .pet-description p {
+        font-size: 0.95rem;
+    }
+    .button-pet-info {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+    .pet-description b {
+        font-size: 1rem;
+    }
+    .main-action-buttons {
+        margin-top: 30px;
+        gap: 10px;
+    }
+    .main-action-buttons a {
+        font-size: 1rem;
+        padding: 10px 20px;
+        max-width: 280px;
+    }
+    .carousel-gallery-container {
+        margin-top: 40px;
+        padding: 20px;
+        max-width: 500px; /* Ajusta ainda mais para telas menores */
+    }
+    .carousel-item img.carousel-img-custom {
+        height: 300px;
+    }
+    footer {
+        padding: 2rem 0;
+        margin-top: 60px;
+    }
+    footer nav ul {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 15px;
+    }
+    .social-icons {
+        margin-top: 10px;
+    }
+    .social-icons img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
+    }
+    header .logo {
+        height: 55px;
+    }
+    header ul {
+        top: 70px; /* Ajuste de top para o menu expandido em telas muito pequenas */
+    }
+    main {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+    .pet-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .pet-hero h1::after {
+        width: 60px;
+        height: 3px;
+    }
+    .pet-img { /* Ajustado para telas muito pequenas */
+        width: 150px;
+        height: 150px;
+        margin: 20px auto;
+        border-width: 6px;
+    }
+    .pet-info-grid {
+        gap: 20px;
+    }
+    .general-info, .pet-description {
+        padding: 15px;
+    }
+    .general-info p, .pet-description p {
+        font-size: 0.9rem;
+    }
+    .situation-buttons {
+        gap: 8px;
+    }
+    .button-pet-info {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    .pet-description b {
+        font-size: 0.95rem;
+    }
+    .main-action-buttons {
+        margin-top: 25px;
+        gap: 8px;
+    }
+    .main-action-buttons a {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+        max-width: 250px;
+    }
+    .carousel-gallery-container {
+        margin-top: 30px;
+        padding: 15px;
+        max-width: 100%; /* Ocupa largura total em celulares muito pequenos */
+        border-radius: 10px;
+    }
+    .carousel-item img.carousel-img-custom {
+        height: 220px; /* Reduz a altura para celulares */
+        border-width: 3px;
+    }
+    .social-icons img {
+        height: 30px;
+    }
+}
+

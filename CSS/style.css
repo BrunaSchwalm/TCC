@@ -128,10 +128,24 @@ header ul li a:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
 
+
+
 header ul li a:hover {
     color: var(--secondary-color);
 }
 
+/* Adicionado: Linha fixa para a aba ativa */
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+#userlocation {
+    color: var(--secondary-color);
+    font-weight: bold;
+    
+    
+}
+
+/* --- FIM DOS ESTILOS DO HEADER --- */
 
 
 h1,
@@ -160,7 +174,6 @@ h3 {
 p {
     margin-bottom: 15px;
 } 
-
 
 
 .logoInicio img {
@@ -196,8 +209,8 @@ p {
     /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
     z-index: 2;
     /* Garante que o conteúdo fique acima da imagem de fundo */
-    /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
-    /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
+    /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
+    /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
 }
 
 
@@ -366,7 +379,7 @@ section#imagemfundo {
     /* Mantém a proporção da imagem */
     display: block;
     /* Remove o espaço extra abaixo da imagem */
-    border-radius: 8px;
+    border-radius: 50%;
     /* Opcional: Adiciona bordas arredondadas à imagem dos cachorros */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Opcional: Adiciona uma sombra */
@@ -397,7 +410,7 @@ section#imagemfundo {
 
 .help-options a {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: var(--neutral-dark);
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -405,11 +418,11 @@ section#imagemfundo {
     transition: all 0.4s;
 }
 
-.help-options :hover{
-transition: all 0.4s;
-padding-bottom: 3px;
-color: var(--primary-color);
-background-color: var(--tertiary-color);
+.help-options a:hover{
+    transition: all 0.4s;
+    padding-bottom: 3px;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
 }
 
 .stats-grid {
@@ -443,18 +456,19 @@ background-color: var(--tertiary-color);
 
 .carouselbackground h2 {
     text-align: center;
-    color: var(--neutral-light);
+    color: var(--neutral-light); /* Alterado para neutral-light para melhor contraste */
     font-size: 2.5rem;
     background-color: var(--secondary-color);
-    margin: 30px;
+    margin: 30px auto; /* Centralizado */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Adicionado max-width para melhor apresentação */
 }
 
 
 .carousel-item {
-    display: none;
+    /* display: none; */ /* Removido para usar o comportamento padrão do Bootstrap */
     position: relative;
     width: 100%;
     height: 400px;
@@ -462,19 +476,35 @@ background-color: var(--tertiary-color);
     background-position: center;
 }
 
-.carousel-item.active {
+/* .carousel-item.active {
     display: block;
+} */ /* Removido, Bootstrap já gerencia isso */
+
+.carousel-caption { /* Estilo para a legenda do carrossel do Bootstrap */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    color: var(--neutral-dark); /* Texto escuro para contraste */
+    padding: 15px 20px;
+    border-radius: 8px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    margin-left: 250px;
 }
 
-.carousel-item.active p {
-    display: block;
-    bottom: 20px;
-    left: 20px;
-    color: var(--black);
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px 20px;
-    border-radius: 5px;
+.carousel-caption h5 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
 }
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
 
 .carousel-item img {
     width: 100%;
@@ -484,7 +514,8 @@ background-color: var(--tertiary-color);
     border: var(--primary-color) 4px solid;
 }
 
-.carousel-controls {
+/* Removido .carousel-controls e seus estilos, pois o Bootstrap já fornece botões */
+/* .carousel-controls {
     position: absolute;
     top: 50%;
     left: 0;
@@ -506,26 +537,22 @@ background-color: var(--tertiary-color);
 
 .carousel-controls button:hover {
     background-color: var(--secondary-color);
-}
+} */
 
 /* Estilos para o carrossel */
-.carousel-inner {
+/* .carousel-inner {
     display: flex;
     transition: transform 0.5s ease;
-}
+} */ /* Removido, Bootstrap já gerencia isso */
 
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Ajuste o max-width do carrossel */
     margin: 0 auto;
     overflow: hidden;
     padding: 20px;
-
-
 }
-
-
 
 
 .adotar {
@@ -534,58 +561,54 @@ background-color: var(--tertiary-color);
     padding: 10px;
     text-align: center;
     border-radius: 10px;
-    max-width: 200px;
-    margin: 0 auto;
-    margin-top: 20px;
+    max-width: 250px; /* Aumentado um pouco o max-width */
+    margin: 20px auto 0 auto; /* Centralizado e com margem superior */
+    box-shadow: var(--box-shadow-medium); /* Adicionada sombra */
+    transition: all 0.3s ease; /* Adicionada transição */
 }
 
 .adotar a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--neutral-dark);
-
+    color: var(--white); /* Alterado para branco para contraste com o fundo secundário */
+    display: block; /* Para que o link ocupe todo o espaço do div */
+    padding: 5px; /* Pequeno padding interno */
 }
 
 .adotar:hover {
     background-color: var(--primary-color);
-    color: var(--white);
-    transition: background-color 0.3s ease;
-
-
-
+    transform: translateY(-3px); /* Efeito de levitar */
+    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
 }
-
-
-
-
-
-
 
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 2.5rem 0; /* Aumentado o padding para consistência */
     text-align: center;
+    margin-top: 80px;
 }
 
 footer nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Aumentado a margem para consistência */
     flex-wrap: wrap;
+    padding: 0;
 }
 
 footer nav ul li {
-    margin: 0 15px 10px;
+    margin: 0 20px 10px; /* Aumentado a margem para consistência */
 }
 
 footer nav ul li a {
     color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 400; /* Adicionado font-weight para consistência */
 }
 
 footer nav ul li a:hover {
@@ -596,184 +619,426 @@ footer nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px; /* Aumentado o padding para consistência */
+    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Aumentado a opacidade da borda */
     flex-wrap: wrap;
+    gap: 25px; /* Adicionado gap para consistência */
 }
 
 .footer-bottom .logo-footer {
-    height: 40px;
+    height: 55px; /* Aumentado o tamanho para consistência */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Adicionado gap para consistência */
 }
 
 .social-icons img {
-    height: 30px;
-    margin-left: 15px;
+    height: 40px; /* Aumentado o tamanho para consistência */
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 518px) {
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    body {
+        padding-top: 80px; /* Ajuste para o header fixo em telas menores */
+    }
+
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
+
     h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     h2 {
         font-size: 1.8rem;
     }
 
-    .stats .number,
-    .stats-grid .number {
-        font-size: 3rem;
+    .logoInicio img {
+        padding-top: 100px;
+        max-width: 70%;
     }
 
-    .help-options span {
-        padding: 8px 15px;
+    .links-rapidos {
+        margin-top: 40px;
+        padding: 15px;
     }
 
-    .contact-images {
-        flex-direction: column;
-        align-items: center;
+    .links-rapidos ul {
+        gap: 15px;
     }
 
     .links-rapidos a {
-        padding: 5px;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .container1 h1 {
-        font-size: 2rem;
-        /* Ajusta o tamanho do título para telas menores */
-        padding-left: 20px;
-        /* Ajusta o preenchimento para telas menores */
+        font-size: 2.2rem;
+        padding-left: 50px;
     }
 
     .hero p {
         font-size: 1rem;
-        /* Ajusta o tamanho do texto da seção hero */
-        padding: 0 20px;
-        /* Adiciona preenchimento horizontal */
     }
 
-    .hero {
-        padding: 40px 0;
-        /* Ajusta o preenchimento da seção hero */
+    .stats .number {
+        font-size: 3.5rem;
+    }
+
+    .help-options {
+        gap: 15px;
+    }
+
+    .help-options a {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
+
+    .carouselbackground h2 {
+        font-size: 2.2rem;
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 500px;
+    }
+
+    .carousel-item {
+        height: 350px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel {
+        max-width: 700px;
+        padding: 15px;
+    }
+
+    .adotar {
+        max-width: 220px;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 2rem 0;
+        margin-top: 60px;
+    }
+
+    footer nav ul {
+        margin-bottom: 20px;
+    }
+
+    footer nav ul li {
+        margin: 0 15px 8px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .footer-bottom .logo-footer {
+        height: 45px;
+    }
+
+    .social-icons img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .logoInicio img {
+        padding-top: 80px;
+        max-width: 80%;
+    }
+
+    .links-rapidos {
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    .links-rapidos ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links-rapidos a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+    .links-rapidos a:hover {
+        padding: 8px 10px; /* Ajustado para não expandir muito em mobile */
+    }
+
+    .container1 h1 {
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+
+    .stats .number {
+        font-size: 3rem;
     }
 
     .help-options {
         flex-direction: column;
-        /* Alinha os itens verticalmente em telas menores */
         align-items: center;
-        /* Centraliza os itens */
+        gap: 10px;
     }
 
-    .help-options span {
-        margin-bottom: 10px;
-        /* Adiciona espaço entre os itens */
-        padding: 8px 15px;
-        /* Ajusta o preenchimento dos itens de ajuda */
-
+    .help-options a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 90%; /* Ocupa mais largura */
+        max-width: 300px;
     }
 
     .carouselbackground h2 {
         font-size: 2rem;
-        /* Ajusta o tamanho do título do carrossel */
-        margin: 20px;
-        /* Ajusta a margem do título do carrossel */
-        padding: 15px;
-        /* Ajusta o preenchimento do título do carrossel */
-    }
-
-    .carousel-item.active p {
-        font-size: 1rem;
-        /* Ajusta o tamanho do texto descritivo do carrossel */
+        margin: 15px auto;
         padding: 10px;
-        /* Ajusta o preenchimento do texto descritivo */
+        max-width: 90%;
     }
 
-    .carousel-item img {
+    .carousel-item {
         height: 300px;
-        /* Ajusta a altura da imagem do carrossel */
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.85rem;
     }
 
     .carousel {
-        max-width: 100%;
-        /* Permite que o carrossel ocupe toda a largura disponível */
+        max-width: 95%;
         padding: 10px;
-        /* Ajusta o preenchimento do carrossel */
-    }
-
-    .carousel-controls button {
-        padding: 5px 10px;
-        /* Ajusta o tamanho dos botões de controle do carrossel */
     }
 
     .adotar {
-        padding: 15px;
-        /* Ajusta o preenchimento do botão de adoção */
-        font-size: 1.2rem;
-        /* Ajusta o tamanho da fonte do botão de adoção */
+        max-width: 90%;
+        padding: 10px;
+        margin-top: 15px;
     }
 
-    .adotar a {
-        padding: 10px 20px;
-        /* Ajusta o preenchimento do link de adoção */
-        font-size: 1rem;
-        /* Ajusta o tamanho da fonte do link de adoção */
+    footer {
+        padding: 1.5rem 0;
+        margin-top: 40px;
     }
 
-    .container1 {
-        padding: 15px;
-        /* Ajusta o preenchimento do contêiner */
+    footer nav ul {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
     }
 
-    .container1 img {
-        height: 150px;
-        /* Ajusta a altura da imagem no contêiner */
+    footer nav ul li {
+        margin: 0 10px 5px;
     }
 
-    .container1 h1 {
-        font-size: 1.8rem;
-        /* Ajusta o tamanho do título no contêiner */
-        padding-left: 10px;
-        /* Ajusta o preenchimento do título no contêiner */
+    .footer-bottom {
+        flex-direction: column;
+        padding-top: 15px;
+        gap: 15px;
     }
 
-    .hero h2 {
-        font-size: 1.5rem;
-        /* Ajusta o tamanho do título da seção hero */
+    .footer-bottom .logo-footer {
+        height: 40px;
     }
 
-
-
+    .social-icons img {
+        height: 30px;
+    }
 }
 
-@media (max-width: 518px) {
-    .carousel-item {
-        height: 300px;
-        /* Ajusta a altura do carrossel para telas menores */
+@media (max-width: 480px) {
+    body {
+        padding-top: 70px;
     }
-
-    .carousel-controls button {
-        padding: 8px 16px;
-        /* Ajusta o tamanho dos botões de controle */
+    header .logo {
+        height: 55px;
     }
-
-    .adotar {
-        max-width: 100%;
-        /* Permite que o botão de adoção ocupe toda a largura disponível */
+    header ul {
+        top: 70px; /* Ajuste de top para o menu expandido em telas muito pequenas */
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .logoInicio img {
+        padding-top: 60px;
+        max-width: 90%;
+    }
+    .links-rapidos {
         margin-top: 20px;
-        /* Espaço acima do botão de adoção */
+        padding: 8px;
     }
-
-    .adotar a {
-        padding: 10px 15px;
-        /* Ajusta o tamanho do link de adoção */
-        font-size: 1rem;
-        /* Ajusta o tamanho da fonte do link de adoção */
+    .links-rapidos ul {
+        gap: 8px;
     }
-
     .links-rapidos a {
-        padding: 5px;
         font-size: 0.8rem;
+        padding: 5px 8px;
     }
-
-
+    .container1 h1 {
+        font-size: 1.8rem;
+        padding-left: 10px;
+    }
+    .hero p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    .stats .number {
+        font-size: 2.5rem;
+    }
+    .help-options a {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+    .carouselbackground h2 {
+        font-size: 1.8rem;
+        margin: 10px auto;
+        padding: 8px;
+    }
+    .carousel-item {
+        height: 250px;
+    }
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+    .carousel-caption p {
+        font-size: 0.75rem;
+    }
+    .carousel {
+        padding: 5px;
+    }
+    .adotar {
+        padding: 8px;
+        margin-top: 10px;
+    }
+    footer {
+        padding: 1rem 0;
+        margin-top: 30px;
+    }
+    .footer-bottom .logo-footer {
+        height: 35px;
+    }
+    .social-icons img {
+        height: 25px;
+    }
 }

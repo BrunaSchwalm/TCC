@@ -420,6 +420,16 @@ header ul li a:hover::after {
 header ul li a:hover {
     color: var(--secondary-color);
 }
+/* Adicionado: Linha fixa para a aba ativa */
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+#userlocation {
+    color: var(--secondary-color);
+    font-weight: bold;
+    
+    
+}
 
 /* Títulos e Parágrafos (Estilos reutilizados da página de Contato) */
 h2, h3, h4 {

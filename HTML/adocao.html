@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoção e apadrinhamento</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Adoção e Apadrinhamento - Caramelos do Vale</title>
+    <link rel="stylesheet" href="../CSS/adocao.css">
     <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
+    <!-- Importação da fonte Poppins do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Importação de Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -14,27 +19,227 @@
     <header>
         <div class="container">
             <nav>
-                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png" alt="Logo Associação Caramelos do Vale"
-                        class="logo"></a>
-                <ul>
-                    <li><a href="voluntariado.html">Voluntariado</a></li>
-                    <li><a href="loja.html">Loja</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png"
+                        alt="Logo Associação Caramelos do Vale" class="logo"></a>
+
+                <!-- Botão do Menu Hambúrguer (visível apenas em telas pequenas) -->
+                <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Menu de Navegação Principal -->
+                <ul id="main-nav">
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a id="userlocation" href="./adocao.html">Adoção</a></li>
+                    <li><a href="../HTML/voluntariado.html">Voluntariado</a></li>
+                    <li><a href="../HTML/loja.html">Loja</a></li>
+                    <li><a href="../HTML/eventos.html">Eventos</a></li>
+                    <li><a href="../HTML/contato.html">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="adocao" class="section-padding background-light">
+        <section id="adocao-apadrinhamento" class="section-padding">
             <div class="container">
-                <h2>Adoção e Apadrinhamento</h2>
-                <p>Conheça nossos amigos disponíveis para adoção e apadrinhamento</p>
+                <h2>Adoção e Apadrinhamento 🐾</h2>
+                <p class="intro-text">Conheça nossos amigos disponíveis para adoção e apadrinhamento. Cada um tem uma
+                    história única e espera por um lar cheio de amor!</p>
+
+                <!-- Botão para alternar filtros (visível apenas em telas menores) -->
+                <button class="filter-toggle-button">
+                    Alternar Filtros <i class="fas fa-filter"></i>
+                </button>
+
+                <div class="content-wrapper">
+                    <!-- Sidebar de Filtros -->
+                    <aside class="filters-sidebar">
+                        <h3>Filtrar por:</h3>
+                        <div class="filter-group">
+                            <h4>Porte</h4>
+                            <label><input type="checkbox" name="porte" value="P"> P (até 10kg)</label>
+                            <label><input type="checkbox" name="porte" value="M"> M (até 25kg)</label>
+                            <label><input type="checkbox" name="porte" value="G"> G (mais de 25kg)</label>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Sexo</h4>
+                            <label><input type="checkbox" name="sexo" value="Fêmea"> Fêmea</label>
+                            <label><input type="checkbox" name="sexo" value="Macho"> Macho</label>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Idade</h4>
+                            <label><input type="checkbox" name="idade" value="menos1"> Menos de 1 ano</label>
+                            <label><input type="checkbox" name="idade" value="1a5"> De 1 a 5 anos</label>
+                            <label><input type="checkbox" name="idade" value="mais5"> Mais de 5 anos</label>
+                            <label><input type="checkbox" name="idade" value="mais10"> Mais de 10 anos</label>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Precisando de apadrinhamento?</h4>
+                            <label><input type="checkbox" name="apadrinhamento" value="Sim"> Sim</label>
+                            <label><input type="checkbox" name="apadrinhamento" value="Não"> Não</label>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Precisando de lar temporário?</h4>
+                            <label><input type="checkbox" name="larTemporario" value="Sim"> Sim</label>
+                            <label><input type="checkbox" name="larTemporario" value="Não"> Não</label>
+                        </div>
+                        <button class="clear-filters-btn">Limpar Filtros</button>
+                    </aside>
+
+                    <!-- Grid de Animais -->
+                    <div class="animal-grid">
+                        <!-- ATENÇÃO: Adicione data-atributos para os filtros aqui -->
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="1a5"
+                            data-apadrinhamento="Não" data-lar-temporario="Não">
+                            <img src="../img/miguel1.jpg" alt="Miguel">
+                            <div class="animal-info">
+                                <h3>Miguel</h3>
+                                <p>Macho</p>
+                                <p>Porte M</p>
+                                <p>Idade: 2 anos</p>
+                                <a href="../HTML/miguel.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="mais5"
+                            data-apadrinhamento="Sim" data-lar-temporario="Não">
+                            <img src="../img/Jurema5.jpg" alt="Jurema">
+                            <div class="animal-info">
+                                <h3>Jurema</h3>
+                                <p>Fêmea</p>
+                                <p>Porte M</p>
+                                <p>Idade: 8 anos</p>
+                                <a href="../HTML/jurema.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="G" data-sexo="Macho" data-idade="1a5"
+                            data-apadrinhamento="Não" data-lar-temporario="Não">
+                            <img src="../img/Sirius4.png" alt="Sirius">
+                            <div class="animal-info">
+                                <h3>Sirius</h3>
+                                <p>Macho</p>
+                                <p>Porte G</p>
+                                <p>Idade: 3 anos</p>
+                                <a href="../HTML/sirius.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="1a5"
+                            data-apadrinhamento="Não" data-lar-temporario="Sim">
+                            <img src="../img/Betina1.jpg" alt="Betina">
+                            <div class="animal-info">
+                                <h3>Betina</h3>
+                                <p>Fêmea</p>
+                                <p>Porte M/G</p>
+                                <p>Idade: 4 anos</p>
+                                <a href="../HTML/betina.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="1a5"
+                            data-apadrinhamento="Sim" data-lar-temporario="Não">
+                            <img src="../img/Pavao11.jpg" alt="Pavão">
+                            <div class="animal-info">
+                                <h3>Pavão</h3>
+                                <p>Macho</p>
+                                <p>Porte M</p>
+                                <p>Idade: 4 anos</p>
+                                <a href="../HTML/pavao.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="menos1"
+                            data-apadrinhamento="Não" data-lar-temporario="Sim">
+                            <img src="../img/Pastelino8.jpg" alt="Pastelino">
+                            <div class="animal-info">
+                                <h3>Pastelino</h3>
+                                <p>Macho</p>
+                                <p>Porte M</p>
+                                <p>Idade: 1 ano</p>
+                                <a href="../HTML/pastelino.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="P" data-sexo="Macho" data-idade="menos1"
+                            data-apadrinhamento="Não" data-lar-temporario="Não">
+                            <img src="../img/flocos14.png" alt="Flocos">
+                            <div class="animal-info">
+                                <h3>Flocos</h3>
+                                <p>Macho</p>
+                                <p>Porte P</p>
+                                <p>Idade: 6 meses</p>
+                                <a href="../HTML/flocos.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="G" data-sexo="Macho" data-idade="mais10"
+                            data-apadrinhamento="Sim" data-lar-temporario="Não">
+                            <img src="../img/Juliano1.jpg" alt="Juliano">
+                            <div class="animal-info">
+                                <h3>Juliano</h3>
+                                <p>Macho</p>
+                                <p>Porte G</p>
+                                <p>Idade: 10 anos</p>
+                                <a href="../HTML/juliano.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="G" data-sexo="Fêmea" data-idade="1a5"
+                            data-apadrinhamento="Não" data-lar-temporario="Sim">
+                            <img src="../img/Mercedes14.jpg" alt="Mercedes">
+                            <div class="animal-info">
+                                <h3>Mercedes</h3>
+                                <p>Fêmea</p>
+                                <p>Porte G</p>
+                                <p>Idade: 3 anos</p>
+                                <a href="../HTML/mercedes.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="mais5"
+                            data-apadrinhamento="Não" data-lar-temporario="Não">
+                            <img src="../img/Otto1.jpg" alt="Otto">
+                            <div class="animal-info">
+                                <h3>Otto</h3>
+                                <p>Macho</p>
+                                <p>Porte M</p>
+                                <p>Idade: 5 anos</p>
+                                <a href="../HTML/otto.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="P" data-sexo="Fêmea" data-idade="mais5"
+                            data-apadrinhamento="Sim" data-lar-temporario="Não">
+                            <img src="../img/tais8.png" alt="Taís">
+                            <div class="animal-info">
+                                <h3>Taís</h3>
+                                <p>Fêmea</p>
+                                <p>Porte P</p>
+                                <p>Idade: 7 anos</p>
+                                <a href="../HTML/tais.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="animal-card" data-porte="G" data-sexo="Macho" data-idade="menos1"
+                            data-apadrinhamento="Não" data-lar-temporario="Sim">
+                            <img src="../img/Timoteo1.jpg" alt="Timóteo">
+                            <div class="animal-info">
+                                <h3>Timóteo</h3>
+                                <p>Macho</p>
+                                <p>Porte G</p>
+                                <p>Idade: 1 ano</p>
+                                <a href="../HTML/timoteo.html" class="btn-conhecer">Vem me conhecer <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Adicione mais cards de animais aqui conforme necessário -->
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
 
     <footer>
         <div class="container">
@@ -53,13 +258,151 @@
                 <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
                 <div class="social-icons">
                     <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
-                            src="../img/tiktoklogo.png.png" alt="Logo Instagram"></a>
-                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"></a><img
-                        src="../img/insta-logo.png" alt="Logo TikTok"></a>
+                            src="../img/insta-logo.png" alt="Logo Instagram"></a>
+                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"><img
+                            src="../img/tiktoklogo.png.png" alt="Logo TikTok"></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const filterToggleButton = document.querySelector('.filter-toggle-button');
+            const filtersSidebar = document.querySelector('.filters-sidebar');
+            const animalCards = document.querySelectorAll('.animal-card');
+            const filterCheckboxes = document.querySelectorAll('.filters-sidebar input[type="checkbox"]');
+            const clearFiltersBtn = document.querySelector('.clear-filters-btn');
+
+            // Toggle do Menu de Navegação (Header)
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function () {
+                    mainNav.classList.toggle('nav-open');
+                    const icon = menuToggle.querySelector('i');
+                    if (mainNav.classList.contains('nav-open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mainNav.classList.remove('nav-open');
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                    });
+                });
+            }
+
+            // Lógica para Alternar Filtros em Telas Pequenas
+            if (filterToggleButton && filtersSidebar) {
+                filterToggleButton.addEventListener('click', function () {
+                    filtersSidebar.classList.toggle('open');
+                    const icon = filterToggleButton.querySelector('i');
+                    if (filtersSidebar.classList.contains('open')) {
+                        icon.classList.remove('fa-filter');
+                        icon.classList.add('fa-times'); // Ícone de "X" quando aberto
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-filter'); // Ícone de filtro quando fechado
+                    }
+                });
+            }
+
+            // Função para aplicar os filtros
+            function applyFilters() {
+                const activeFilters = {
+                    porte: [],
+                    sexo: [],
+                    idade: [],
+                    apadrinhamento: [],
+                    larTemporario: []
+                };
+
+                // Coletar filtros ativos
+                filterCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        activeFilters[checkbox.name].push(checkbox.value);
+                    }
+                });
+
+                animalCards.forEach(card => {
+                    let matchesAllFilters = true;
+
+                    // Verificar Porte
+                    if (activeFilters.porte.length > 0) {
+                        const cardPorte = card.dataset.porte;
+                        if (!activeFilters.porte.includes(cardPorte)) {
+                            matchesAllFilters = false;
+                        }
+                    }
+
+                    // Verificar Sexo
+                    if (activeFilters.sexo.length > 0) {
+                        const cardSexo = card.dataset.sexo;
+                        if (!activeFilters.sexo.includes(cardSexo)) {
+                            matchesAllFilters = false;
+                        }
+                    }
+
+                    // Verificar Idade
+                    if (activeFilters.idade.length > 0) {
+                        const cardIdade = card.dataset.idade;
+                        if (!activeFilters.idade.includes(cardIdade)) {
+                            matchesAllFilters = false;
+                        }
+                    }
+
+                    // Verificar Apadrinhamento
+                    if (activeFilters.apadrinhamento.length > 0) {
+                        const cardApadrinhamento = card.dataset.apadrinhamento;
+                        if (!activeFilters.apadrinhamento.includes(cardApadrinhamento)) {
+                            matchesAllFilters = false;
+                        }
+                    }
+
+                    // Verificar Lar Temporário
+                    if (activeFilters.larTemporario.length > 0) {
+                        const cardLarTemporario = card.dataset.larTemporario;
+                        if (!activeFilters.larTemporario.includes(cardLarTemporario)) {
+                            matchesAllFilters = false;
+                        }
+                    }
+
+                    // Mostrar ou esconder o card
+                    if (matchesAllFilters) {
+                        card.style.display = 'flex'; // Mostra o card (assumindo display flex para o card)
+                    } else {
+                        card.style.display = 'none'; // Esconde o card
+                    }
+                });
+            }
+
+            // Adicionar event listeners para os checkboxes de filtro
+            filterCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', applyFilters);
+            });
+
+            // Lógica para Limpar Filtros
+            if (clearFiltersBtn) {
+                clearFiltersBtn.addEventListener('click', function () {
+                    filterCheckboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                    });
+                    applyFilters(); // Aplica os filtros novamente para mostrar todos os animais
+                    console.log('Filtros limpos e aplicados!');
+                });
+            }
+
+            // Chamar applyFilters() no carregamento inicial para garantir que todos os animais sejam exibidos por padrão
+            applyFilters();
+        });
+    </script>
 </body>
 
 </html>

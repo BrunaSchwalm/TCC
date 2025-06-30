@@ -22,7 +22,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: var(--neutral-light);
     color: var(--neutral-dark);
 }
 
@@ -163,4 +163,11 @@ footer {
   margin-top: 50px;
  margin-bottom: 40px;
  
+}
+
+.material{
+      font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }

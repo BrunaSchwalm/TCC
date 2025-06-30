@@ -547,7 +547,7 @@ p {
     width: 100%;
 }
 
-.stat-item {
+.stat-item { /* Seletor corrigido de #adoc, #resg, #anima para .stat-item */
     background-color: var(--accent-color);
     padding: 30px;
     border-radius: 15px;
@@ -583,7 +583,7 @@ p {
 }
 
 /* Seção Lobo & Loba */
-.lobo-loba-section {
+.lobo-loba-section { /* Seletor corrigido de #lob2 para .lobo-loba-section */
     display: flex;
     flex-direction: row; /* Imagem e texto lado a lado */
     align-items: center;
@@ -594,9 +594,11 @@ p {
     border-radius: 15px;
     box-shadow: var(--box-shadow-light);
     border: 2px solid var(--secondary-color);
+    width: 100%; /* Ocupar a largura total do container */
+    max-width: 900px; /* Limitar largura máxima para legibilidade */
 }
 
-.lobo-loba-img {
+.lobo-loba-img { /* Seletor corrigido de #loboelobaimg para .lobo-loba-img */
     max-width: 280px; /* Tamanho da imagem */
     height: 250px; /* Altura fixa */
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
@@ -606,15 +608,15 @@ p {
     flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
-.lobo-loba-section p {
+.lobo-loba-section p { /* Seletor corrigido de #parag para .lobo-loba-section p */
     text-align: left; /* Alinhar texto à esquerda */
     margin-bottom: 0; /* Remover margem extra do parágrafo */
     flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
 }
 
 /* Imagem da Equipe (full-width) */
-.full-width-img {
-    width: 100%;
+.full-width-img { /* Seletor corrigido de #equipe para .full-width-img */
+    width: 70%;
     height: auto;
     border-radius: 15px;
     margin-top: 40px;
@@ -705,6 +707,7 @@ footer nav ul li a:hover {
     .lobo-loba-section {
         flex-direction: column; /* Empilha em tablets */
         gap: 25px;
+        max-width: 600px; /* Ajuste para tablets */
     }
     .lobo-loba-img {
         max-width: 250px;
@@ -799,6 +802,7 @@ footer nav ul li a:hover {
     .lobo-loba-section {
         gap: 20px;
         padding: 20px;
+        max-width: 95%;
     }
     .lobo-loba-img {
         max-width: 200px;
