@@ -48,10 +48,11 @@ header {
     padding: 1rem 0;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    width: 100%;
+    height: 100px;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 1000;
+    left: 0;
 }
 
 header nav {
@@ -63,6 +64,7 @@ header nav {
 
 header .logo {
     height: 65px;
+    width: 130px;
     transition: transform 0.3s ease;
 }
 
@@ -130,6 +132,14 @@ header ul li a:hover::after {
 
 header ul li a:hover {
     color: var(--secondary-color);
+}
+
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+#userlocation { /* Mantido para sobrescrever a cor do texto da aba ativa */
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
 /* --- FIM DOS ESTILOS DO HEADER --- */
@@ -318,6 +328,7 @@ p {
     gap: 30px; /* Espaçamento entre os cards */
     /* Adicionado para centralizar os itens quando há menos de 3 colunas */
     justify-content: center; 
+
 }
 
 .animal-card {
@@ -332,6 +343,7 @@ p {
     border: 2px solid var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Adicionado para garantir que o card não se estique excessivamente */
+    max-height: 35rem;
     max-width: 300px; /* Limita a largura máxima do card */
     width: 100%; /* Garante que ele ocupe a largura disponível até o max-width */
 }

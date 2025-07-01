@@ -1,20 +1,35 @@
 /* Paleta de Cores (Consistente com as outras páginas) */
 :root {
-    --primary-color: #1e95b3; /* Azul principal */
-    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
-    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
-    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f8f8f8; /* Fundo claro */
-    --white: #ffffff; /* Branco */
-    --black: #000000; /* Preto */
-    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
-    --success-color: #28a745; /* Verde para botões de ação */
-    --success-hover: #218838; /* Verde mais escuro no hover */
-    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
-    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
-    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --primary-color: #1e95b3;
+    /* Azul principal */
+    --secondary-color: #eab74a;
+    /* Laranja/Amarelo de destaque */
+    --tertiary-color: #ffe6af;
+    /* Amarelo claro para fundos */
+    --accent-color: #c2f2ff;
+    /* Azul claro para fundos/destaques */
+    --neutral-dark: #333;
+    /* Texto escuro */
+    --neutral-medium: #666;
+    /* Texto médio */
+    --neutral-light: #f8f8f8;
+    /* Fundo claro */
+    --white: #ffffff;
+    /* Branco */
+    --black: #000000;
+    /* Preto */
+    --darker-primary-color: #1a7a91;
+    /* Azul principal mais escuro */
+    --success-color: #28a745;
+    /* Verde para botões de ação */
+    --success-hover: #218838;
+    /* Verde mais escuro no hover */
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra suave */
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Sombra média */
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra forte */
 }
 
 /* Reset Básico */
@@ -26,19 +41,25 @@
 
 /* Estilos Globais do Corpo */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    line-height: 1.7; /* Melhorar legibilidade */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna */
+    line-height: 1.7;
+    /* Melhorar legibilidade */
     color: var(--neutral-dark);
     background-color: var(--neutral-light);
-    padding-top: 90px; /* Espaçamento para o header fixo */
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    padding-top: 90px;
+    /* Espaçamento para o header fixo */
+    overflow-x: hidden;
+    /* Evitar scroll horizontal */
 }
 
 /* Container Central */
 .container {
-    max-width: 1200px; /* Aumentar um pouco a largura máxima */
+    max-width: 1200px;
+    /* Aumentar um pouco a largura máxima */
     margin: 0 auto;
-    padding: 0 25px; /* Mais padding lateral */
+    padding: 0 25px;
+    /* Mais padding lateral */
 }
 
 /* Cabeçalho (Estilos do menu hambúrguer) */
@@ -49,6 +70,7 @@ header {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
+    height: 100px;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -63,6 +85,7 @@ header nav {
 
 header .logo {
     height: 65px;
+    width: 130px;
     transition: transform 0.3s ease;
 }
 
@@ -136,18 +159,21 @@ header ul li a:hover {
 header ul li a.active::after {
     transform: translateX(-50%) scaleX(1);
 }
+
 #userlocation {
     color: var(--secondary-color);
     font-weight: bold;
-    
-    
+
+
 }
 
 /* --- FIM DOS ESTILOS DO HEADER --- */
 
 
 /* Títulos e Parágrafos (Estilos reutilizados das outras páginas) */
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     color: var(--neutral-dark);
     margin-bottom: 20px;
     font-weight: 700;
@@ -181,7 +207,8 @@ h3 {
 }
 
 h4 {
-    font-size: 1.6rem; /* Estilo para h4 dentro dos eventos */
+    font-size: 1.6rem;
+    /* Estilo para h4 dentro dos eventos */
     color: var(--primary-color);
     margin-bottom: 15px;
 }
@@ -196,11 +223,17 @@ p {
 /* Seção de Eventos */
 #eventos {
     padding: 60px 0;
-    background-color: var(--white); /* Fundo branco para a seção principal */
-    box-shadow: var(--box-shadow-medium); /* Sombra para a seção */
-    margin: 60px auto 40px; /* Centralizar e adicionar margem */
-    border-radius: 20px; /* Bordas arredondadas */
-    max-width: 90%; /* Limitar largura em telas maiores */
+    background-color: var(--white);
+    /* Fundo branco para a seção principal */
+    box-shadow: var(--box-shadow-medium);
+    /* Sombra para a seção */
+    margin: 60px auto 40px;
+    /* Centralizar e adicionar margem */
+    border-radius: 20px;
+    /* Bordas arredondadas */
+    max-width: 90%;
+    /* Limitar largura em telas maiores */
+    border: var(--secondary-color) 5px solid;
 }
 
 .eventos-header h3 {
@@ -220,39 +253,53 @@ p {
 .eventos-grid {
     display: grid;
     /* Alterado para permitir 2 colunas em telas maiores, tornando os cards maiores */
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
-    gap: 30px; /* Espaçamento entre os cards */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    /* Espaçamento entre os cards */
     margin-top: 50px;
 }
 
 /* Wrapper para cada evento (imagem + botão + info) */
 .evento-wrapper {
-    background-color: var(--tertiary-color); /* Fundo amarelo claro para cada evento */
+    background-color: var(--tertiary-color);
+    /* Fundo amarelo claro para cada evento */
     border-radius: 15px;
     box-shadow: var(--box-shadow-light);
-    overflow: hidden; /* Garante que o conteúdo não vaze */
+    overflow: hidden;
+    /* Garante que o conteúdo não vaze */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border: 2px solid var(--secondary-color); /* Borda para os cards de evento */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição para hover */
+    border: 2px solid var(--secondary-color);
+    /* Borda para os cards de evento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transição para hover */
 }
 
 .evento-wrapper:hover {
-    transform: translateY(-8px); /* Efeito de levitar */
-    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
+    transform: translateY(-8px);
+    /* Efeito de levitar */
+    box-shadow: var(--box-shadow-strong);
+    /* Sombra mais forte no hover */
 }
 
 /* Cartaz do Evento (Imagem) */
 .cartazEvento img {
-    width: 100%; /* Ocupa a largura total do wrapper */
-    height: auto; /* Altura automática para manter proporção */
-    max-height: 350px; /* Aumentado para 350px para imagens maiores */
-    object-fit: cover; /* Recorta a imagem para caber sem distorcer */
-    display: block; /* Remove espaço extra abaixo da imagem */
-    border-radius: 15px 15px 0 0; /* Bordas arredondadas apenas no topo */
-    padding-top: 10px;}
+    width: 100%;
+    /* Ocupa a largura total do wrapper */
+    height: auto;
+    /* Altura automática para manter proporção */
+    max-height: 350px;
+    /* Aumentado para 350px para imagens maiores */
+    object-fit: cover;
+    /* Recorta a imagem para caber sem distorcer */
+    display: block;
+    /* Remove espaço extra abaixo da imagem */
+    border-radius: 15px 15px 0 0;
+    /* Bordas arredondadas apenas no topo */
+    padding-top: 10px;
+}
 
 /* Botão "Saiba Mais" */
 .btn-alternar {
@@ -264,10 +311,13 @@ p {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 20px; /* Espaçamento da imagem */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* Espaçamento da imagem */
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow-light);
-    flex-shrink: 0; /* Impede que o botão encolha */
+    flex-shrink: 0;
+    /* Impede que o botão encolha */
 }
 
 .btn-alternar:hover {
@@ -279,18 +329,28 @@ p {
 /* Informações do Evento (Escondido por padrão) */
 .informacoes-evento {
     padding: 30px;
-    text-align: left; /* Alinhar texto à esquerda dentro da caixa de informações */
+    text-align: left;
+    /* Alinhar texto à esquerda dentro da caixa de informações */
     width: 100%;
     box-sizing: border-box;
-    transition: all 0.4s ease-out; /* Transição para o efeito de esconder/mostrar */
-    max-height: 0; /* Começa com altura zero para esconder */
-    overflow: hidden; /* Esconde o conteúdo que transborda */
-    opacity: 0; /* Começa invisível */
-    transform: translateY(-20px); /* Começa um pouco acima */
-    flex-grow: 1; /* Permite que o conteúdo cresça para preencher o espaço */
-    display: flex; /* Para alinhar o botão no final */
-    flex-direction: column; /* Para alinhar o botão no final */
-    justify-content: space-between; /* Para empurrar o botão para o final */
+    transition: all 0.4s ease-out;
+    /* Transição para o efeito de esconder/mostrar */
+    max-height: 0;
+    /* Começa com altura zero para esconder */
+    overflow: hidden;
+    /* Esconde o conteúdo que transborda */
+    opacity: 0;
+    /* Começa invisível */
+    transform: translateY(-20px);
+    /* Começa um pouco acima */
+    flex-grow: 1;
+    /* Permite que o conteúdo cresça para preencher o espaço */
+    display: flex;
+    /* Para alinhar o botão no final */
+    flex-direction: column;
+    /* Para alinhar o botão no final */
+    justify-content: space-between;
+    /* Para empurrar o botão para o final */
 }
 
 .informacoes-evento.escondido {
@@ -302,7 +362,8 @@ p {
 }
 
 .informacoes-evento:not(.escondido) {
-    max-height: 1000px; /* Altura máxima para mostrar o conteúdo (ajuste se necessário) */
+    max-height: 1000px;
+    /* Altura máxima para mostrar o conteúdo (ajuste se necessário) */
     opacity: 1;
     transform: translateY(0);
     padding-top: 30px;
@@ -314,14 +375,16 @@ p {
     font-size: 1.8rem;
     color: var(--primary-color);
     margin-bottom: 15px;
-    text-align: left; /* Alinhar título à esquerda */
+    text-align: left;
+    /* Alinhar título à esquerda */
 }
 
 .informacoes-evento p {
     font-size: 1rem;
     color: var(--neutral-dark);
     margin-bottom: 10px;
-    text-align: left; /* Alinhar parágrafos à esquerda */
+    text-align: left;
+    /* Alinhar parágrafos à esquerda */
 }
 
 .informacoes-evento p strong {
@@ -329,7 +392,8 @@ p {
 }
 
 .informacoes-evento ul {
-    list-style: none; /* Remover marcadores de lista padrão */
+    list-style: none;
+    /* Remover marcadores de lista padrão */
     padding: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -340,11 +404,13 @@ p {
     color: var(--neutral-medium);
     margin-bottom: 8px;
     position: relative;
-    padding-left: 20px; /* Espaço para o ícone */
+    padding-left: 20px;
+    /* Espaço para o ícone */
 }
 
 .informacoes-evento ul li::before {
-    content: '✨'; /* Ícone de estrela para itens de lista */
+    content: '✨';
+    /* Ícone de estrela para itens de lista */
     position: absolute;
     left: 0;
     top: 0;
@@ -365,8 +431,10 @@ p {
     background-color: var(--success-color);
     border: 2px solid var(--success-color);
     color: var(--white);
-    margin-top: 20px; /* Espaçamento do conteúdo acima */
-    align-self: center; /* Centraliza o botão dentro do flex container */
+    margin-top: 20px;
+    /* Espaçamento do conteúdo acima */
+    align-self: center;
+    /* Centraliza o botão dentro do flex container */
 }
 
 .informacoes-evento .btn:hover {
@@ -443,30 +511,40 @@ footer nav ul li a:hover {
     h2 {
         font-size: 2.5rem;
     }
+
     h3 {
         font-size: 1.6rem;
     }
+
     h4 {
         font-size: 1.4rem;
     }
+
     .eventos-grid {
         /* Mantido para tablets, pode exibir 2 ou 1 dependendo do tamanho da tela */
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 25px;
     }
+
     .cartazEvento img {
-        max-height: 280px; /* Ajuste de altura da imagem para tablets */
+        max-height: 280px;
+        /* Ajuste de altura da imagem para tablets */
     }
+
     .btn-alternar {
         font-size: 1rem;
         padding: 10px 20px;
     }
+
     .informacoes-evento h2 {
         font-size: 1.6rem;
     }
-    .informacoes-evento p, .informacoes-evento ul li {
+
+    .informacoes-evento p,
+    .informacoes-evento ul li {
         font-size: 0.95rem;
     }
+
     .informacoes-evento .btn {
         font-size: 0.9rem;
         padding: 10px 18px;
@@ -477,7 +555,7 @@ footer nav ul li a:hover {
     body {
         padding-top: 80px;
     }
-    
+
     /* Menu Hambúrguer em telas pequenas */
     header nav {
         flex-direction: row;
@@ -490,11 +568,13 @@ footer nav ul li a:hover {
     }
 
     header ul {
-        display: none; /* Esconde a lista de navegação */
+        display: none;
+        /* Esconde a lista de navegação */
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 85px; /* Abaixo do header */
+        top: 85px;
+        /* Abaixo do header */
         left: 0;
         background-color: var(--primary-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -520,68 +600,90 @@ footer nav ul li a:hover {
     header ul li a::after {
         bottom: 0;
     }
+
     /* Fim do Menu Hambúrguer */
 
     #eventos {
         margin: 40px 15px;
         padding: 30px 15px;
     }
+
     h2 {
         font-size: 2rem;
         margin-bottom: 25px;
     }
+
     h2::after {
         width: 80px;
         height: 4px;
     }
+
     h3 {
         font-size: 1.4rem;
         margin-top: 30px;
     }
+
     p {
         font-size: 1rem;
     }
+
     .eventos-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas menores */
         gap: 20px;
     }
+
     .evento-wrapper {
-        width: 95%; /* Ocupa mais largura */
-        margin: 0 auto; /* Centraliza */
+        width: 95%;
+        /* Ocupa mais largura */
+        margin: 0 auto;
+        /* Centraliza */
     }
+
     .cartazEvento img {
-        max-height: 250px; /* Ajuste de altura da imagem para celulares */
+        max-height: 250px;
+        /* Ajuste de altura da imagem para celulares */
     }
+
     .informacoes-evento {
         padding: 20px;
     }
+
     .informacoes-evento h2 {
         font-size: 1.4rem;
     }
-    .informacoes-evento p, .informacoes-evento ul li {
+
+    .informacoes-evento p,
+    .informacoes-evento ul li {
         font-size: 0.9rem;
     }
+
     .informacoes-evento .btn {
         font-size: 0.85rem;
         padding: 8px 15px;
     }
+
     footer {
         padding: 2rem 0;
         margin-top: 60px;
     }
+
     footer nav ul {
         flex-direction: column;
         gap: 6px;
         margin-bottom: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         padding-top: 20px;
         gap: 15px;
     }
+
     .social-icons {
         margin-top: 10px;
     }
+
     .social-icons img {
         height: 35px;
     }
@@ -591,31 +693,43 @@ footer nav ul li a:hover {
     body {
         padding-top: 70px;
     }
+
     header .logo {
         height: 55px;
     }
+
     header ul {
-        top: 70px; /* Ajuste de top para o menu expandido em telas muito pequenas */
+        top: 70px;
+        /* Ajuste de top para o menu expandido em telas muito pequenas */
     }
+
     h2 {
         font-size: 1.8rem;
     }
+
     h3 {
         font-size: 1.2rem;
     }
+
     .cartazEvento img {
-        max-height: 220px; /* Ajuste de altura da imagem para celulares pequenos */
+        max-height: 220px;
+        /* Ajuste de altura da imagem para celulares pequenos */
     }
+
     .btn-alternar {
         font-size: 0.9rem;
         padding: 8px 15px;
     }
+
     .informacoes-evento h2 {
         font-size: 1.2rem;
     }
-    .informacoes-evento p, .informacoes-evento ul li {
+
+    .informacoes-evento p,
+    .informacoes-evento ul li {
         font-size: 0.85rem;
     }
+
     .social-icons img {
         height: 30px;
     }

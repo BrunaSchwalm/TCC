@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoção e Apadrinhamento - Miguel - Caramelos do Vale</title>
+    <title>Adoção e Apadrinhamento - Flocos - Caramelos do Vale</title>
     <link rel="stylesheet" href="../CSS/pet-page.css">
     <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
     <!-- Importação da fonte Poppins do Google Fonts -->
@@ -15,6 +15,17 @@
         xintegrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- Importação de Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </head>
 
 <body>
@@ -33,7 +44,7 @@
                 <!-- Menu de Navegação Principal -->
                 <ul id="main-nav">
                     <li><a href="../index.html">Página Inicial</a></li>
-                    <li><a href="./adocao.html" class="active">Adoção</a></li>
+                    <li><a href="./adocao.html" class="active" id="userlocation">Adoção</a></li>
                     <li><a href="../HTML/voluntariado.html">Voluntariado</a></li>
                     <li><a href="../HTML/loja.html">Loja</a></li>
                     <li><a href="../HTML/eventos.html">Eventos</a></li>
@@ -45,9 +56,9 @@
 
     <main>
         <section class="pet-hero">
-            <h1>Miguel</h1>
+            <h1>Flocos</h1>
             <!-- Fotinho redonda do pet adicionada aqui -->
-            <img src="../img/miguel1.jpg" alt="cachorro miguel" class="pet-img">
+            <img src="../img/Flocos1.jpg" alt="cachorro Flocos" class="pet-img">
         </section>
 
         <section class="pet-info-and-buttons">
@@ -55,30 +66,29 @@
                 <div class="general-info">
                     <p><b>Porte:</b> M</p>
                     <p><b>Sexo:</b> Macho</p>
-                    <p><b>Idade aproximada:</b> 1 ano</p>
+                    <p><b>Idade aproximada:</b> 4 anos</p>
                     <p><b>Situação atual:</b></p>
                     <div class="situation-buttons">
                         <p class="button-pet-info">Castrado</p>
                         <p class="button-pet-info">Vacinado</p>
                         <p class="button-pet-info">Vermifugado</p>
                         <p class="button-pet-info">Hospedado</p>
-                        <p class="button-pet-info">Apadrinhado</p>
                     </div>
                 </div>
 
                 <div class="pet-description">
                     <p><b>Um pouquinho sobre mim:</b></p>
                     <p>
-                        <span>Miguel é pura energia e alegria, e está pronto para conquistar seu novo lar! 🐾💛</span>
-                        <span>Esse mix de border collie é fofo e adora brincar. Adestrado, ele é ideal para quem busca um amigo ativo e inteligente! 🐶</span>
-                        <span>✨️ Quer dar um lar para o Miguel? Manda uma mensagem!</span>
+                        <span>Flocos é o cãozinho ideal para qualquer lar, seja casa ou apartamento! 🐾💛</span>
+                        <span>Esse doce porte médio se dá bem com outros pets. Dócil e tranquilo, ele está à espera de uma família amorosa para chamar de sua. 🐶</span>
+                        <span>✨️ Interessado em adotar o Flocos ou ser lar temporário? Manda uma mensagem!</span>
                     </p>
                 </div>
             </div>
 
             <div class="main-action-buttons">
                 <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o(a)%20Miguel%20para%20ado%C3%A7%C3%A3o!" class="button-primary" target="_blank">Mandar mensagem</a>
-                <a href="URL_DO_SEU_APOIASE" class="button-primary" target="_blank">Seja padrinho no Apoia-se</a>
+                <a href="https://apoia.se/caramelosdovale" class="button-primary">Seja padrinho no Apoia-se</a>
             </div>
         </section>
 
@@ -87,17 +97,30 @@
             <div id="petCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/miguel1.jpg" class="d-block w-100 carousel-img-custom" alt="Miguel 1">
+                        <img src="../img/Flocos1.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/miguel2.jpg" class="d-block w-100 carousel-img-custom" alt="Miguel 2">
+                        <img src="../img/Flocos5.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 2">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/miguel3.jpg" class="d-block w-100 carousel-img-custom" alt="Miguel 3">
+                        <img src="../img/Flocos7.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 3">
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/miguel4.jpg" class="d-block w-100 carousel-img-custom" alt="Miguel 4">
+                        <img src="../img/Flocos9.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 4">
                     </div>
+                    <div class="carousel-item">
+                        <img src="../img/Flocos10.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/Flocos12.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/Flocos13.jpg" class="d-block w-100 carousel-img-custom" alt="Flocos 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/flocos14.png" class="d-block w-100 carousel-img-custom" alt="Flocos 8">
+                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#petCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -113,6 +136,10 @@
                     <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#petCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
                 </div>
             </div>
         </section>

@@ -9,165 +9,200 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
     <link rel="stylesheet" href="../CSS/lojastyle.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </head>
-<div>
 
-
-</div>
-
-<header>
-    <div class="container">
-        <nav>
-            <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png" alt="Logo Associação Caramelos do Vale"
-                    class="logo"></a>
-            <ul>
-                <li><a href="../index.html">Página Inicial</a></li>
-                <li><a href="./adocao.html">Adoção</a></li>
-                <li><a href="voluntariado.html">Voluntariado</a></li>
-                <li><a href="loja.html" class="active" id="userlocation">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<br><br><br><br>
+<body>
 
 
 
 
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Logo da Associação Caramelos do Vale -->
+                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png"
+                        alt="Logo Associação Caramelos do Vale" class="logo"></a>
 
-<section id="loja" class="section-padding">
-    <div class="container">
-        <h2 class="section-title">Lojinha dos Caramelos</h2>
+                <!-- Botão do Menu Hambúrguer (visível apenas em telas pequenas) -->
+                <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-    </div>
-</section>
 
-<hr>
-<main class="product-container">
-    <div class="product-card">
-        <img src="/img/Loja14.jpg" alt="Imagem do Produto 1">
-        <div class="product-info">
-            <h2>Bottom - Lobo/Loba</h2>
-            <p class="price">R$3,50</p>
-            <p class="description">Dois bottoms lindos do Lobo e da Loba, de ótima qualidade.</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                <!-- Menu de Navegação Principal -->
+                <ul id="main-nav">
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a href="./adocao.html">Adoção</a></li>
+                    <li><a href="voluntariado.html">Voluntariado</a></li>
+                    <li><a href="loja.html" class="active" id="userlocation">Loja</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html"> Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    <br><br><br><br>
 
-    <div class="product-card">
-        <img src="/img/Loja1.png" alt="Imagem do Produto 2">
-        <div class="product-info">
-            <h2>Camiseta branca - Anatomia</h2>
-            <p class="price">R$48,00</p>
-            <p class="description">Camiseta mostrando a anatomia de um vira-lata.</p>
-            <p class="material">malha de poliéster ★</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
 
-    <div class="product-card">
-        <img src="/img/Loja10.jpg" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Chaveiro - Caramelos do Vale</h2>
-            <p class="price">R$8,00</p>
-            <p class="description">Decorativo perfeito para um dono de pet!</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+
+
+
+    <section id="loja" class="section-padding">
+        <div class="container">
+            <div class="loja-header"></div>
+            <h2>Lojinha dos Caramelos</h2>
         </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja19.jpg" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Ecobag - Que a vida te trate</h2>
-            <p class="price">R$40,00</p>
-            <p class="description">Ecobag estilizada e boa para o meio-ambiente</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
         </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja5.png" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Camiseta branca - Lobo</h2>
-            <p class="price">R$ 75,00</p>
-            <p class="description">Perfeito para presentear ou para você mesmo! Qualidade garantida.</p>
-            <p class="material">malha de poliéster ★</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja6.png" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Camiseta Pelo de Cachorro</h2>
-            <p class="price">R$ 75,00</p>
-            <p class="description">Camiseta minimalista e comfortável.</p>
-            <p class="material">malha de algodão ★</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja7.png" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Camiseta preta - Não posso</h2>
-            <p class="price">R$62,00</p>
-            <p class="description">Camiseta minimalista e comfortável.</p>
-            <p class="material">malha de algodão ★</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja8.png" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Camiseta preta - Significado</h2>
-            <p class="price">R$62,00</p>
-            <p class="description">Camiseta minimalista e comfortável.</p>
-            <p class="material">malha de algodão ★</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="/img/Loja9.jpg" alt="Imagem do Produto 3">
-        <div class="product-info">
-            <h2>Imã - Perdoar</h2>
-            <p class="price">R$4,00</p>
-            <p class="description">Um imã caracterizado para sua geladeira</p>
-            <a href="contato.html"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
-        </div>
-    </div>
-</main>
-<footer>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="sobrenos.html">Sobre Nós</a></li>
-                <li><a href="adocao.html">Adoção e Apadrinhamento</a></li>
-                <li><a href="comoajudar.html">Como Ajudar</a></li>
-                <li><a href="voluntariado.html">Voluntariado</a></li>
-                <li><a href="loja.html">Loja</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="footer-bottom">
-            <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
-            <p style="color: white;font-weight: bold;">Todos os direitos reservados a Associação Caramelos do Vale &copy;</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
-                        src="../img/tiktoklogo.png.png" alt="Logo Instagram"></a>
-                <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"></a><img src="../img/insta-logo.png"
-                    alt="Logo TikTok"></a>
+
+
+
+        <main class="product-container">
+            <div class="product-card">
+                <img src="/img/Loja14.jpg" alt="Imagem do Produto 1">
+                <div class="product-info">
+                    <h2>Bottom - Lobo/Loba</h2>
+                    <p class="price">R$3,50</p>
+                    <p class="description">Dois bottoms lindos do Lobo e da Loba, de ótima qualidade.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="/img/Loja1.png" alt="Imagem do Produto 2">
+                <div class="product-info">
+                    <h2>Camiseta branca - Anatomia</h2>
+                    <p class="price">R$48,00</p>
+                    <p class="description">Camiseta mostrando a anatomia de um vira-lata.</p>
+                    <p class="material">malha de poliéster ★</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="/img/Loja10.jpg" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Chaveiro - Caramelos do Vale</h2>
+                    <p class="price">R$8,00</p>
+                    <p class="description">Decorativo perfeito para um dono de pet!</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja19.jpg" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Ecobag - Que a vida te trate</h2>
+                    <p class="price">R$40,00</p>
+                    <p class="description">Ecobag estilizada e boa para o meio-ambiente</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja5.png" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Camiseta branca - Lobo</h2>
+                    <p class="price">R$ 75,00</p>
+                    <p class="description">Perfeito para presentear ou para você mesmo! Qualidade garantida.</p>
+                    <p class="material">malha de poliéster ★</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja6.png" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Camiseta Pelo de Cachorro</h2>
+                    <p class="price">R$ 75,00</p>
+                    <p class="description">Camiseta minimalista e comfortável.</p>
+                    <p class="material">malha de algodão ★</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja7.png" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Camiseta preta - Não posso</h2>
+                    <p class="price">R$62,00</p>
+                    <p class="description">Camiseta minimalista e comfortável.</p>
+                    <p class="material">malha de algodão ★</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja8.png" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Camiseta preta - Significado</h2>
+                    <p class="price">R$62,00</p>
+                    <p class="description">Camiseta minimalista e comfortável.</p>
+                    <p class="material">malha de algodão ★</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="/img/Loja9.jpg" alt="Imagem do Produto 3">
+                <div class="product-info">
+                    <h2>Imã - Perdoar</h2>
+                    <p class="price">R$4,00</p>
+                    <p class="description">Um imã caracterizado para sua geladeira</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                        target="_blank"><button class="btn btn-primary">Encomende pelo Whatsapp 🡺</button></a>
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="adocao.html">Adoção e Apadrinhamento</a></li>
+                    <li><a href="comoajudar.html">Como Ajudar</a></li>
+                    <li><a href="voluntariado.html">Voluntariado</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-bottom">
+                <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
+                <p style="color: white;font-weight: bold;">Todos os direitos reservados a Associação Caramelos do Vale
+                    &copy;</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
+                            src="../img/tiktoklogo.png.png" alt="Logo Instagram"></a>
+                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"></a><img
+                        src="../img/insta-logo.png" alt="Logo TikTok"></a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

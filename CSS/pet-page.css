@@ -10,7 +10,7 @@
     --white: #ffffff; /* Branco */
     --black: #000000; /* Preto */
     --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
-    --success-color: #28a745; /* Verde para botões de ação (ex: WhatsApp) */
+    --success-color: #28a745; /* Verde para botões de ação */
     --success-hover: #218838; /* Verde mais escuro no hover */
     --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
     --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
@@ -34,7 +34,7 @@ body {
     overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-/* Container Central (para o conteúdo principal) */
+/* Container Central */
 .container {
     max-width: 1200px; /* Aumentar um pouco a largura máxima */
     margin: 0 auto;
@@ -128,14 +128,78 @@ header ul li a:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-/* Linha fixa para a aba ativa */
-header ul li a.active::after {
-    transform: translateX(-50%) scaleX(1);
-}
-
 header ul li a:hover {
     color: var(--secondary-color);
 }
+
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+#userlocation { /* Mantido para sobrescrever a cor do texto da aba ativa */
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* --- FIM DOS ESTILOS DO HEADER --- */
+
+
+/* Títulos e Parágrafos (Estilos reutilizados das outras páginas) */
+h2, h3, h4 {
+    color: var(--neutral-dark);
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 35px;
+    position: relative;
+    color: var(--primary-color);
+    padding-top: 20px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 40px;
+    color: var(--neutral-dark);
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--neutral-medium);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* --- FIM DOS ESTILOS DO HEADER --- */
 
