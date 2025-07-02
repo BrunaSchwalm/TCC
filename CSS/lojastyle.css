@@ -219,17 +219,19 @@ body {
 
 
 #loja {
+    
     padding: 60px 0;
     background-color: var(--white);
     /* Fundo branco para a seção principal */
     box-shadow: var(--box-shadow-medium);
     /* Sombra para a seção */
-    margin: -10px auto 40px;
+    margin: 10px auto 40px;
     /* Centralizar e adicionar margem */
     border-radius: 20px;
     /* Bordas arredondadas */
-    max-width: 90%;
+    max-width: 87%;
     /* Limitar largura em telas maiores */
+  padding-bottom: 20px;
     border: var(--secondary-color) 5px solid;
 }
 
@@ -237,8 +239,23 @@ body {
     font-size: 1.8rem;
     color: var(--neutral-dark);
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    position: relative; /* Essencial para posicionar o pseudo-elemento */
+  padding-bottom: 15px; /* Espaço para a linha */
 }
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+
 
 .section-title {
     font-size: 2em;
@@ -250,7 +267,7 @@ body {
 }
 
 .product-container {
-    box-shadow: var(--secondary-color) 3px 0px 20px 2px;
+    /* box-shadow: var(--secondary-color) 3px 0px 20px 2px; */
     display: flex;
     /* Permite que os cards fiquem um ao lado do outro */
     flex-wrap: wrap;
@@ -266,6 +283,7 @@ body {
     /* Centraliza o contêiner na página */
     background-color: var(--tertiary-color);
     border-radius: 25px;
+    
 }
 
 /* Card de Produto Individual */
@@ -279,6 +297,7 @@ body {
     /* Largura fixa para cada card */
     display: flex;
     flex-direction: column;
+ margin-left: 50px;
     /* Coloca a imagem em cima e as infos embaixo */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Efeito de hover */
@@ -311,12 +330,12 @@ body {
     /* Espaçamento entre os elementos do info */
 }
 
-.product-info h2 {
-    font-size: 1.4em;
-    margin-top: 0;
+.product-info h3 {
+    font-size: 1.2em;
+    margin-top: 2px;
     margin-bottom: 10px;
     color: #0056b3;
-    /* Cor para o título do produto */
+    /* Cor para o título do  produto */
 }
 
 .product-info .price {

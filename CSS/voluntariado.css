@@ -275,7 +275,7 @@ p {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow-light);
-    background-color: var(--success-color);
+    background-color: whitesmoke    ;
     border: 2px solid var(--success-color);
     color: var(--white);
     margin-top: auto;
@@ -291,6 +291,7 @@ p {
 .btn i {
     margin-right: 8px;
     font-size: 1.2rem;
+    color: rgb(231, 227, 227);
 }
 
 /* Seção de Dúvidas/Contato (Estilo semelhante ao contact-us-message) */

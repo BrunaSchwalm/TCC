@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voluntariado - Associação Caramelos do Vale</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/voluntariado.css">
-    <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="icon" type="png" href="/.https://example.com/my-favicon/favicon.ico /my-favicon/favicon-96x96.png"
+        sizes="96x96" />
+    <link rel="icon" type="svg" href="/.https://example.com/my-favicon/favicon.ico /my-favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/.https://example.com/my-favicon/favicon.ico /my-favicon/favicon.ico" />
+    
     <!-- Importação da fonte Poppins do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Importação de Font Awesome para ícones (WhatsApp, Instagram, Email, e o ícone do menu) -->
+    <!-- Importação de Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
@@ -28,98 +34,108 @@
 </head>
 
 <body>
-    
     <header>
         <div class="container">
-            <nav>
-                <!-- Logo da Associação Caramelos do Vale -->
-                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png"
-                    alt="Logo Associação Caramelos do Vale" class="logo"></a>
-                    
-                    <!-- Botão do Menu Hambúrguer (visível apenas em telas pequenas) -->
-                    <button class="menu-toggle" aria-label="Abrir menu de navegação">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    
-                    <!-- Menu de Navegação Principal -->
-                    <ul id="main-nav">
-                        <li><a href="../index.html">Página Inicial</a></li>
-                        <li><a href="./adocao.html">Adoção</a></li>
-                        <li><a href="voluntariado.html" class="active" id="userlocation">Voluntariado</a></li>
-                        <li><a href="loja.html">Loja</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </nav>
+            <nav class="main-nav">
+                <!-- Logo -->
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/logo-caramelos-do-vale.png" alt="Logo Associação Caramelos do Vale" class="logo">
+                </a>
+
+                <!-- Botão do Menu Hambúrguer -->
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Menu de Navegação Principal -->
+                <ul id="main-nav">
+                    <li><a href="../index.html">Página Inicial</a></li>
+                    <li><a href="./adocao.html">Adoção</a></li>
+                    <li><a href="voluntariado.html" class="active" id="userlocation">Voluntariado</a></li>
+                    <li><a href="loja.html">Loja</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+
+        <section id="voluntariado" class="section-padding background-light">
+
+            <div class="container">
+                <h2>Seja um Voluntário: Transforme Vidas!</h2>
+                <br>
+                <p>Você ama animais e quer ajudar de alguma forma? Junte-se à Associação Caramelos do Vale e faça a
+                    diferença na vida dos nossos aumigos!</p>
+
+                <h3>Como você pode ajudar:</h3>
+
+                <div class="volunteer-options">
+                    <div class="volunteer-item">
+                        <h4>Transporte de Animais</h4>
+                        <br>
+                        <p>Ajude a transportar nossos aumigos para lares temporários, o sítio ou a clínica veterinária.
+                            Sua ajuda é essencial para garantir que eles recebam os cuidados necessários.</p>
+                        <a href="https://amandasilveira.limesurvey.net/512578" target="_blank" class="btn"  style="color: #ffffff; background-color: #1e95b3;"><i
+                                    class="fas fa-car"></i> Quero ser
+                                motorista voluntário</a>
+                    </div>
+
+                    <div class="volunteer-item">
+                        <h4>Participação e Doação para Cafés</h4>
+                        <br>
+                        <p>Doe lanchinhos deliciosos e ajude na venda dos nossos cafés no campus e em eventos externos.
+                            A arrecadação com os cafés é um recurso vital para a nossa causa!</p>
+                        <a href="https://amandasilveira.limesurvey.net/512578" target="_blank" class="btn" style="color: #ffffff;  background-color: #1e95b3;" ><i
+                                    class="fas fa-coffee"></i> Quero ajudar nos
+                                cafés</a>
+                    </div>
+
+                    <div class="volunteer-item">
+                        <h4>Lar Temporário</h4>
+                        <br>
+                        <br>
+                        <p>Que tal abrir um espacinho no seu lar para um dos nossos aumigos? Ofereça um lar temporário e
+                            ajude um animal a se preparar para encontrar sua família permanente.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSMe661hJb0e4IzO7U-Xp-cN7bgngpna8lLutbdKjt6onCQA/viewform?pli=1"
+                                target="_blank" class="btn" style="color: #ffffff; background-color: #1e95b3;"><i class="fas fa-home"></i> Oferecer
+                                lar temporário</a>
+                    </div>
+
+                    <div class="volunteer-item">
+                        <h4>Parcerias</h4>
+                        <br>
+                        <p>Se você ou sua empresa desejam contribuir para a nossa causa, existem diversas formas de
+                            parcerias:</p>
+                        <ul>
+                            <li>Atendimento veterinário;</li>
+                            <li>Destinar uma porcentagem das vendas de produtos a favor da Caramelos do Vale;</li>
+                            <li>Eventos e campanhas conjuntas;</li>
+                            <li>Doação de produtos da empresa.</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+realizar+uma+parceria+da+minha+empresa+com+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                                target="_blank" class="btn" style="color: #ffffff; background-color: #1e95b3;" ><i class="fab fa-whatsapp"></i> Propor uma
+                                parceria</a>
+                    </div>
+                </div>
+
+                <div class="question-contact">
+                    <h3>Ficou com alguma dúvida ou tem outra ideia de como ajudar?</h3>
+                    <p>Entre em contato conosco, adoraríamos conversar!</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0"
+                            target="_blank" class="btn" ><i class="fab fa-whatsapp"></i> Fale com a gente por
+                            WhatsApp</a>
+                </div>
             </div>
-        </header>
-        
-        <main>
-            
-            
-            <section id="voluntariado" class="section-padding background-light">
-                
-                <div class="container">
-                        <h2>Seja um Voluntário: Transforme Vidas!</h2>
-                        <p>Você ama animais e quer ajudar de alguma forma? Junte-se à Associação Caramelos do Vale e faça a
-                            diferença na vida dos nossos aumigos!</p>
-                            
-                            <h3>Como você pode ajudar:</h3>
-                            
-                            <div class="volunteer-options">
-                                <div class="volunteer-item">
-                                    <h4>Transporte de Animais</h4>
-                                    <p>Ajude a transportar nossos aumigos para lares temporários, o sítio ou a clínica veterinária.
-                                        Sua ajuda é essencial para garantir que eles recebam os cuidados necessários.</p>
-                                        <p><a href="https://amandasilveira.limesurvey.net/512578"  target="_blank" class="btn"><i class="fas fa-car"></i> Quero ser
-                                            motorista voluntário</a></p>
-                                        </div>
-                                        
-                                        <div class="volunteer-item">
-                                            <h4>Participação e Doação para Cafés</h4>
-                                            <p>Doe lanchinhos deliciosos e ajude na venda dos nossos cafés no campus e em eventos externos.
-                                                A arrecadação com os cafés é um recurso vital para a nossa causa!</p>
-                                                <p><a href="https://amandasilveira.limesurvey.net/512578" target="_blank" class="btn"><i class="fas fa-coffee"></i> Quero ajudar nos
-                                                    cafés</a></p>
-                                                </div>
-                                                
-                                                <div class="volunteer-item">
-                                                    <h4>Lar Temporário</h4>
-                                                    <p>Que tal abrir um espacinho no seu lar para um dos nossos aumigos? Ofereça um lar temporário e
-                                                        ajude um animal a se preparar para encontrar sua família permanente.</p>
-                                                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfSMe661hJb0e4IzO7U-Xp-cN7bgngpna8lLutbdKjt6onCQA/viewform?pli=1" target="_blank"  class="btn"><i class="fas fa-home"></i> Oferecer
-                                                            lar temporário</a></p>
-                                                        </div>
-                                                        
-                                                        <div class="volunteer-item">
-                                                            <h4>Parcerias</h4>
-                                                    <p>Se você ou sua empresa desejam contribuir para a nossa causa, existem diversas formas de
-                                                        parcerias:</p>
-                                                        <ul>
-                                                            <li>Atendimento veterinário;</li>
-                                                            <li>Destinar uma porcentagem das vendas de produtos a favor da Caramelos do Vale;</li>
-                                                            <li>Eventos e campanhas conjuntas;</li>
-                                                            <li>Doação de produtos da empresa.</li>
-                                                        </ul>
-                                                        <p><a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+realizar+uma+parceria+da+minha+empresa+com+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0" target="_blank"  class="btn"><i class="fab fa-whatsapp"></i> Propor uma
-                                                            parceria</a></p>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="question-contact">
-                                                        <h3>Ficou com alguma dúvida ou tem outra ideia de como ajudar?</h3>
-                                                        <p>Entre em contato conosco, adoraríamos conversar!</p>
-                                                        <p><a href="https://api.whatsapp.com/send/?phone=5551991084114&text=Ol%C3%A1%2C+gostaria+de+tirar+uma+d%C3%BAvida+sobre+a+Associa%C3%A7%C3%A3o+Caramelos+do+Vale&type=phone_number&app_absent=0" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Fale com a gente por
-                                                            WhatsApp</a></p>
-                                                        </div>
-                                                    </div>
-                                                </section>
-                                            </main>
-                                        </div>
-                                    
-        
+        </section>
+    </main>
+    
+    
     <footer>
         <div class="container">
+        </div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Página Inicial</a></li>
@@ -133,19 +149,20 @@
                 </ul>
             </nav>
             <div class="footer-bottom">
-                
+
                 <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
-                <p style="color: white;font-weight: bold;">Todos os direitos reservados a Associação Caramelos do Vale &copy;</p>
+                <p style="color: white;font-weight: bold;">&copy;Todos os direitos reservados a Associação Caramelos do Vale
+                    </p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
-                        src="../img/insta-logo.png" alt="Logo Instagram"></a>
-                        <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"><img
+                            src="../img/insta-logo.png" alt="Logo Instagram"></a>
+                    <a href="https://www.tiktok.com/@caramelosdovale" target="_blank"><img
                             src="../img/tiktoklogo.png.png" alt="Logo TikTok"></a>
-                        </div>
-                    </div>
-                </footer>
-                
-                <script>
+                </div>
+            </div>
+    </footer>
+
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const mainNav = document.getElementById('main-nav');

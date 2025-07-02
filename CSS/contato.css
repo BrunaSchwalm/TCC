@@ -1,23 +1,23 @@
 /* Paleta de Cores */
 :root {
-    --primary-color: #1e95b3; /* Azul principal */
-    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
-    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
-    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f8f8f8; /* Fundo claro */
-    --white: #ffffff; /* Branco */
-    --black: #000000; /* Preto */
-    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
-    --success-color: #28a745; /* Verde para sucesso (WhatsApp) */
-    --success-hover: #218838; /* Verde mais escuro no hover */
-    --instagram-gradient-start: #fd5949; /* Início do degradê do Instagram (mais vibrante) */
-    --instagram-gradient-middle: #d62976; /* Meio do degradê do Instagram */
-    --instagram-gradient-end: #962fbf; /* Fim do degradê do Instagram */
-    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
-    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
-    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --primary-color: #1e95b3;
+    --secondary-color: #eab74a;
+    --tertiary-color: #ffe6af;
+    --accent-color: #c2f2ff;
+    --neutral-dark: #333;
+    --neutral-medium: #666;
+    --neutral-light: #f8f8f8;
+    --white: #ffffff;
+    --black: #000000;
+    --darker-primary-color: #1a7a91;
+    --success-color: #28a745;
+    --success-hover: #218838;
+    --instagram-gradient-start: #fd5949;
+    --instagram-gradient-middle: #d62976;
+    --instagram-gradient-end: #962fbf;
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Reset Básico */
@@ -27,21 +27,20 @@
     box-sizing: border-box;
 }
 
-/* Estilos Globais do Corpo */
+/* Estilos Globais */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    line-height: 1.7; /* Melhorar legibilidade */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
     color: var(--neutral-dark);
     background-color: var(--neutral-light);
-    padding-top: 90px; /* Espaçamento para o header fixo */
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    padding-top: 90px;
+    overflow-x: hidden;
 }
 
-/* Container Central */
 .container {
-    max-width: 1200px; /* Aumentar um pouco a largura máxima */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 25px; /* Mais padding lateral */
+    padding: 0 25px;
 }
 
 /* Cabeçalho */
@@ -49,7 +48,7 @@ header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra mais visível */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     height: 100px;
@@ -66,7 +65,7 @@ header nav {
 }
 
 header .logo {
-    height: 65px; /* Logo um pouco maior */
+    height: 65px;
     width: 130px;
     transition: transform 0.3s ease;
 }
@@ -75,7 +74,6 @@ header .logo:hover {
     transform: scale(1.08);
 }
 
-/* Esconde o botão do menu hambúrguer por padrão em telas grandes */
 .menu-toggle {
     display: none;
     background: none;
@@ -98,7 +96,7 @@ header ul {
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 0.3s ease-in-out; /* Transição para abertura/fechamento */
+    transition: all 0.3s ease-in-out;
 }
 
 header ul li {
@@ -137,19 +135,16 @@ header ul li a:hover {
     color: var(--secondary-color);
 }
 
-/* Linha fixa para a aba ativa */
 header ul li a.active::after {
     transform: translateX(-50%) scaleX(1);
 }
-#userlocation { /* Mantido para sobrescrever a cor do texto da aba ativa */
+
+#userlocation {
     color: var(--secondary-color);
     font-weight: bold;
 }
 
-/* --- FIM DOS ESTILOS DO HEADER --- */
-
-
-/* Títulos e Parágrafos (Estilos reutilizados das outras páginas) */
+/* Títulos */
 h2, h3, h4 {
     color: var(--neutral-dark);
     margin-bottom: 20px;
@@ -168,7 +163,7 @@ h2 {
 h2::after {
     content: '';
     position: absolute;
-    bottom: -15px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
@@ -181,6 +176,7 @@ h3 {
     font-size: 2rem;
     margin-top: 40px;
     color: var(--neutral-dark);
+    gap: 1rem;
 }
 
 p {
@@ -193,58 +189,57 @@ p {
 /* Seção de Contato */
 #contato {
     background-color: var(--white);
-    margin: 60px auto 40px; /* Centralizar e adicionar margem */
-    border-radius: 20px; /* Bordas mais arredondadas */
-    padding: 50px; /* Mais preenchimento interno */
-    box-shadow: var(--box-shadow-medium); /* Sombra mais pronunciada */
+    margin: 60px auto 40px;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: var(--box-shadow-medium);
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 90%; /* Limitar largura em telas maiores */
+    max-width: 90%;
+    border: solid 5px  var(--secondary-color);
 }
 
-/* Grupo de Botões de Contato */
+/* Botões de Contato */
 .btn-group {
     display: flex;
-    flex-direction: row; /* Botões lado a lado */
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas menores */
-    justify-content: center; /* Centraliza os botões */
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: 40px;
-    width: 100%; /* Ocupa a largura total disponível */
-    max-width: 900px; /* Aumentar a largura máxima do grupo para permitir botões mais compridos */
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto 0;
+    width: 100%;
+    max-width: 9000px;
+
 }
 
 .btn-group a, a.email {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 30px; /* Mais padding para os botões */
-    border-radius: 35px; /* Bordas bem arredondadas */
+    padding: 18px 30px;
+    border-radius: 35px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem; /* Fonte maior nos botões */
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow-light);
-    color: var(--white); /* Cor do texto dos botões */
-    flex: 1; /* Permite que os botões cresçam e ocupem o espaço disponível igualmente */
-    min-width: 250px; /* Garante que os botões não fiquem muito pequenos */
+    color: var(--white);
+    min-width: 250px;
 }
 
 .btn-group a i, a.email i {
-    margin-right: 10px; /* Espaçamento entre ícone e texto */
-    font-size: 1.4rem; /* Tamanho do ícone */
+    margin-right: 10px;
+    font-size: 1.4rem;
 }
 
 .btn-group a:hover, a.email:hover {
-    transform: translateY(-5px); /* Efeito de levitar mais visível */
-    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-strong);
 }
 
-
-
-a.btn1 { /* WhatsApp */
+/* WhatsApp */
+a.btn1 {
     background-color: var(--success-color);
     border: 2px solid var(--success-color);
 }
@@ -254,7 +249,8 @@ a.btn1:hover {
     border-color: var(--success-hover);
 }
 
-a.btn2 { /* Instagram */
+/* Instagram */
+a.btn2 {
     background-image: linear-gradient(to right top, var(--instagram-gradient-start), var(--instagram-gradient-middle), var(--instagram-gradient-end));
     border: 2px solid transparent;
 }
@@ -263,13 +259,13 @@ a.btn2:hover {
     background-image: linear-gradient(to left bottom, var(--instagram-gradient-end), var(--instagram-gradient-middle), var(--instagram-gradient-start));
 }
 
+/* Email */
 a.email {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
-    /* Ajustado para centralizar o botão de email */
-    margin: 30px auto 0 auto; /* Top, Horizontalmente centralizado, Bottom, Horizontalmente centralizado */
-    width: 100%; /* Ocupa a largura total para o botão de email */
-    max-width: 450px; /* Limitar largura para o botão de email */
+    margin: 30px auto;
+    width: 100%;
+    max-width: 450px;
 }
 
 a.email:hover {
@@ -278,17 +274,17 @@ a.email:hover {
 }
 
 #subtitulo {
-    margin-top: 60px; /* Espaçamento antes do "Fale com a gente por Email!" */
-    font-size: 1.8rem; /* Ajustar tamanho */
-    color: var(--primary-color); /* Cor do subtítulo */
+    margin-top: 60px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
 }
 
-/* Estilos para a mensagem de contato com os cães */
+/* Mensagem com os cães */
 .contact-us-message {
     background-color: var(--accent-color);
     padding: 50px;
     border-radius: 15px;
-    margin-top: 80px; /* Mais espaçamento */
+    margin-top: 80px;
     box-shadow: var(--box-shadow-medium);
     display: flex;
     flex-direction: column;
@@ -300,7 +296,7 @@ a.email:hover {
 }
 
 .contact-us-message::before {
-    content: '🐾'; /* Icone de patinha */
+    content: '🐾';
     position: absolute;
     top: 20px;
     left: 20px;
@@ -311,7 +307,7 @@ a.email:hover {
 }
 
 .contact-us-message::after {
-    content: '🐶'; /* Icone de cachorro */
+    content: '🐶';
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -326,13 +322,13 @@ a.email:hover {
     font-size: 2.2rem;
     color: var(--primary-color);
     position: relative;
-    z-index: 1; /* Garantir que o texto fique acima dos ícones decorativos */
+    z-index: 1;
 }
 
 .contact-images {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Espaçamento maior entre os cards */
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 20px;
     width: 100%;
@@ -340,7 +336,7 @@ a.email:hover {
 
 .dog-contact-card {
     background-color: var(--white);
-    padding: 30px; /* Mais padding */
+    padding: 30px;
     border-radius: 15px;
     box-shadow: var(--box-shadow-light);
     display: flex;
@@ -349,24 +345,23 @@ a.email:hover {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid var(--secondary-color);
-    /* Removido width fixo e adicionado flex-basis para melhor responsividade */
-    flex: 1 1 260px; /* Cresce, encolhe, e tem base de 260px */
-    max-width: 300px; /* Limita a largura máxima para não ficarem muito grandes */
+    flex: 1 1 260px;
+    max-width: 300px;
 }
 
 .dog-contact-card:hover {
-    transform: translateY(-10px); /* Efeito de levitar mais pronunciado */
-    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-strong);
 }
 
 .dog-contact-card img {
-    max-width: 160px; /* Imagem ligeiramente menor para melhor encaixe */
-    height: 160px; /* Altura fixa */
+    max-width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 25px;
-    border: 6px solid var(--secondary-color); /* Borda com a cor secundária */
-    box-shadow: 0 0 0 4px var(--primary-color), 0 0 15px rgba(0, 0, 0, 0.1); /* Anel externo e sombra */
+    border: 6px solid var(--secondary-color);
+    box-shadow: 0 0 0 4px var(--primary-color), 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .dog-contact-card p {
@@ -376,7 +371,7 @@ a.email:hover {
     line-height: 1.5;
 }
 
-/* Rodapé (Estilos reutilizados das outras páginas) */
+/* Rodapé */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -439,7 +434,6 @@ footer nav ul li a:hover {
 
 /* Responsividade */
 @media (max-width: 992px) {
-    
     h2 {
         font-size: 2.5rem;
     }
@@ -447,62 +441,42 @@ footer nav ul li a:hover {
         font-size: 1.6rem;
     }
     .btn-group {
-        max-width: 90%; /* Ajustado para ocupar mais espaço em tablets */
-        margin-left: auto; /* Centraliza o grupo de botões */
-        margin-right: auto;
+        max-width: 90%;
     }
     .btn-group a {
-        flex: 1 1 45%; /* Permite que dois botões fiquem lado a lado em telas maiores de tablet */
-        min-width: unset; /* Remove min-width fixo */
+        flex: 1 1 45%;
         font-size: 1.1rem;
         padding: 15px 25px;
     }
-    a.email {
-        max-width: 100%; /* Ocupa a largura total em tablets */
-        /* Removido margin-left e margin-right das media queries, pois já está no estilo base */
-        /* margin-left: auto; */
-        /* margin-right: auto; */
-    }
     .contact-images {
-        gap: 20px; /* Reduzido o espaçamento entre os cards de cães */
+        gap: 20px;
     }
     .dog-contact-card {
-        flex: 1 1 200px; /* Ajuste para permitir 2 cards por linha em telas maiores de tablet */
-        max-width: 280px; /* Limita a largura máxima do card */
+        flex: 1 1 200px;
+        max-width: 280px;
         padding: 25px;
     }
     .dog-contact-card img {
-        max-width: 120px; /* Ajuste para telas menores */
+        max-width: 120px;
         height: 120px;
-    }
-    .dog-contact-card p {
-        font-size: 1rem;
     }
 }
 
 @media (max-width: 768px) {
     body {
         padding-top: 80px;
-        /* Removido align-items: center; aqui para não interferir com o layout */
     }
     
-    /* Menu Hambúrguer em telas pequenas */
-    header nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
     .menu-toggle {
         display: block;
     }
 
     header ul {
-        display: none; /* Esconde a lista de navegação */
+        display: none;
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 85px; /* Abaixo do header */
+        top: 85px;
         left: 0;
         background-color: var(--primary-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -525,45 +499,28 @@ footer nav ul li a:hover {
         border-radius: 0;
     }
 
-    header ul li a::after {
-        bottom: 0;
-    }
-    /* Fim do Menu Hambúrguer */
-
     #contato {
         margin: 40px 15px;
         padding: 30px;
     }
     h2 {
         font-size: 2rem;
-        margin-bottom: 25px;
-    }
-    h2::after {
-        width: 80px;
-        height: 4px;
     }
     h3 {
         font-size: 1.4rem;
-        margin-top: 30px;
     }
     p {
         font-size: 1rem;
     }
     .btn-group {
-        flex-direction: column; /* Voltar a empilhar em telas pequenas */
-        max-width: 90%; /* Ocupa mais largura */
+        flex-direction: column;
+        max-width: 90%;
         gap: 15px;
-        margin-left: auto; /* Centraliza o grupo de botões */
-        margin-right: auto;
     }
     .btn-group a, a.email {
-        width: 100%; /* Ocupa a largura total */
-        max-width: none; /* Remover max-width individual */
+        width: 100%;
         font-size: 1rem;
         padding: 14px 20px;
-    }
-    .btn-group a i, a.email i {
-        font-size: 1.2rem;
     }
     #subtitulo {
         margin-top: 40px;
@@ -573,28 +530,13 @@ footer nav ul li a:hover {
         padding: 35px;
         margin-top: 60px;
     }
-    .contact-us-message h3 {
-        font-size: 1.8rem;
-    }
     .contact-images {
         flex-direction: column;
-        align-items: center;
         gap: 25px;
     }
     .dog-contact-card {
-        width: 90%; /* Ocupa 90% da largura do pai */
-        max-width: 300px; /* Limita a largura máxima */
-        padding: 25px;
-        flex: 1 1 auto; /* Ajusta para uma coluna */
-    }
-    .dog-contact-card img {
-        max-width: 130px; /* Ajuste para telas menores */
-        height: 130px;
-        border-width: 5px;
-        box-shadow: 0 0 0 3px var(--primary-color), 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .dog-contact-card p {
-        font-size: 0.95rem;
+        width: 90%;
+        max-width: 300px;
     }
     footer {
         padding: 2rem 0;
@@ -603,31 +545,19 @@ footer nav ul li a:hover {
     footer nav ul {
         flex-direction: column;
         gap: 6px;
-        margin-bottom: 20px;
     }
     .footer-bottom {
         flex-direction: column;
-        padding-top: 20px;
         gap: 15px;
-    }
-    .social-icons {
-        margin-top: 10px;
-    }
-    .social-icons img {
-        height: 35px;
     }
 }
 
 @media (max-width: 480px) {
     body {
         padding-top: 70px;
-        /* Removido align-items: center; */
     }
     header .logo {
         height: 55px;
-    }
-    header ul {
-        top: 70px; /* Ajuste de top para o menu expandido em telas muito pequenas */
     }
     h2 {
         font-size: 1.8rem;
@@ -639,9 +569,6 @@ footer nav ul li a:hover {
         font-size: 0.95rem;
         padding: 12px 18px;
     }
-    .btn-group a i, a.email i {
-        font-size: 1rem;
-    }
     #subtitulo {
         font-size: 1.4rem;
     }
@@ -650,8 +577,5 @@ footer nav ul li a:hover {
     }
     .contact-us-message h3 {
         font-size: 1.6rem;
-    }
-    .social-icons img {
-        height: 30px;
     }
 }

@@ -5,46 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoção e Apadrinhamento - Caramelos do Vale</title>
-    
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="../CSS/adocao.css">
 
-    <link rel="shortcut icon" href="../img/faviconV2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/adocao.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Ícone principal (aba do navegador) -->
+
+    <!-- <link rel="shortcut icon" href="../img/abaicon.svg" type="image/x-icon"> -->
     <!-- Importação da fonte Poppins do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Importação de Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <nav>
-                <a href="../index.html"><img src="../img/logo-caramelos-do-vale.png"
-                        alt="Logo Associação Caramelos do Vale" class="logo"></a>
+            <nav class="main-nav">
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/logo-caramelos-do-vale.png" alt="Logo Associação Caramelos do Vale" class="logo">
+                </a>
 
                 <!-- Botão do Menu Hambúrguer (visível apenas em telas pequenas) -->
-                <button class="menu-toggle" aria-label="Abrir menu de navegação">
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- Menu de Navegação Principal -->
                 <ul id="main-nav">
                     <li><a href="../index.html">Página Inicial</a></li>
-                    <li><a href="./adocao.html"  class="active" id="userlocation">Adoção</a></li>
+                    <li><a href="./adocao.html" class="active" id="userlocation">Adoção</a></li>
                     <li><a href="../HTML/voluntariado.html">Voluntariado</a></li>
                     <li><a href="../HTML/loja.html">Loja</a></li>
                     <li><a href="../HTML/eventos.html">Eventos</a></li>
@@ -58,6 +53,7 @@
         <section id="adocao-apadrinhamento" class="section-padding">
             <div class="container">
                 <h2>Adoção e Apadrinhamento 🐾</h2>
+                <br>
                 <p class="intro-text">Conheça nossos amigos disponíveis para adoção e apadrinhamento. Cada um tem uma
                     história única e espera por um lar cheio de amor!</p>
 
@@ -116,7 +112,7 @@
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="mais5"
+                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="mais10"
                             data-apadrinhamento="Sim" data-lar-temporario="Não">
                             <img src="../img/Jurema5.jpg" alt="Jurema">
                             <div class="animal-info">
@@ -164,7 +160,7 @@
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="menos1"
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="1a5"
                             data-apadrinhamento="Não" data-lar-temporario="Sim">
                             <img src="../img/Pastelino8.jpg" alt="Pastelino">
                             <div class="animal-info">
@@ -176,13 +172,13 @@
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="P" data-sexo="Macho" data-idade="menos1"
+                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="1a5"
                             data-apadrinhamento="Não" data-lar-temporario="Não">
                             <img src="../img/flocos14.png" alt="Flocos">
                             <div class="animal-info">
                                 <h3>Flocos</h3>
                                 <p>Macho</p>
-                                <p>Porte P</p>
+                                <p>Porte M</p>
                                 <p>Idade: 4 anos</p>
                                 <a href="../HTML/flocos.html" class="btn-conhecer">Vem me conhecer <i
                                         class="fas fa-arrow-right"></i></a>
@@ -200,43 +196,43 @@
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="G" data-sexo="Fêmea" data-idade="1a5"
+                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="1a5"
                             data-apadrinhamento="Não" data-lar-temporario="Sim">
                             <img src="../img/Mercedes14.jpg" alt="Mercedes">
                             <div class="animal-info">
                                 <h3>Mercedes</h3>
                                 <p>Fêmea</p>
-                                <p>Porte G</p>
+                                <p>Porte M</p>
                                 <p>Idade: 2 anos</p>
                                 <a href="../HTML/mercedes.html" class="btn-conhecer">Vem me conhecer <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="M" data-sexo="Macho" data-idade="mais5"
+                        <div class="animal-card" data-porte="P" data-sexo="Macho" data-idade="mais5"
                             data-apadrinhamento="Não" data-lar-temporario="Não">
                             <img src="../img/Otto1.jpg" alt="Otto">
                             <div class="animal-info">
                                 <h3>Otto</h3>
                                 <p>Macho</p>
-                                <p>Porte M</p>
+                                <p>Porte P</p>
                                 <p>Idade: 10 anos</p>
                                 <a href="../HTML/otto.html" class="btn-conhecer">Vem me conhecer <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="P" data-sexo="Fêmea" data-idade="mais5"
+                        <div class="animal-card" data-porte="M" data-sexo="Fêmea" data-idade="1a5"
                             data-apadrinhamento="Sim" data-lar-temporario="Não">
                             <img src="../img/tais8.png" alt="Taís">
                             <div class="animal-info">
                                 <h3>Taís</h3>
                                 <p>Fêmea</p>
-                                <p>Porte P</p>
+                                <p>Porte M</p>
                                 <p>Idade: 3 anos</p>
                                 <a href="../HTML/tais.html" class="btn-conhecer">Vem me conhecer <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="animal-card" data-porte="G" data-sexo="Macho" data-idade="menos1"
+                        <div class="animal-card" data-porte="G" data-sexo="Macho" data-idade="1a5"
                             data-apadrinhamento="Não" data-lar-temporario="Sim">
                             <img src="../img/Timoteo1.jpg" alt="Timóteo">
                             <div class="animal-info">
@@ -270,6 +266,8 @@
             </nav>
             <div class="footer-bottom">
                 <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
+                <p style="color: white;font-weight: bold;">Todos os direitos reservados a Associação Caramelos do Vale
+                    &copy</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
                             src="../img/insta-logo.png" alt="Logo Instagram"></a>
