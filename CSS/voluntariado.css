@@ -1,21 +1,35 @@
-
 /* Paleta de Cores (Consistente com a página de Contato) */
 :root {
-    --primary-color: #1e95b3; /* Azul principal */
-    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
-    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
-    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f8f8f8; /* Fundo claro */
-    --white: #ffffff; /* Branco */
-    --black: #000000; /* Preto */
-    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
-    --success-color: #28a745; /* Verde para botões de ação */
-    --success-hover: #218838; /* Verde mais escuro no hover */
-    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
-    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
-    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
+    --primary-color: #1e95b3;
+    /* Azul principal */
+    --secondary-color: #eab74a;
+    /* Laranja/Amarelo de destaque */
+    --tertiary-color: #ffe6af;
+    /* Amarelo claro para fundos */
+    --accent-color: #c2f2ff;
+    /* Azul claro para fundos/destaques */
+    --neutral-dark: #333;
+    /* Texto escuro */
+    --neutral-medium: #666;
+    /* Texto médio */
+    --neutral-light: #f8f8f8;
+    /* Fundo claro */
+    --white: #ffffff;
+    /* Branco */
+    --black: #000000;
+    /* Preto */
+    --darker-primary-color: #1a7a91;
+    /* Azul principal mais escuro */
+    --success-color: #28a745;
+    /* Verde para botões de ação */
+    --success-hover: #218838;
+    /* Verde mais escuro no hover */
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Sombra suave */
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Sombra média */
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2);
+    /* Sombra forte */
 }
 
 /* Reset Básico */
@@ -27,19 +41,30 @@
 
 /* Estilos Globais do Corpo */
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    line-height: 1.7; /* Melhorar legibilidade */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna */
+    line-height: 1.7;
+    /* Melhorar legibilidade */
     color: var(--neutral-dark);
     background-color: var(--neutral-light);
-    padding-top: 90px; /* Espaçamento para o header fixo */
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    padding-top: 90px;
+    /* Espaçamento para o header fixo */
+    overflow-x: hidden;
+    /* Evitar scroll horizontal */
+}
+
+.titulo-azul {
+    color: #1e95b3;
+    font-weight: bold;
 }
 
 /* Container Central */
 .container {
-    max-width: 1200px; /* Aumentar um pouco a largura máxima */
+    max-width: 1200px;
+    /* Aumentar um pouco a largura máxima */
     margin: 0 auto;
-    padding: 0 25px; /* Mais padding lateral */
+    padding: 0 25px;
+    /* Mais padding lateral */
 }
 
 /* Cabeçalho */
@@ -64,7 +89,8 @@ header nav {
 }
 
 header .logo {
-    height: 65px; /* Logo um pouco maior */
+    height: 65px;
+    /* Logo um pouco maior */
     transition: transform 0.3s ease;
     width: 130px;
 }
@@ -96,7 +122,8 @@ header ul {
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 0.3s ease-in-out; /* Transição para abertura/fechamento */
+    transition: all 0.3s ease-in-out;
+    /* Transição para abertura/fechamento */
 }
 
 header ul li {
@@ -134,20 +161,24 @@ header ul li a:hover::after {
 header ul li a:hover {
     color: var(--secondary-color);
 }
+
 /* Adicionado: Linha fixa para a aba ativa */
 header ul li a.active::after {
     transform: translateX(-50%) scaleX(1);
 }
+
 #userlocation {
     color: var(--secondary-color);
     font-weight: bold;
-    
-    
+
+
 }
 
 
 /* Títulos e Parágrafos (Estilos reutilizados da página de Contato) */
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     color: var(--neutral-dark);
     margin-bottom: 20px;
     font-weight: 700;
@@ -195,7 +226,7 @@ p {
 
 /* Seção de Voluntariado */
 #voluntariado {
-    
+
     padding: 60px 0;
     background-color: var(--white);
     box-shadow: var(--box-shadow-medium);
@@ -275,7 +306,7 @@ p {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: var(--box-shadow-light);
-    background-color: whitesmoke    ;
+    background-color: whitesmoke;
     border: 2px solid var(--success-color);
     color: var(--white);
     margin-top: auto;
@@ -299,7 +330,7 @@ p {
     background-color: var(--accent-color);
     padding: 50px;
     border-radius: 15px;
-    margin-top: 80px;
+    margin-top: 10px;
     box-shadow: var(--box-shadow-medium);
     display: flex;
     flex-direction: column;
@@ -308,6 +339,12 @@ p {
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+#fabwhats {
+    color: var(--neutral-light);
+    font-weight: bold;
+    margin-bottom: -2.5px;
 }
 
 .question-contact h3 {
@@ -324,6 +361,8 @@ p {
 
 .question-contact .btn {
     background-color: var(--success-color);
+    border-radius: 30px;
+    
 }
 
 .question-contact .btn:hover {
@@ -396,19 +435,24 @@ footer nav ul li a:hover {
     h2 {
         font-size: 2.5rem;
     }
+
     h3 {
         font-size: 1.6rem;
     }
+
     h4 {
         font-size: 1.4rem;
     }
+
     .volunteer-options {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
     }
+
     .volunteer-item {
         padding: 25px;
     }
+
     .btn {
         font-size: 1rem;
         padding: 14px 22px;
@@ -434,11 +478,13 @@ footer nav ul li a:hover {
 
     /* Esconde o menu de navegação por padrão em telas pequenas */
     header ul {
-        display: none; /* Esconde a lista de navegação */
+        display: none;
+        /* Esconde a lista de navegação */
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 85px; /* Abaixo do header */
+        top: 85px;
+        /* Abaixo do header */
         left: 0;
         background-color: var(--primary-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -452,81 +498,104 @@ footer nav ul li a:hover {
     }
 
     header ul li {
-        margin: 10px 0; /* Espaçamento vertical para os itens do menu */
+        margin: 10px 0;
+        /* Espaçamento vertical para os itens do menu */
         text-align: center;
     }
 
     header ul li a {
         padding: 12px 18px;
-        display: block; /* Ocupa a largura total para facilitar o clique */
-        border-radius: 0; /* Remover border-radius para links de menu expandido */
+        display: block;
+        /* Ocupa a largura total para facilitar o clique */
+        border-radius: 0;
+        /* Remover border-radius para links de menu expandido */
     }
 
     header ul li a::after {
-        bottom: 0; /* Ajustar posição da linha no menu expandido */
+        bottom: 0;
+        /* Ajustar posição da linha no menu expandido */
     }
 
     #voluntariado {
         margin: 40px 15px;
         padding: 30px 15px;
     }
+
     h2 {
         font-size: 2rem;
         margin-bottom: 25px;
     }
+
     h2::after {
         width: 80px;
         height: 4px;
     }
+
     h3 {
         font-size: 1.4rem;
         margin-top: 30px;
     }
+
     h4 {
         font-size: 1.2rem;
     }
+
     p {
         font-size: 1rem;
     }
+
     .volunteer-options {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas menores */
         gap: 20px;
     }
+
     .volunteer-item {
-        width: 90%; /* Ocupa mais largura */
-        margin: 0 auto; /* Centraliza */
+        width: 90%;
+        /* Ocupa mais largura */
+        margin: 0 auto;
+        /* Centraliza */
     }
+
     .btn {
         font-size: 0.95rem;
         padding: 12px 18px;
     }
+
     .question-contact {
         padding: 35px;
         margin-top: 60px;
     }
+
     .question-contact h3 {
         font-size: 1.8rem;
     }
+
     .question-contact p {
         font-size: 1rem;
     }
+
     footer {
         padding: 2rem 0;
         margin-top: 60px;
     }
+
     footer nav ul {
         flex-direction: column;
         gap: 6px;
         margin-bottom: 20px;
     }
+
     .footer-bottom {
         flex-direction: column;
         padding-top: 20px;
         gap: 15px;
     }
+
     .social-icons {
         margin-top: 10px;
     }
+
     .social-icons img {
         height: 35px;
     }
@@ -536,35 +605,45 @@ footer nav ul li a:hover {
     body {
         padding-top: 70px;
     }
+
     header .logo {
         height: 55px;
     }
+
     /* Ajuste de top para o menu expandido em telas muito pequenas */
     header ul {
         top: 70px;
     }
+
     h2 {
         font-size: 1.8rem;
     }
+
     h3 {
         font-size: 1.2rem;
     }
+
     h4 {
         font-size: 1.1rem;
     }
+
     .volunteer-item {
         padding: 20px;
     }
+
     .btn {
         font-size: 0.9rem;
         padding: 10px 15px;
     }
+
     .question-contact {
         padding: 25px;
     }
+
     .question-contact h3 {
         font-size: 1.6rem;
     }
+
     .social-icons img {
         height: 30px;
     }

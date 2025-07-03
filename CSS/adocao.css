@@ -28,10 +28,14 @@
 body {
     font-family: 'Poppins', sans-serif; /* Fonte moderna */
     line-height: 1.7; /* Melhorar legibilidade */
-    color: var(--neutral-dark);
     background-color: var(--neutral-light);
     padding-top: 90px; /* Espaçamento para o header fixo */
     overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.titulo-azul {
+    color: #1e95b3;
+    font-weight: bold;
 }
 
 /* Container Central */

@@ -53,6 +53,11 @@ body {
     /* Evitar scroll horizontal */
 }
 
+.titulo-azul {
+    color: #1e95b3;
+    font-weight: bold;
+}
+
 /* Container Central */
 .container {
     max-width: 1200px;

@@ -37,6 +37,11 @@ body {
     overflow-x: hidden;
 }
 
+.titulo-azul {
+    color: #1e95b3;
+    font-weight: bold;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

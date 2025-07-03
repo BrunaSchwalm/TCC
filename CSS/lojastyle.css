@@ -237,6 +237,7 @@ body {
 
 .loja-header h2 {
     font-size: 1.8rem;
+    font-weight: bold;
     color: var(--neutral-dark);
     margin-top: 30px;
     margin-bottom: 5px;
@@ -655,4 +656,8 @@ footer nav ul li a:hover {
     color: #666;
     line-height: 1.5;
     margin-bottom: 15px;
+}
+
+
+    
 }

@@ -1,21 +1,4 @@
-/* Paleta de Cores (Consistente com as outras páginas) */
-:root {
-    --primary-color: #1e95b3; /* Azul principal */
-    --secondary-color: #eab74a; /* Laranja/Amarelo de destaque */
-    --tertiary-color: #ffe6af; /* Amarelo claro para fundos */
-    --accent-color: #c2f2ff; /* Azul claro para fundos/destaques */
-    --neutral-dark: #333; /* Texto escuro */
-    --neutral-medium: #666; /* Texto médio */
-    --neutral-light: #f8f8f8; /* Fundo claro */
-    --white: #ffffff; /* Branco */
-    --black: #000000; /* Preto */
-    --darker-primary-color: #1a7a91; /* Azul principal mais escuro */
-    --success-color: #28a745; /* Verde para botões de ação */
-    --success-hover: #218838; /* Verde mais escuro no hover */
-    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave */
-    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra média */
-    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra forte */
-}
+
 
 /* Reset Básico */
 * {
@@ -54,7 +37,21 @@ header {
     left: 0;
     z-index: 1000;
 }
-
+/* header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    height: auto;
+    min-height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+} */
 header nav {
     display: flex;
     justify-content: space-between;
@@ -72,21 +69,7 @@ header .logo:hover {
     transform: scale(1.08);
 }
 
-/* Esconde o botão do menu hambúrguer por padrão em telas grandes */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--white);
-    cursor: pointer;
-    padding: 10px;
-    transition: color 0.3s ease;
-}
 
-.menu-toggle:hover {
-    color: var(--secondary-color);
-}
 
 header ul {
     list-style: none;
@@ -150,131 +133,27 @@ header ul li a.active::after {
 /* --- FIM DOS ESTILOS DO HEADER --- */
 
 
-h1,
-h2,
-h3,
-h4 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
 
-h1 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: var(--neutral-dark);
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-top: 30px;
-}
-
-p {
-    margin-bottom: 15px;
-} 
-
-
-.logoInicio img {
-    max-width: 60%;
-    /* Garante que a imagem não ultrapasse a largura da sua div pai (.logoInicio) */
-    height: auto;
-    /* Mantém a proporção */
-    display: block;
-    /* Garante que a imagem seja tratada como um bloco */
-    margin: 0 auto;
-    /* Centraliza a imagem horizontalmente */
-    padding-top: 150px;
-    padding-bottom: 0px;
-    /* Espaço abaixo da imagem */
-
-}
-
-
-
-/* Estilos para o contêiner principal da logo e links */
-.cabecalho-principal {
-    display: flex;
-    /* Habilita o Flexbox */
-    flex-direction: column;
-    /* Coloca os itens em coluna (logo em cima, links embaixo) */
-    align-items: center;
-    /* Centraliza os itens horizontalmente dentro do contêiner */
-    width: 100%;
-    /* Ocupa a largura total */
-    padding-top: 20px;
-    /* Espaçamento superior, ajuste conforme necessário */
-    position: relative;
-    /* Importante para que a imagem de fundo possa ficar por baixo se ela estiver em `section#imagemfundo` */
-    z-index: 2;
-    /* Garante que o conteúdo fique acima da imagem de fundo */
-    /* background-color: rgba(255, 255, 255, 0.8);  Opcional: fundo semi-transparente para o cabeçalho */
-    /* border-bottom: 1px solid #ccc;  Opcional: linha abaixo do cabeçalho */
-}
-
-
-
-
-/* Estilos para a div dos links rápidos */
-.links-rapidos {
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-top: 60px;
-    padding: 20px;
-    /* Espaçamento interno */
-    border-radius: 10px;
-    /* Bordas arredondadas */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-    text-align: center;
-    /* Centraliza o h2 e a ul */
-    margin-bottom: 20px;
-    /* Espaço abaixo dos links */
-}
 
 
 /* Estilos para a lista de links */
-.links-rapidos ul {
-    list-style: none;
-    /* Remove os marcadores de lista */
-    padding: 0;
-    /* Remove o padding padrão da lista */
-    margin: 0;
-    /* Remove a margem padrão da lista */
-    display: flex;
-    /* Habilita o Flexbox para os itens da lista */
-    gap: 20px;
-    /* Espaçamento entre os itens da lista */
-    justify-content: center;
-    /* Centraliza os links horizontalmente */
-}
 
 
 /* Estilos para os links (a) */
 .links-rapidos a {
     text-decoration: none;
-    /* Remove o sublinhado */
     color: var(--neutral-dark);
-    /* Cor azul padrão, ajuste conforme sua paleta */
     font-weight: bold;
-    /* Deixa o texto em negrito */
     padding: 5px 10px;
-    /* Espaçamento interno para clique */
     transition: color 0.3s ease;
-    /* Transição suave para o hover */
     
 }
 
 .links-rapidos a:hover {
     color: var(--accent-color);
-    /* Cor mais escura no hover */
     background-color: var(--primary-color);
     border-radius: 20px;
-    /* Borda arredondada no hover */
     padding: 10px;
-    /* Aumenta o espaçamento interno no hover */
 }
 
 /* Estilo para a imagem de fundo (provavelmente no seu #imagemfundo) */
@@ -309,45 +188,7 @@ section#imagemfundo {
 
 /*Inicio dos estilos para a seção "conheca a associacao"*/
 
-.container1 {
-    background-color: var(--tertiary-color);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 30px;
-}
 
-.container1 img {
-    max-width: 100%;
-    height: 200px;
-    display: block;
-    margin: 0 auto;
-}
-
-.container1 h1 {
-    position: relative;
-    left: 90px;
-    font-size: 2.5rem;
-    text-align: left;
-    padding-left: 200px;
-    color: var(--neutral-dark);
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.hero {
-    background-color: var(--neutral-light);
-    color: var(--neutral-dark);
-    text-align: center;
-    padding: 80px 0;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
 
 
 .header-container {
@@ -454,200 +295,9 @@ section#imagemfundo {
 
 
 /*carousel*/
-.carouselbackground {
-    background-color: var(--accent-color);
-    padding: 50px 0;
-}
-
-.carouselbackground h2 {
-    text-align: center;
-    color: var(--neutral-light); /* Alterado para neutral-light para melhor contraste */
-    font-size: 2.5rem;
-    background-color: var(--secondary-color);
-    margin: 30px auto; /* Centralizado */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Adicionado max-width para melhor apresentação */
-}
 
 
-.carousel-item {
-    /* display: none; */ /* Removido para usar o comportamento padrão do Bootstrap */
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-}
 
-/* .carousel-item.active {
-    display: block;
-} */ /* Removido, Bootstrap já gerencia isso */
-
-.carousel-caption { /* Estilo para a legenda do carrossel do Bootstrap */
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
-    color: var(--black); /* Texto escuro para contraste */
-    padding: 10px;
-    border-radius: 8px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 500px;
-    margin-left: 250px;
-}
-
-.carousel-caption h5 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-}
-
-.carousel-caption p {
-    color: var(--black);
-    font-size: 1rem;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    border: var(--primary-color) 4px solid;
-}
-
-/* Removido .carousel-controls e seus estilos, pois o Bootstrap já fornece botões */
-/* .carousel-controls {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.carousel-controls button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-controls button:hover {
-    background-color: var(--secondary-color);
-} */
-
-/* Estilos para o carrossel */
-/* .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-} */ /* Removido, Bootstrap já gerencia isso */
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Ajuste o max-width do carrossel */
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 20px;
-}
-
-
-.adotar {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    max-width: 250px; /* Aumentado um pouco o max-width */
-    margin: 20px auto 0 auto; /* Centralizado e com margem superior */
-    box-shadow: var(--box-shadow-medium); /* Adicionada sombra */
-    transition: all 0.3s ease; /* Adicionada transição */
-}
-
-.adotar a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--white); /* Alterado para branco para contraste com o fundo secundário */
-    display: block; /* Para que o link ocupe todo o espaço do div */
-    padding: 5px; /* Pequeno padding interno */
-}
-
-.adotar:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px); /* Efeito de levitar */
-    box-shadow: var(--box-shadow-strong); /* Sombra mais forte no hover */
-}
-
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 2.5rem 0; /* Aumentado o padding para consistência */
-    text-align: center;
-    margin-top: 80px;
-}
-
-footer nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 30px; /* Aumentado a margem para consistência */
-    flex-wrap: wrap;
-    padding: 0;
-}
-
-footer nav ul li {
-    margin: 0 20px 10px; /* Aumentado a margem para consistência */
-}
-
-footer nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 400; /* Adicionado font-weight para consistência */
-}
-
-footer nav ul li a:hover {
-    color: var(--accent-color);
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px; /* Aumentado o padding para consistência */
-    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Aumentado a opacidade da borda */
-    flex-wrap: wrap;
-    gap: 25px; /* Adicionado gap para consistência */
-}
-
-.footer-bottom .logo-footer {
-    height: 55px; /* Aumentado o tamanho para consistência */
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px; /* Adicionado gap para consistência */
-}
-
-.social-icons img {
-    height: 40px; /* Aumentado o tamanho para consistência */
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
 
 /* Paleta de Cores */
 :root {
@@ -668,27 +318,7 @@ footer nav ul li a:hover {
     --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Reset e Estilos Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    color: var(--neutral-dark);
-    background-color: var(--neutral-light);
-    padding-top: 90px;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 26px;
-}
 
 /* Tipografia Responsiva */
 h1, h2, h3, h4 {
@@ -715,6 +345,9 @@ p {
     margin-bottom: 15px;
     font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
+
+
+
 
 /* Header Responsivo */
 header {
@@ -760,6 +393,7 @@ header .logo:hover {
     padding: 10px;
     transition: color 0.3s ease;
 }
+
 
 .menu-toggle:hover {
     color: var(--secondary-color);
@@ -816,6 +450,7 @@ header ul li a:hover {
     z-index: 2;
 }
 
+
 .logoInicio img {
     max-width: 60%;
     height: auto;
@@ -824,8 +459,11 @@ header ul li a:hover {
     padding: clamp(60px, 15vw, 150px) 0 0;
 }
 
+
 #imagemfundo {
-    background-image: url('../img/pastelinoFundo.png.png');
+    /* background-image: url('../img/pastelinoFundo.png.png'); */
+    background-image: url('../img/pexels2.png');
+    /* background-image: url('../img/pexels3.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -874,7 +512,12 @@ header ul li a:hover {
 }
 
 /* Seção Conheça a Associação */
+
+
+
+
 .container1 {
+    border: solid 5px  var(--secondary-color);
     background-color: var(--tertiary-color);
     max-width: 1200px;
     margin: 0 auto;
@@ -889,6 +532,8 @@ header ul li a:hover {
     text-align: left;
     padding-left: clamp(10px, 10vw, 200px);
     margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .container1 img {
@@ -914,8 +559,9 @@ header ul li a:hover {
     padding: clamp(10px, 2vw, 20px);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
+     max-width: 600px;
 }
+
 
 .carousel {
     position: relative;
@@ -931,7 +577,6 @@ header ul li a:hover {
     width: 100%;
     height: clamp(250px, 50vw, 400px);
 }
-
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -940,9 +585,9 @@ header ul li a:hover {
     border: var(--primary-color) 4px solid;
 }
 
-.carousel-caption {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: var(--black);
+.carousel-caption { /* Estilo para a legenda do carrossel do Bootstrap */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente */
+    color: var(--black); /* Texto escuro para contraste */
     padding: 10px;
     border-radius: 8px;
     bottom: 20px;
@@ -950,6 +595,14 @@ header ul li a:hover {
     transform: translateX(-50%);
     width: 90%;
     max-width: 500px;
+    margin-left: 250px;
+}
+
+.carousel-caption p {
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .carousel-caption h5 {
@@ -958,7 +611,21 @@ header ul li a:hover {
     margin-bottom: 5px;
 }
 
+
+.hero {
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
 /* Botão Adotar */
+
 .adotar {
     background-color: var(--secondary-color);
     color: var(--white);
@@ -970,7 +637,6 @@ header ul li a:hover {
     box-shadow: var(--box-shadow-medium);
     transition: all 0.3s ease;
 }
-
 .adotar a {
     text-decoration: none;
     font-weight: bold;
@@ -986,6 +652,7 @@ header ul li a:hover {
     box-shadow: var(--box-shadow-strong);
 }
 
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -993,7 +660,12 @@ footer {
     padding: clamp(1rem, 3vw, 2.5rem) 0;
     text-align: center;
     margin-top: clamp(30px, 5vw, 80px);
+    padding: 2.5rem 0; 
+    text-align: center;
+    margin-top: 80px;
+    gap: clamp(5px, 2vw, 20px);
 }
+
 
 footer nav ul {
     display: flex;
@@ -1002,7 +674,6 @@ footer nav ul {
     margin-bottom: clamp(15px, 3vw, 30px);
     flex-wrap: wrap;
     padding: 0;
-    gap: clamp(5px, 2vw, 20px);
 }
 
 footer nav ul li a {
@@ -1013,6 +684,9 @@ footer nav ul li a {
     font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
+footer nav ul li {
+    margin: 0 20px 10px; /* Aumentado a margem para consistência */
+}
 footer nav ul li a:hover {
     color: var(--accent-color);
 }
@@ -1049,6 +723,10 @@ footer nav ul li a:hover {
 @media (max-width: 992px) {
     body {
         padding-top: 80px;
+    }
+
+    #imagemfundo {
+        min-height: 600px; /* Uma altura fixa para evitar que fique muito comprida */
     }
     
     .menu-toggle {
@@ -1103,6 +781,10 @@ footer nav ul li a:hover {
         text-align: center;
         padding-left: 0;
     }
+     #imagemfundo {
+        min-height: 500px; /* Altura mais adequada para mobile */
+        
+    }
 }
 
 @media (max-width: 480px) {
@@ -1113,5 +795,11 @@ footer nav ul li a:hover {
     
     .social-icons {
         justify-content: center;
+    }
+
+      #imagemfundo {
+        /* Para celulares menores */
+        min-height: 400px; /* Uma altura mais compacta */
+        
     }
 }
