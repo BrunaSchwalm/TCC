@@ -1,0 +1,699 @@
+/* Paleta de Cores */
+:root {
+    --primary-color: #1e95b3;
+    --secondary-color: #eab74a;
+    --tertiary-color: #ffe6af;
+    --accent-color: #c2f2ff;
+    --neutral-dark: #333;
+    --neutral-medium: #666;
+    --neutral-light: #f8f8f8;
+    --white: #ffffff;
+    --black: #000000;
+    --darker-primary-color: #1a7a91;
+    --success-color: #28a745;
+    --success-hover: #218838;
+    --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --box-shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --box-shadow-strong: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais do Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna */
+    line-height: 1.7;
+    /* Melhorar legibilidade */
+    color: var(--neutral-dark);
+    background-color: var(--neutral-light);
+    padding-top: 90px;
+    /* Espaçamento para o header fixo */
+    overflow-x: hidden;
+    /* Evitar scroll horizontal */
+}
+
+/* Container Central */
+.container {
+    max-width: 1200px;
+    /* Aumentar um pouco a largura máxima */
+    margin: 0 auto;
+    padding: 0 26px;
+    /* Mais padding lateral */
+}
+
+/* Tipografia Responsiva */
+h1,
+h2,
+h3,
+h4 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: center;
+    color: var(--neutral-dark);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+
+
+
+/* Header Responsivo */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    height: auto;
+    min-height: 90px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+header .logo {
+    height: 65px;
+    width: 130px;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.08);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+
+.menu-toggle:hover {
+    color: var(--secondary-color);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+header ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 10px 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+header ul li {
+    margin-left: 30px;
+}
+
+
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: transform 0.3s ease-out;
+}
+
+
+header ul li a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+header ul li a:hover::after,
+header ul li a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+header ul li a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+section#imagemfundo {
+    padding-top: 1px;
+}
+
+/*Inicio dos estilos para a seção "conheca a associacao"*/
+
+
+
+
+.header-container {
+    display: flex;
+    /* Habilita o Flexbox */
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente (se o contêiner for maior) */
+    gap: 20px;
+    /* Espaço entre a logo e a imagem dos cachorros */
+    margin-bottom: 30px;
+    /* Espaço abaixo do cabeçalho */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha em telas menores */
+}
+
+
+
+.logo-img {
+    max-width: 1500px;
+    /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove o espaço extra abaixo da imagem */
+
+}
+
+.dogs-img {
+    max-width: 300px;
+    /* Ajuste o tamanho da imagem dos cachorros conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Remove o espaço extra abaixo da imagem */
+    border-radius: 50%;
+    /* Opcional: Adiciona bordas arredondadas à imagem dos cachorros */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Opcional: Adiciona uma sombra */
+}
+
+#userlocation {
+    color: var(--secondary-color);
+    font-weight: bold;
+
+
+}
+
+/* Seção Hero */
+.cabecalho-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.logoInicio img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: clamp(60px, 15vw, 150px) 0 0;
+}
+
+
+#imagemfundo {
+    background-image: url('../img/pexels20.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 1px;
+}
+
+/* Links Rápidos */
+.links-rapidos {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: clamp(20px, 8vw, 60px);
+    padding: clamp(8px, 2vw, 20px);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.links-rapidos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: clamp(8px, 3vw, 20px);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links-rapidos a {
+    text-decoration: none;
+    color: var(--neutral-dark);
+    font-weight: bold;
+    padding: clamp(5px, 1vw, 10px);
+    transition: all 0.3s ease;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.links-rapidos a:hover {
+    color: var(--accent-color);
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+/* Estilos para os links (a) */
+
+
+
+/* Seção Conheça a Associação */
+
+
+
+
+.container1 {
+    border: solid 5px var(--secondary-color);
+    background-color: var(--tertiary-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.container1 h1 {
+    position: relative;
+    left: 0;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: left;
+    padding-left: clamp(10px, 10vw, 200px);
+    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container1 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.stats {
+    margin: 40px 0;
+}
+
+.stats .number {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.help-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.help-options a {
+    background-color: var(--secondary-color);
+    color: var(--neutral-dark);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.help-options a:hover {
+    transition: all 0.4s;
+    padding-bottom: 3px;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.stats-grid div {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.stats-grid .number {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Carrossel */
+.carouselbackground {
+    background-color: var(--accent-color);
+    padding: 50px 0;
+}
+
+.carouselbackground h2 {
+    text-align: center;
+    color: var(--neutral-light);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    background-color: var(--secondary-color);
+    margin: 30px auto;
+    padding: clamp(10px, 2vw, 20px);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: clamp(5px, 2vw, 20px);
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: clamp(250px, 50vw, 400px);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: var(--primary-color) 4px solid;
+}
+
+.carousel-caption {
+    /* Estilo para a legenda do carrossel do Bootstrap */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Fundo semi-transparente */
+    color: var(--black);
+    /* Texto escuro para contraste */
+    padding: 10px;
+    border-radius: 8px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    margin-left: 250px;
+}
+
+.carousel-caption p {
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.carousel-caption h5 {
+    color: var(--primary-color);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    margin-bottom: 5px;
+}
+
+
+.hero {
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Botão Adotar */
+
+.adotar {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: clamp(8px, 1vw, 10px);
+    text-align: center;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 20px auto 0;
+    box-shadow: var(--box-shadow-medium);
+    transition: all 0.3s ease;
+}
+
+.adotar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
+    display: block;
+    padding: 5px;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+.adotar:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-strong);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: clamp(1rem, 3vw, 2.5rem) 0;
+    text-align: center;
+    margin-top: clamp(30px, 5vw, 80px);
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 80px;
+    gap: clamp(5px, 2vw, 20px);
+}
+
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: clamp(15px, 3vw, 30px);
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+footer nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 400;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+footer nav ul li {
+    margin: 0 20px 10px;
+    /* Aumentado a margem para consistência */
+}
+
+footer nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(15px, 3vw, 30px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    flex-wrap: wrap;
+    gap: clamp(15px, 3vw, 25px);
+}
+
+.footer-bottom .logo-footer {
+    height: clamp(35px, 5vw, 55px);
+}
+
+.social-icons {
+    display: flex;
+    gap: clamp(10px, 3vw, 20px);
+}
+
+.social-icons img {
+    height: clamp(25px, 4vw, 40px);
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries Simplificadas */
+@media (max-width: 992px) {
+    body {
+        padding-top: 80px;
+    }
+
+    #imagemfundo {
+        min-height: 600px;
+        /* Uma altura fixa para evitar que fique muito comprida */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+    }
+
+    .links-rapidos ul {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    header ul {
+        top: 70px;
+    }
+
+    .links-rapidos ul {
+        flex-direction: column;
+    }
+
+    .container1 h1 {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #imagemfundo {
+        min-height: 500px;
+        /* Altura mais adequada para mobile */
+
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container1 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 130px;
+    display: block;
+    margin: 0 auto;
+}
+    .container1  {
+        margin-left: 10px;
+        margin-right: 10px;
+   
+}
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    #imagemfundo {
+        /* Para celulares menores */
+        min-height: 400px;
+        /* Uma altura mais compacta */
+
+    }
+}
