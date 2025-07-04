@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
 /* Paleta de Cores (Consistente com as outras páginas) */
 :root {
     --primary-color: #1e95b3; /* Azul principal */
@@ -180,7 +184,10 @@ p {
 #sobre {
     background-color: var(--white);
     border: solid 5px var(--secondary-color); /* Borda visível */
+<<<<<<< HEAD
     /* Removido margin-left: 75px; pois max-width e margin: auto já centralizam */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     margin: 60px auto 40px; /* Centralizar e adicionar margem */
     border-radius: 20px; /* Bordas mais arredondadas */
     padding: 50px; /* Mais preenchimento interno */
@@ -189,7 +196,10 @@ p {
     flex-direction: column;
     align-items: center;
     max-width: 90%; /* Limitar largura em telas maiores */
+<<<<<<< HEAD
     width: 100%; /* Garante que o elemento ocupe a largura disponível */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
 }
 
 /* Grid de Estatísticas */
@@ -241,11 +251,17 @@ p {
     display: flex;
     flex-direction: row; /* Imagem e texto lado a lado */
     justify-content: center;
+<<<<<<< HEAD
     align-items: center; /* Centralizar verticalmente os itens */
     gap: 40px; /* Espaçamento entre imagem e texto */
     margin-top: 50px;
     /* Removido margin-left: 75px; para melhor responsividade */
     margin: 50px auto; /* Centraliza a div */
+=======
+    gap: 40px; /* Espaçamento entre imagem e texto */
+    margin-top: 50px;
+    margin-left: 75px;
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     padding: 30px;
     background-color: var(--tertiary-color);
     border-radius: 15px;
@@ -274,16 +290,24 @@ p {
 
 /* Imagem da Equipe (full-width) */
 .full-width-img { /* Seletor corrigido de #equipe para .full-width-img */
+<<<<<<< HEAD
     width: 100%; /* Alterado para 100% para ser responsivo dentro do container */
     max-width: 700px; /* Adicionado um max-width para não ficar muito grande em telas largas */
+=======
+    width: 70%;
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     height: auto;
     border-radius: 15px;
     margin-top: 40px;
     box-shadow: var(--box-shadow-medium);
     border: 3px solid var(--primary-color);
+<<<<<<< HEAD
     display: block; /* Garante que a imagem se comporte como um bloco para margin auto funcionar */
     margin-left: auto; /* Centraliza a imagem */
     margin-right: auto; /* Centraliza a imagem */
+=======
+   margin-left: 145px;
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
 }
 
 
@@ -370,8 +394,11 @@ footer nav ul li a:hover {
         flex-direction: column; /* Empilha em tablets */
         gap: 25px;
         max-width: 600px; /* Ajuste para tablets */
+<<<<<<< HEAD
         width: 95%; /* Garante que ocupe a largura disponível com padding */
         margin: 50px auto; /* Centraliza novamente após a mudança de flex-direction */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
     .lobo-loba-img {
         max-width: 250px;
@@ -382,9 +409,12 @@ footer nav ul li a:hover {
     }
     .full-width-img {
         margin-top: 30px;
+<<<<<<< HEAD
         width: 90%; /* Ajuste para tablets */
         margin-left: auto; /* Centraliza a imagem */
         margin-right: auto; /* Centraliza a imagem */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
 }
 
@@ -438,9 +468,14 @@ footer nav ul li a:hover {
     /* Fim do Menu Hambúrguer */
 
     #sobre {
+<<<<<<< HEAD
         margin: 40px auto; /* Centraliza em telas menores */
         padding: 30px;
         max-width: 95%; /* Garante que ocupe quase toda a largura disponível */
+=======
+        margin: 40px 15px;
+        padding: 30px;
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
     h2 {
         font-size: 2rem;
@@ -471,7 +506,10 @@ footer nav ul li a:hover {
         gap: 20px;
         padding: 20px;
         max-width: 95%;
+<<<<<<< HEAD
         margin: 30px auto; /* Centraliza em telas menores */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
     .lobo-loba-img {
         max-width: 200px;
@@ -479,9 +517,12 @@ footer nav ul li a:hover {
     }
     .full-width-img {
         margin-top: 25px;
+<<<<<<< HEAD
         width: 95%; /* Ajuste para celulares */
         margin-left: auto; /* Centraliza a imagem */
         margin-right: auto; /* Centraliza a imagem */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
     footer {
         padding: 2rem 0;
@@ -527,11 +568,18 @@ footer nav ul li a:hover {
     }
     .full-width-img {
         margin-top: 20px;
+<<<<<<< HEAD
         width: 98%; /* Leve ajuste para telas muito pequenas */
         margin-left: auto; /* Centraliza a imagem */
         margin-right: auto; /* Centraliza a imagem */
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     }
     .social-icons img {
         height: 30px;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf

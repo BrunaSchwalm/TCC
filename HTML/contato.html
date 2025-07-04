@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Associação Caramelos do Vale</title>
     <!-- CSS -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../CSS/style.css">
+=======
+    <!-- <link rel="stylesheet" href="../CSS/style.css"> -->
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     <link rel="stylesheet" href="../CSS/contato.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Favicon -->
 
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -27,10 +35,13 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 </head>
 
 <body>
 
+=======
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -41,6 +52,12 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+<<<<<<< HEAD
+=======
+</head>
+
+<body>
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
     <!-- HEADER PADRONIZADO -->
     <header>
         <div class="container">
@@ -96,12 +113,20 @@
                     <!-- Card do Timóteo -->
                     <div class="dog-contact-card">
                         <img src="../img/Timoteo1.jpg" alt="Imagem do cão Timóteo">
+<<<<<<< HEAD
                         <p>O Timóteo vai esclarecer todas as suas dúvidas! 💛</p>
+=======
+                        <p>O **Timóteo** vai esclarecer todas as suas dúvidas! 💛</p>
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
                     </div>
                     <!-- Card do Lobo -->
                     <div class="dog-contact-card">
                         <img src="../img/joinusdog1.jpg" alt="Imagem do cão Lobo">
+<<<<<<< HEAD
                         <p>O Lobo vai estar pronto para responder suas perguntas! 🐾</p>
+=======
+                        <p>O **Lobo** vai estar pronto para responder suas perguntas! 🐾</p>
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
                     </div>
                 </div>
             </div>
@@ -135,8 +160,41 @@
         </div>
     </footer>
 
+<<<<<<< HEAD
 
     <script src="../js/comoajudar.js"></script>
+=======
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function () {
+                    mainNav.classList.toggle('nav-open');
+                    // Altera o ícone do hambúrguer para um 'X' e vice-versa
+                    const icon = menuToggle.querySelector('i');
+                    if (mainNav.classList.contains('nav-open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+
+                // Fecha o menu se um link for clicado (para navegação suave)
+                mainNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mainNav.classList.remove('nav-open');
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                    });
+                });
+            }
+        });
+    </script>
+>>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
 </body>
 
 </html>
