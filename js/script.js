@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
             const menuToggle = document.querySelector('.menu-toggle');
             const mainNav = document.getElementById('main-nav');
@@ -49,30 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
-=======
-document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona todos os botões com a classe 'btn-alternar'
-    const botoesAlternar = document.querySelectorAll('.btn-alternar');
-
-    botoesAlternar.forEach(function(botao) {
-        botao.addEventListener('click', function() {
-            // Encontra o elemento pai mais próximo que tem a classe 'detalhes-evento'
-            const eventoWrapper = this.closest('.evento-wrapper');
-
-            // Dentro desse 'detalhesEvento', encontra a div com a classe 'informacoes-evento'
-            const informacoesEscondidas = eventoWrapper.querySelector('.informacoes-evento');
-
-            // Alterna a classe 'escondido' para mostrar ou esconder o conteúdo
-            informacoesEscondidas.classList.toggle('escondido');
-
-            // Opcional: Altera o texto do botão
-            if (informacoesEscondidas.classList.contains('escondido')) {
-                this.textContent = 'Saiba Mais';
-            } else {
-                this.textContent = 'Ver Menos';
-            }
-        });
-    });
-});
-
->>>>>>> 67e502314b183bad8e70283ee600d0a1ab6bfbbf
