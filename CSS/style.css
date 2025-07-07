@@ -445,6 +445,7 @@ section#imagemfundo {
     width: 100%;
     height: clamp(250px, 50vw, 400px);
 }
+
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -495,6 +496,7 @@ section#imagemfundo {
     max-width: 800px;
     margin: 0 auto 30px;
 }
+
 /* Botão Adotar */
 
 .adotar {
@@ -508,6 +510,7 @@ section#imagemfundo {
     box-shadow: var(--box-shadow-medium);
     transition: all 0.3s ease;
 }
+
 .adotar a {
     text-decoration: none;
     font-weight: bold;
@@ -642,6 +645,7 @@ footer nav ul li a:hover {
     body {
         padding-top: 70px;
     }
+
     header ul {
         top: 80px;
     }
@@ -664,23 +668,34 @@ footer nav ul li a:hover {
 
 @media (max-width: 480px) {
 
+    header .logo {
+        height: 55px;
+    }
+
+    header ul {
+        top: 80px;
+        /* Ajuste de top para o menu expandido em telas muito pequenas */
+    }
+
     .container1 img {
-    max-width: 100%;
-    height: auto;
-    max-height: 130px;
-    display: block;
-    margin: 0 auto;
-}
-    .container1  {
+        max-width: 100%;
+        height: auto;
+        max-height: 130px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container1 {
         margin-left: 10px;
         margin-right: 10px;
-   
-}
+
+    }
 
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
+
     .social-icons {
         justify-content: center;
     }
