@@ -377,30 +377,26 @@ a.email:hover {
 }
 
 /* Footer */
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
-    /* Usar clamp para padding vertical no footer, removendo a duplicação */
-    padding: clamp(1.5rem, 4vw, 2.5rem) 0; 
+    padding: clamp(1rem, 3vw, 2.5rem) 0;
     text-align: center;
-    /* Usar clamp para margin-top, removendo a duplicação */
-    margin-top: clamp(40px, 6vw, 80px); 
+    margin-top: clamp(30px, 5vw, 80px);
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 80px;
+    gap: clamp(5px, 2vw, 20px);
 }
+
 
 footer nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    /* Usar clamp para margin-bottom */
-    margin-bottom: clamp(15px, 3vw, 30px); 
+    margin-bottom: clamp(15px, 3vw, 30px);
     flex-wrap: wrap;
     padding: 0;
-}
-
-footer nav ul li {
-    /* Manter margem horizontal e adicionar margem inferior para quebra de linha */
-    margin: 0 15px 10px; 
 }
 
 footer nav ul li a {
@@ -408,8 +404,12 @@ footer nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 400;
-    /* Usar clamp para o tamanho da fonte */
-    font-size: clamp(0.9rem, 1.8vw, 1rem); 
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+footer nav ul li {
+    margin: 0 20px 10px;
+    /* Aumentado a margem para consistência */
 }
 
 footer nav ul li a:hover {
@@ -420,30 +420,14 @@ footer nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Usar clamp para padding-top */
-    padding-top: clamp(15px, 3vw, 30px); 
+    padding-top: clamp(15px, 3vw, 30px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     flex-wrap: wrap;
-    /* Usar clamp para gap */
-    gap: clamp(15px, 3vw, 25px); 
+    gap: clamp(15px, 3vw, 25px);
 }
 
 .footer-bottom .logo-footer {
-    /* Usar clamp para a altura do logo */
-    height: clamp(40px, 5vw, 55px); 
-    /* Adiciona margem inferior para telas pequenas quando flex-wrap atua */
-    margin-bottom: 0; 
-}
-
-/* Centralizar o parágrafo de direitos autorais e dar flex-basis */
-.footer-bottom p {
-    color: white;
-    font-weight: bold;
-    text-align: center; /* Garante que o texto fique centralizado */
-    /* Permite que o parágrafo ocupe o máximo de espaço, mas encolha */
-    flex: 1 1 auto; 
-    min-width: 200px; /* Largura mínima para o parágrafo antes de quebrar a linha */
-    margin-bottom: 0; /* Remove a margem inferior padrão de p */
+    height: clamp(35px, 5vw, 55px);
 }
 
 .social-icons {
@@ -452,7 +436,7 @@ footer nav ul li a:hover {
 }
 
 .social-icons img {
-    height: clamp(30px, 4vw, 40px);
+    height: clamp(25px, 4vw, 40px);
     transition: transform 0.3s ease;
 }
 
@@ -568,24 +552,7 @@ footer nav ul li a:hover {
         max-width: 300px;
     }
     
-    footer nav ul {
-        flex-direction: column; /* Empilha os links de navegação */
-        gap: 6px; /* Espaçamento entre os links empilhados */
-    }
-
-    .footer-bottom {
-        flex-direction: column; /* Empilha logo, texto de direitos e ícones */
-        gap: 15px; /* Espaçamento entre os itens empilhados */
-        padding-top: 20px; /* Ajuste manual para o padding superior, se preferir ao clamp() */
-    }
-
-    /* Ajustar logo e texto de direitos autorais para ficarem centralizados quando empilhados */
-    .footer-bottom .logo-footer {
-        margin-bottom: 10px; /* Adiciona espaço abaixo do logo */
-    }
-    .footer-bottom p {
-        margin-bottom: 10px; /* Adiciona espaço abaixo do texto de direitos */
-    }
+    
 }
 
 @media (max-width: 480px) {

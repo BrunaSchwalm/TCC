@@ -287,26 +287,27 @@ p {
 }
 
 
-/* Rodapé (Estilos reutilizados das outras páginas) */
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
+    padding: clamp(1rem, 3vw, 2.5rem) 0;
+    text-align: center;
+    margin-top: clamp(30px, 5vw, 80px);
     padding: 2.5rem 0;
     text-align: center;
     margin-top: 80px;
+    gap: clamp(5px, 2vw, 20px);
 }
+
 
 footer nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: clamp(15px, 3vw, 30px);
     flex-wrap: wrap;
     padding: 0;
-}
-
-footer nav ul li {
-    margin: 0 20px 10px;
 }
 
 footer nav ul li a {
@@ -314,6 +315,12 @@ footer nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 400;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+footer nav ul li {
+    margin: 0 20px 10px;
+    /* Aumentado a margem para consistência */
 }
 
 footer nav ul li a:hover {
@@ -324,23 +331,23 @@ footer nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
+    padding-top: clamp(15px, 3vw, 30px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     flex-wrap: wrap;
-    gap: 25px;
+    gap: clamp(15px, 3vw, 25px);
 }
 
 .footer-bottom .logo-footer {
-    height: 55px;
+    height: clamp(35px, 5vw, 55px);
 }
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: clamp(10px, 3vw, 20px);
 }
 
 .social-icons img {
-    height: 40px;
+    height: clamp(25px, 4vw, 40px);
     transition: transform 0.3s ease;
 }
 
@@ -483,26 +490,6 @@ footer nav ul li a:hover {
         margin-left: auto; /* Centraliza a imagem */
         margin-right: auto; /* Centraliza a imagem */
     }
-    footer {
-        padding: 2rem 0;
-        margin-top: 60px;
-    }
-    footer nav ul {
-        flex-direction: column;
-        gap: 6px;
-        margin-bottom: 20px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        padding-top: 20px;
-        gap: 15px;
-    }
-    .social-icons {
-        margin-top: 10px;
-    }
-    .social-icons img {
-        height: 35px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -525,6 +512,14 @@ footer nav ul li a:hover {
         max-width: 180px;
         height: 160px;
     }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+
     .full-width-img {
         margin-top: 20px;
         width: 98%; /* Leve ajuste para telas muito pequenas */
