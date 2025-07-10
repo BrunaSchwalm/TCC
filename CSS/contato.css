@@ -452,6 +452,10 @@ footer nav ul li a:hover {
     h3 {
         font-size: 1.6rem;
     }
+    .menu-toggle {
+        display: block;
+    }
+
     /* Esconde o menu de navegação por padrão em telas pequenas */
     header ul {
         display: none;
