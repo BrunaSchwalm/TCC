@@ -413,6 +413,49 @@ footer nav ul li a:hover {
         font-size: 1.4rem;
     }
 
+    /* Menu Hambúrguer em telas pequenas */
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header ul {
+        display: none; /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        border-radius: 0;
+    }
+
+    header ul li a::after {
+        bottom: 0;
+    }
+    /* Fim do Menu Hambúrguer */
     .help-item {
         padding: 25px;
         max-width: 700px;
