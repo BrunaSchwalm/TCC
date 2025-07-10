@@ -452,6 +452,45 @@ footer nav ul li a:hover {
     h3 {
         font-size: 1.6rem;
     }
+    /* Esconde o menu de navegação por padrão em telas pequenas */
+    header ul {
+        display: none;
+        /* Esconde a lista de navegação */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px;
+        /* Abaixo do header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Mostra o menu quando a classe 'nav-open' é adicionada pelo JS */
+    header ul.nav-open {
+        display: flex;
+    }
+
+    header ul li {
+        margin: 10px 0;
+        /* Espaçamento vertical para os itens do menu */
+        text-align: center;
+    }
+
+    header ul li a {
+        padding: 12px 18px;
+        display: block;
+        /* Ocupa a largura total para facilitar o clique */
+        border-radius: 0;
+        /* Remover border-radius para links de menu expandido */
+    }
+
+    header ul li a::after {
+        bottom: 0;
+        /* Ajustar posição da linha no menu expandido */
+    }
     .btn-group {
         max-width: 90%;
     }
