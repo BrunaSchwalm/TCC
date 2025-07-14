@@ -5,29 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos - Associação Caramelos do Vale</title>
-    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/eventos.css">
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Favicon -->
-
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-    
-    <!-- Fontes -->
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- VLibras -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-
-    
 </head>
 
 <body>
@@ -42,7 +33,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <!-- HEADER PADRONIZADO -->
     <header>
         <div class="container">
             <nav class="main-nav">
@@ -78,13 +68,11 @@
                 <h3>Últimos eventos</h3>
             </div>
 
-            <!-- Novo container para o grid de eventos -->
             <div class="eventos-grid">
-                <!-- Evento 1 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos1.png" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento1">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento1-info">
                         <h2>Feira de Carnaval</h2>
                         <p><strong>Data:</strong> 16/03/2025</p>
                         <p><strong>Horário:</strong> 16h às 20h</p>
@@ -102,11 +90,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 2 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos2.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento2">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento2-info">
                         <h2>CARAMELOS IN FUGA</h2>
                         <p><strong>Data:</strong> 14/03/2025</p>
                         <p><strong>Horário:</strong> 20h</p>
@@ -130,11 +117,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 3 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos3.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento3">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento3-info">
                         <h2>Café dos Caramelos: Especial Volta às Aulas</h2>
                         <p><strong>Data:</strong> 10/03/2025</p>
                         <p><strong>Horário:</strong> 8h30</p>
@@ -156,11 +142,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 4 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos4.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento4">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento4-info">
                         <h2>Venha jogar e curtir a noite e apoie uma causa animal</h2>
                         <p><strong>Data:</strong> 22/02/2025</p>
                         <p><strong>Horário:</strong> 19h</p>
@@ -182,11 +167,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 5 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos5.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento5">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento5-info">
                         <h2>Café dos Caramelos: Edição Natau</h2>
                         <p><strong>Data:</strong> 11/12/2024</p>
                         <p><strong>Horário:</strong> 9h15</p>
@@ -209,11 +193,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 6 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos6.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento6">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento6-info">
                         <h2>Dia no Recanto dos Caramelos</h2>
                         <p><strong>Data:</strong> 08/12/2024</p>
                         <p><strong>Horário:</strong> a partir das 10h30</p>
@@ -239,11 +222,10 @@
                     </div>
                 </div>
 
-                <!-- Evento 7 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos7.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento7">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento7-info">
                         <h2>Rifa Solidária</h2>
                         <p><strong>Informações:</strong> Concorra a mais de 4 MIL reais em prêmios e ainda ajude uma boa
                             causa!
@@ -260,17 +242,14 @@
                             Payot, Maybelline, Essence, Contém1g e Bruna Tavares.</p>
                         <p><strong>Kit Autocuidado:</strong> produtos das marcas ADCOS, Avène, Bauny, Cadiveu, Care,
                             Cetaphil,
-                            Essence, L’Oréal, Mantecorp, Sallve, Stephen Knoll e Wet n Wild.</p>
-                        <p><a href="https://rd.app/s/dRgqLATGamn" target="_blank" class="btn">Compre seu número pelo
-                                site rifa.digital</a></p>
+                            Essence, L’Oréal, Mantecorp, Sallve, Stephen Knoll e Wet n Wild.</p>                       
                     </div>
                 </div>
 
-                <!-- Evento 8 -->
                 <div class="evento-wrapper">
                     <section class="cartazEvento"><img src="../img/Eventos8.jpg" alt="cartao de evento"></section>
-                    <button class="btn-alternar">Saiba Mais</button>
-                    <div class="informacoes-evento escondido">
+                    <button class="btn-alternar" data-event-id="evento8">Saiba Mais</button>
+                    <div class="informacoes-evento" id="evento8-info">
                         <h2>Bebeu, aujudou 2.0</h2>
                         <p><strong>Data:</strong> 05/12/2024</p>
                         <p><strong>Horário:</strong> das 18h à meia noite</p>
@@ -288,8 +267,7 @@
                             Não vai perder essa oportunidade de se divertir e fazer o bem. 💛 Esperamos vocês! 🐾</p>
                     </div>
                 </div>
-            </div> <!-- Fim do eventos-grid -->
-
+            </div>
         </div>
     </section>
 
@@ -308,7 +286,8 @@
             </nav>
             <div class="footer-bottom">
                 <img src="../img/logoHome-vale.png.png" alt="Logo Associação Caramelos do Vale" class="logo-footer">
-                <p style="color: white;font-weight: bold;">&copy Todos os direitos reservados a Associação Caramelos do Vale</p>
+                <p style="color: white;font-weight: bold;">&copy Todos os direitos reservados a Associação Caramelos do
+                    Vale</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/caramelosdovale/" target="_blank"><img
                             src="../img/insta-logo.png" alt="Logo Instagram"></a>
@@ -318,6 +297,16 @@
             </div>
         </div>
     </footer>
+
+    <!-- Pop-up para exibir as informações dos eventos -->
+    <div id="popup-overlay">
+        <div id="popup-content">
+            <button id="close-popup" class="btn-fechar-popup">&times;</button>
+            <div id="popup-body">
+                <!-- O conteúdo do evento será injetado aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <script src="../js/eventos.js"></script>
 </body>
