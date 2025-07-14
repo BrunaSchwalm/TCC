@@ -331,122 +331,9 @@ p {
     box-shadow: var(--box-shadow-medium);
 }
 
-/* Informações do Evento (Escondido por padrão) */
+/* Informações do Evento (Escondido por padrão, será clonado para o pop-up) */
 .informacoes-evento {
-    padding: 30px;
-    text-align: left;
-    /* Alinhar texto à esquerda dentro da caixa de informações */
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.4s ease-out;
-    /* Transição para o efeito de esconder/mostrar */
-    max-height: 0;
-    /* Começa com altura zero para esconder */
-    overflow: hidden;
-    /* Esconde o conteúdo que transborda */
-    opacity: 0;
-    /* Começa invisível */
-    transform: translateY(-20px);
-    /* Começa um pouco acima */
-    flex-grow: 1;
-    /* Permite que o conteúdo cresça para preencher o espaço */
-    display: flex;
-    /* Para alinhar o botão no final */
-    flex-direction: column;
-    /* Para alinhar o botão no final */
-    justify-content: space-between;
-    /* Para empurrar o botão para o final */
-}
-
-.informacoes-evento.escondido {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.informacoes-evento:not(.escondido) {
-    max-height: 1000px;
-    /* Altura máxima para mostrar o conteúdo (ajuste se necessário) */
-    opacity: 1;
-    transform: translateY(0);
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-
-.informacoes-evento h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    text-align: left;
-    /* Alinhar título à esquerda */
-}
-
-.informacoes-evento p {
-    font-size: 1rem;
-    color: var(--neutral-dark);
-    margin-bottom: 10px;
-    text-align: left;
-    /* Alinhar parágrafos à esquerda */
-}
-
-.informacoes-evento p strong {
-    color: var(--neutral-dark);
-}
-
-.informacoes-evento ul {
-    list-style: none;
-    /* Remover marcadores de lista padrão */
-    padding: 0;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.informacoes-evento ul li {
-    font-size: 1rem;
-    color: var(--neutral-medium);
-    margin-bottom: 8px;
-    position: relative;
-    padding-left: 20px;
-    /* Espaço para o ícone */
-}
-
-.informacoes-evento ul li::before {
-    content: '✨';
-    /* Ícone de estrela para itens de lista */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 0.9em;
-}
-
-.informacoes-evento .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--box-shadow-light);
-    background-color: var(--success-color);
-    border: 2px solid var(--success-color);
-    color: var(--white);
-    margin-top: 20px;
-    /* Espaçamento do conteúdo acima */
-    align-self: center;
-    /* Centraliza o botão dentro do flex container */
-}
-
-.informacoes-evento .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--box-shadow-medium);
-    background-color: var(--success-hover);
-    border-color: var(--success-hover);
+    display: none; /* Esconde todas as divs de informações dos eventos por padrão */
 }
 
 
@@ -516,6 +403,126 @@ footer nav ul li a:hover {
 
 .social-icons img:hover {
     transform: scale(1.2);
+}
+
+/* --- Estilos para o Pop-up de Eventos --- */
+
+/* Overlay - Fundo escuro transparente */
+#popup-overlay {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixado na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente escuro */
+    z-index: 2000; /* Garante que fique acima de todo o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+    -webkit-backdrop-filter: blur(5px); /* Para compatibilidade com Safari */
+}
+
+/* Conteúdo do Pop-up */
+#popup-content {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-strong);
+    position: relative; /* Para posicionar o botão de fechar */
+    max-width: 700px; /* Largura máxima do pop-up */
+    max-height: 90vh; /* Altura máxima do pop-up (90% da altura da viewport) */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+    transform: scale(0.9); /* Começa um pouco menor para o efeito de zoom */
+    opacity: 0; /* Começa invisível */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Animação de pop-up */
+}
+
+/* Estado ativo do pop-up (quando é exibido) */
+#popup-overlay.active #popup-content {
+    transform: scale(1); /* Volta ao tamanho normal */
+    opacity: 1; /* Torna visível */
+}
+
+/* Botão de Fechar do Pop-up */
+#close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--neutral-dark);
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 1; /* Ajusta a linha para o 'x' */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#close-popup:hover {
+    color: var(--primary-color);
+    transform: scale(1.5);
+}
+
+/* Estilos para o corpo do pop-up (onde o conteúdo do evento será injetado) */
+#popup-body h2 {
+    font-size: 2rem; /* Tamanho do título dentro do pop-up */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título no pop-up */
+    position: relative;
+    padding-top: 0; /* Remove padding que pode ter vindo do h2 global */
+}
+
+#popup-body h2::after {
+    content: none; /* Remove a linha decorativa de baixo do h2 global */
+}
+
+
+#popup-body p {
+    font-size: 1.05rem;
+    color: var(--neutral-medium);
+    margin-bottom: 10px;
+    text-align: left; /* Alinha o texto à esquerda dentro do pop-up */
+}
+
+#popup-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#popup-body ul li {
+    font-size: 1rem;
+    color: var(--neutral-medium);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#popup-body ul li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9em;
+}
+
+#popup-body .btn {
+    display: block; /* Ocupa a largura total */
+    margin: 20px auto 0; /* Centraliza o botão e adiciona margem superior */
+    width: fit-content; /* Ajusta a largura ao conteúdo do botão */
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    
+}
+#popup-body .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-medium);  
 }
 
 /* Responsividade */
@@ -600,7 +607,7 @@ footer nav ul li a:hover {
         padding-top: 80px;
     }
 
-    /* Menu Hambúrguer em telas pequenas */
+   /* Menu Hambúrguer em telas pequenas */
     header nav {
         flex-direction: row;
         justify-content: space-between;
@@ -644,7 +651,6 @@ footer nav ul li a:hover {
     header ul li a::after {
         bottom: 0;
     }
-
     /* Fim do Menu Hambúrguer */
 
     #eventos {
@@ -669,6 +675,10 @@ footer nav ul li a:hover {
 
     p {
         font-size: 1rem;
+    }
+
+     #popup-content {
+        margin: 15px;
     }
 
     .eventos-grid {
@@ -731,6 +741,9 @@ footer nav ul li a:hover {
         font-size: 1.2rem;
     }
 
+     #popup-content {
+        margin: 15px;
+    }
     .cartazEvento img {
         max-height: 220px;
         /* Ajuste de altura da imagem para celulares pequenos */
