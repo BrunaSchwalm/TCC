@@ -743,6 +743,7 @@ footer nav ul li a:hover {
 
      #popup-content {
         margin: 15px;
+        margin-bottom: 60px;
     }
     .cartazEvento img {
         max-height: 220px;
